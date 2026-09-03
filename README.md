@@ -23,3 +23,5 @@ python3 -m http.server 4173
 ## Brand assets
 
 사이트의 wordmark와 symbol은 Naroworks company workspace의 정규 CI에서 가져온 배포용 사본입니다. CI 형태나 색상을 변경할 때는 회사 workspace의 브랜드 기준을 먼저 갱신한 뒤 이 저장소에 반영합니다.
+
+히어로 배경은 이 홈페이지를 위해 생성한 원본 비구상 이미지이며, 외부 사진이나 스톡 이미지를 사용하지 않았습니다. 생성 방식과 최종 프롬프트는 [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md)에 기록합니다.

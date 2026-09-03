@@ -46,10 +46,16 @@ nav a:hover, nav a:focus-visible {
 .hero {
   display: flex; align-items: center; min-height: 820px;
   padding: 176px 0 96px; border-bottom: 1px solid var(--line);
+  background-color: var(--paper);
+  background-image: url("assets/hero-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-grid {
   display: block;
 }
+.hero-copy { max-width: 760px; }
 .eyebrow, .section-label, .principle-number {
   margin: 0; color: var(--blue); font-size: 12px; font-weight: 750;
   letter-spacing: .13em; line-height: 1.4; text-transform: uppercase;
@@ -109,7 +115,10 @@ footer {
   .brand { width: 108px; }
   nav { gap: 18px; }
   nav a:not(:last-child) { display: none; }
-  .hero { min-height: auto; padding: 148px 0 78px; }
+  .hero {
+    min-height: auto; padding: 148px 0 78px;
+    background-position: 35% center;
+  }
   h1 { margin-top: 22px; font-size: clamp(48px, 13.4vw, 70px); }
   .section { padding: 92px 0; }
   .intro-grid, .contact-inner {
