@@ -13,16 +13,16 @@
 
 ```text
 Use case: stylized-concept
-Asset type: restrained company homepage hero background
-Primary request: Create clearly original abstract editorial artwork on warm off-white paper. A sparse flat-print composition should suggest movement from a close starting point toward an open horizon using only two abstract ink planes: one midnight navy (#08192D) plane and one trust blue (#194A78) plane.
-Scene/backdrop: warm off-white paper field with subtly imperfect natural paper grain and restrained ink texture.
-Subject: two non-representational flat ink planes only, arranged with quiet directional tension that opens outward; they must not resolve into any recognizable object, symbol, landscape, letter, or logo.
-Style/medium: matte editorial printmaking, flat screenprint-like ink, restrained and contemporary, understated rather than decorative.
-Composition/framing: very wide homepage hero background; preserve generous calm negative space across the entire left 60% for dark Korean headline text. Keep the abstract ink planes primarily in the right 40%, with a subtle visual progression from a nearer compact convergence toward a more open edge/horizon-like spaciousness, without depicting an actual horizon or landscape. Avoid busy detail near the left copy area.
-Lighting/mood: even, quiet, confident, matte; no dramatic lighting.
-Color palette: warm off-white paper, midnight navy #08192D, trust blue #194A78 only.
-Materials/textures: subtle imperfect paper fibers and slight unevenness at ink edges; refined, low-contrast texture.
+Asset type: clean company homepage hero background
+Primary request: Create one clearly original, restrained abstract corporate editorial graphic: a small, close starting point that opens outward toward the world, expressed only through two thin, precise flat bands or planes.
+Scene/backdrop: a perfectly uniform pure warm off-white field, exactly #F7F8F6, with no paper grain, texture, noise, variation, vignette, or visible surface.
+Subject: in the rightmost 35% only, place two crisp, thin, balanced architectural bands or planes that begin near one compact point and run parallel or gently diverge outward toward the right edge. One band is midnight navy #08192D and the other is trust blue #194A78. Keep the gesture non-representational and understated.
+Style/medium: clean flat geometric editorial corporate graphic design; precise hard edges; matte solid color; minimal, calm, confident, architectural.
+Composition/framing: very wide 16:9-ish landscape. Preserve the entire left 65% as uninterrupted empty #F7F8F6 space for dark Korean headline text. Confine all colored geometry to the right 35%. Make the bands thin and airy, surrounded by abundant whitespace; avoid large heavy color masses.
+Lighting/mood: no lighting effects; quiet, balanced, assured.
+Color palette: background #F7F8F6; geometry only #08192D and #194A78; no other colors.
+Materials/textures: perfectly flat vector-like raster rendering, entirely textureless and noiseless.
 Text: none.
-Constraints: no text, no letters, no logo, no symbols, no people, no objects, no landscape; clearly original; do not imitate any named artist or existing brand.
-Avoid: gradients, 3D, glossy effects, glow, dramatic lighting, photorealism, shadows suggesting objects, watermark, signature, visual clutter, decorative motifs.
+Constraints: exactly one restrained geometric gesture made from two colored bands or planes; crisp edges; clearly original; do not name or imitate any artist or existing brand.
+Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, glow, objects, landscape, horizon, symbols, icons, letters, logos, people, watermark, signature, decorative clutter, photorealism, painterly marks, rough edges, oversized shapes, any content in the left 65%.
 ```
