@@ -42,7 +42,7 @@ img { display: block; max-width: 100%; }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between; min-height: 96px;
 }
-.brand { display: block; width: 132px; }
+.brand { display: block; width: 180px; }
 .brand img { width: 100%; height: auto; }
 nav { display: flex; align-items: center; gap: 30px; }
 nav a {
@@ -106,7 +106,7 @@ footer {
 @media (max-width: 800px) {
   .container { width: min(calc(100% - 40px), var(--container)); }
   .header-inner { min-height: 78px; }
-  .brand { width: 108px; }
+  .brand { width: 150px; }
   nav { gap: 18px; }
   nav a:not(:last-child) { display: none; }
   .hero {
