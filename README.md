@@ -28,4 +28,6 @@ python3 -m http.server 4173
 
 ## Styles
 
-`styles.css`는 기존 히어로·문의·푸터의 레이아웃을, `about.css`는 OUR APPROACH 영역의 반응형 디자인을 담당합니다. Pretendard 글꼴은 `assets/fonts/`에서 직접 제공합니다.
+`styles.css`는 기존 히어로·문의·푸터의 레이아웃을, `about.css`는 OUR APPROACH 영역의 반응형 디자인을 담당합니다. 기본 글꼴은 Pretendard이며, 히어로 핵심 문구에만 LINE Seed KR Bold를 사용합니다. 두 글꼴 모두 `assets/fonts/`에서 직접 제공합니다.
+
+LINE Seed KR은 [LINE 공식 배포본](https://seed.line.me/index_kr.html)의 웹폰트이며, 저작권은 LY Corporation에 있습니다. SIL Open Font License 1.1은 [LINESeed-OFL.txt](assets/fonts/LINESeed-OFL.txt)에 포함되어 있습니다.
