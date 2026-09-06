@@ -35,3 +35,11 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 - License: SIL Open Font License 1.1 — `assets/fonts/OFL.txt`
 
 외부 폰트 서비스 요청 없이 사이트에서 직접 제공합니다.
+
+## Header wordmark
+
+- File: `assets/naroworks-english-wordmark.png`
+- Source: `naroworks-workspace/assets/brand/naroworks-english-long-transparent.png`
+- Approved CI commit: `0d6adaa7da1e835bb23c3b26360e135f816a27f0`
+- Design: Bauhaus 계열의 원형과 직선 구조를 바탕으로 한 정규 영문 NaroWorks 워드마크
+- Processing: 투명 여백만 잘라냈으며 글자 형태·간격·색상·알파를 그대로 보존했습니다. 화면에서는 비율을 유지해 축소합니다.
