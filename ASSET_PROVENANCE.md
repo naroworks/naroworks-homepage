@@ -26,3 +26,12 @@ Text: none.
 Constraints: exactly one restrained geometric gesture made from two colored bands or planes; crisp edges; clearly original; do not name or imitate any artist or existing brand.
 Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, glow, objects, landscape, horizon, symbols, icons, letters, logos, people, watermark, signature, decorative clutter, photorealism, painterly marks, rough edges, oversized shapes, any content in the left 65%.
 ```
+
+## Font
+
+- Family: Pretendard Variable
+- Source: https://github.com/orioncactus/pretendard
+- File: `assets/fonts/PretendardVariable.woff2`
+- License: SIL Open Font License 1.1 — `assets/fonts/OFL.txt`
+
+외부 폰트 서비스 요청 없이 사이트에서 직접 제공합니다.

@@ -11,7 +11,9 @@
     <link rel="icon" href="favicon-naro-16.png?v=2" type="image/png" sizes="16x16" />
     <link rel="icon" href="favicon-naro.png?v=2" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2" sizes="180x180" />
+    <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="about.css" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content="나로웍스" />
@@ -53,35 +55,33 @@
           </div>
         </div>
       </section>
-      <section class="section" id="about">
-        <div class="container intro-grid">
-          <p class="section-label">About</p>
-          <div class="intro-copy">
-            <h2>가까운 곳에서 시작합니다.</h2>
-            <p>
-              모든 제품은 한 사람의 실제 삶에서 시작됩니다. 좋아하는 일을 하며
-              마주친 불편, 더 잘 누리고 싶은 일상, 오래 이어가고 싶은 취미와
-              열정. 우리는 가까운 필요를 작지만 완결된 서비스로 풀고, 비슷한
-              마음을 가진 사람들이 함께 쓸 수 있도록 키웁니다.
-            </p>
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-meta"><p class="eyebrow">OUR APPROACH</p><span>가까운 필요에서, 오래 쓰이는 서비스로</span></div>
+          <div class="about-intro">
+            <h2 id="about-title">가까운 곳에서<br />시작합니다<span class="accent-dot">.</span></h2>
+            <p>좋아하는 일을 하며 마주친 불편,<br />더 잘 누리고 싶은 일상.<br /><br />우리는 가까운 필요를 작지만 완결된 서비스로 풀고,<br class="desktop-break" /> 비슷한 마음을 가진 사람들이 함께 쓸 수 있도록 키웁니다.</p>
           </div>
-        </div>
-        <div class="container principles" aria-label="나로웍스의 제품 원칙">
-          <article>
-            <p class="principle-number">01</p>
-            <h3>가까이서 시작합니다</h3>
-            <p>우리가 직접 겪거나 충분히 이해한 문제를 다룹니다.</p>
-          </article>
-          <article>
-            <p class="principle-number">02</p>
-            <h3>작게 완성합니다</h3>
-            <p>많은 기능보다 하나의 중요한 경험을 제대로 만듭니다.</p>
-          </article>
-          <article>
-            <p class="principle-number">03</p>
-            <h3>계속할 수 있게 합니다</h3>
-            <p>화면에 머문 시간보다 좋아하는 일을 이어가는 변화를 봅니다.</p>
-          </article>
+          <div class="principles" aria-label="나로웍스의 제품 원칙">
+            <article class="principle">
+              <span class="principle-number">01</span>
+              <div class="principle-symbol symbol-start" aria-hidden="true"><i></i><i></i></div>
+              <h3>가까이서 시작합니다</h3>
+              <p>우리가 직접 겪거나 충분히 이해한<br class="desktop-break" /> 문제를 다룹니다.</p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">02</span>
+              <div class="principle-symbol symbol-focus" aria-hidden="true"><i></i><i></i><i></i></div>
+              <h3>작게 완성합니다</h3>
+              <p>많은 기능보다 하나의 중요한 경험을<br class="desktop-break" /> 제대로 만듭니다.</p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">03</span>
+              <div class="principle-symbol symbol-continue" aria-hidden="true"><i></i><i></i></div>
+              <h3>계속할 수 있게 합니다</h3>
+              <p>화면에 머문 시간보다 좋아하는 일을<br class="desktop-break" /> 이어가는 변화를 봅니다.</p>
+            </article>
+          </div>
         </div>
       </section>
       <section class="contact" id="contact">
