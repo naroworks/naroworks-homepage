@@ -43,3 +43,10 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 - Approved CI commit: `0d6adaa7da1e835bb23c3b26360e135f816a27f0`
 - Design: Bauhaus 계열의 원형과 직선 구조를 바탕으로 한 정규 영문 NaroWorks 워드마크
 - Processing: 투명 여백만 잘라냈으며 글자 형태·간격·색상·알파를 그대로 보존했습니다. 화면에서는 비율을 유지해 축소합니다.
+
+## Favicon and touch icon
+
+- Source: `naroworks-workspace/assets/brand/naroworks-hangul-short-square.png`
+- CI source commit: `92eeb62`
+- Files: `favicon.ico`, `favicon-naro.png`, `favicon-naro-32.png`, `favicon-naro-16.png`, `apple-touch-icon.png`
+- 현재 정규 한글 나로 정사각형의 흰 배경본을 비례 축소했습니다. 원본 자간과 종횡비를 유지하고 작은 크기에서도 밝고 어두운 브라우저 테마에 같은 배경을 제공합니다.
