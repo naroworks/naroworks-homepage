@@ -111,13 +111,24 @@ footer {
   border-top: 1px solid var(--line);
 }
 .footer-inner p { margin: 0; font-size: 13px; }
+.footer-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px 32px; }
+.footer-inner .company-name { color: var(--navy); font-size: 15px; font-weight: 650; }
+.company-name span { display: inline-block; margin-left: 8px; color: var(--muted); font-size: 12px; font-weight: 400; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; color: var(--navy); font-size: 13px; }
+.footer-links a, .company-details a { text-decoration: none; }
+.footer-links a:hover, .footer-links a:focus-visible, .company-details a:hover, .company-details a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.company-details { margin: 18px 0; font-size: 13px; line-height: 1.8; }
+.company-details p:first-child { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.company-details address { font-style: normal; overflow-wrap: anywhere; }
+.footer-inner .copyright { font-size: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 @media (max-width: 800px) {
   .container { width: min(calc(100% - 40px), var(--container)); }
   .header-inner { min-height: 78px; }
   .brand { width: 150px; }
   nav { gap: 18px; }
-  nav a:not(:last-child) { display: none; }
+  nav a[href="#about"] { display: none; }
   .hero {
     min-height: auto; padding: 148px 0 78px;
     background-position: 60% center;
