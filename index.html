@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>나로웍스 — 나로 시작해 좋아하는 일이 계속되도록</title>
+    <title>NaroWorks — Start with you. Keep doing what you love.</title>
     <meta
       name="description"
-      content="나로웍스는 직접 겪는 불편에서 출발해, 좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다."
+      content="NaroWorks starts with everyday frustrations we experience ourselves, building services that make it easier to start and keep doing what you love."
     />
     <meta name="theme-color" content="#f2f5f7" />
     <link rel="canonical" href="https://www.naroworks.com/" />
@@ -47,17 +47,17 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261012-locales-r1" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ko_KR" />
-    <meta property="og:site_name" content="나로웍스" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="NaroWorks" />
     <meta
       property="og:title"
-      content="나로웍스 — 나로 시작해 좋아하는 일이 계속되도록"
+      content="NaroWorks — Start with you. Keep doing what you love."
     />
     <meta
       property="og:description"
-      content="좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다."
+      content="Services that make it easier to start and keep doing what you love."
     />
     <meta property="og:url" content="https://www.naroworks.com/" />
     <meta
@@ -66,37 +66,46 @@
     />
     <meta property="og:image:width" content="1684" />
     <meta property="og:image:height" content="934" />
-    <meta property="og:image:alt" content="나로웍스 CI" />
+    <meta property="og:image:alt" content="NaroWorks CI" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="나로웍스 — 나로 시작해 좋아하는 일이 계속되도록"
+      content="NaroWorks — Start with you. Keep doing what you love."
     />
     <meta
       name="twitter:description"
-      content="좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다."
+      content="Services that make it easier to start and keep doing what you love."
     />
     <meta
       name="twitter:image"
       content="https://www.naroworks.com/assets/og.png"
     />
     <script src="site.js" defer></script>
+    <script type="module" src="localization.mjs?v=20261012-locales-r1"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
     <header class="site-header" id="top">
       <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="나로웍스 홈"
+        <a class="brand" href="#top" aria-label="NaroWorks home" data-i18n-aria="home"
           ><img
             src="assets/naroworks-english-wordmark.png"
             alt="NaroWorks"
             width="1806"
             height="312"
         /></a>
-        <nav aria-label="주요 메뉴">
-          <a href="#products">제품</a><a href="#about">회사</a
-          ><a href="#contact">문의</a>
+        <nav aria-label="Main navigation" data-i18n-aria="navigation">
+          <a href="#products" data-i18n="nav.products">Products</a><a href="#about" data-i18n="nav.about">About</a><a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
+        <label class="language-picker" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+          <select id="language-select" aria-label="Language" data-i18n-aria="language">
+            <option value="ko">한국어</option>
+            <option value="ja-JP">日本語</option>
+            <option value="zh-Hant-TW">繁體中文（台灣）</option>
+            <option value="en-US" selected>English</option>
+          </select>
+        </label>
       </div>
     </header>
     <main id="main">
@@ -121,21 +130,12 @@
             ><span></span>
           </div>
           <h1 id="hero-title">
-            <span class="hero-line">나로 시작해</span
-            ><span class="hero-line">좋아하는 일이</span
-            ><span class="hero-line hero-line-outline">계속되도록</span>
+            <span class="hero-line" data-i18n="hero.1">Start with you.</span><span class="hero-line" data-i18n="hero.2">Keep doing</span><span class="hero-line hero-line-outline" data-i18n="hero.3">what you love.</span>
           </h1>
           <div class="hero-bottom">
-            <p>
-              나로웍스는 우리가 직접 겪는 불편에서 출발해,<br
-                class="desktop-break"
-              />
-              좋아하는 일을 더 쉽게 시작하고<br class="desktop-break" />
-              오래 이어갈 수 있는 서비스를 만듭니다.
-            </p>
+            <p data-i18n="hero.description">We start with the everyday frustrations we experience,<br />and build services that make it easier to start<br />and keep doing what you love.</p>
             <a class="explore-link" href="#products"
-              ><span>우리가 만드는 서비스</span
-              ><span class="circle-arrow"
+              ><span data-i18n="services">The services we make</span><span class="circle-arrow"
                 ><svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -153,7 +153,7 @@
       <section class="products" id="products" aria-labelledby="bandlog-title">
         <div class="container">
           <div class="product-topline">
-            <p>우리가 만드는 서비스</p>
+            <p data-i18n="services">The services we make</p>
             <span>Bandlog</span>
           </div>
           <div class="product-intro">
@@ -166,20 +166,14 @@
                   width="512"
                   height="512"
                   loading="lazy"
-                /><span>밴드로그</span>
+                /><span data-i18n="bandlog">Bandlog</span>
               </div>
-              <h2 id="bandlog-title">내 연습부터,<br />우리 밴드까지.</h2>
+              <h2 id="bandlog-title" data-i18n="product.title">From your practice<br />to your band.</h2>
             </div>
             <div class="product-description">
-              <p>
-                혼자 남긴 연습이 모이고,<br />함께할 다음 합주로 이어지도록.
-              </p>
-              <p>
-                밴드로그는 개인 연습 기록과 밴드 활동을 한곳에 모으는 앱입니다.
-                연습의 순간을 남기고, 합주곡과 일정을 준비하고, 서로에게 가벼운
-                리액션을 보내세요.
-              </p>
-              <div class="store-badges" aria-label="스토어 출시 준비 중">
+              <p data-i18n="product.lead">Solo practice adds up,<br />and leads into your next rehearsal together.</p>
+              <p data-i18n="product.description">Bandlog brings your practice log and your band’s activities together. Capture moments of practice, prepare songs and schedules, and send each other a quick reaction.</p>
+              <div class="store-badges" aria-label="Preparing for release on app stores" data-i18n-aria="store.label">
                 <div class="store-badge">
                   <img
                     src="assets/icons/apple.svg"
@@ -187,7 +181,7 @@
                     width="26"
                     height="26"
                   /><span
-                    ><strong>App Store</strong><small>준비 중</small></span
+                    ><strong>App Store</strong><small data-i18n="store.status">Coming soon</small></span
                   >
                 </div>
                 <div class="store-badge">
@@ -197,36 +191,36 @@
                     width="25"
                     height="25"
                   /><span
-                    ><strong>Google Play</strong><small>준비 중</small></span
+                    ><strong>Google Play</strong><small data-i18n="store.status">Coming soon</small></span
                   >
                 </div>
               </div>
             </div>
           </div>
           <div class="gallery-heading">
-            <span>화면을 눌러 자세히 보기</span>
+            <span data-i18n="gallery.hint">Tap a screen to see more</span>
           </div>
           <div
             class="product-gallery"
             tabindex="0"
             role="region"
-            aria-label="밴드로그 iPhone 화면 5장"
+            aria-label="Five Bandlog iPhone screens" data-i18n-aria="gallery.label"
           >
             <figure class="gallery-shot">
               <a
                 class="shot-link"
-                href="assets/bandlog/iphone-01-home-880.webp?v=20261012-r2"
-                aria-label="나의 연습과 우리 밴드 화면 확대"
-                data-caption="나의 연습과 우리 밴드"
+                href="assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1"
+                aria-label="My practice and our band · Enlarge screen"
+                data-caption="My practice and our band"
               >
                 <img
-                  src="assets/bandlog/iphone-01-home-880.webp?v=20261012-r2"
+                  src="assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1"
                   srcset="
-                    assets/bandlog/iphone-01-home-440.webp?v=20261012-r2 440w,
-                    assets/bandlog/iphone-01-home-880.webp?v=20261012-r2 880w
+                    assets/bandlog/en-US/iphone-01-home-440.webp?v=20261012-localized-r1 440w,
+                    assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1 880w
                   "
                   sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="개인 연습 기록과 참여 중인 밴드를 함께 보는 홈 화면"
+                  alt="Home screen showing personal practice records and joined bands"
                   width="1320"
                   height="2868"
                   loading="lazy"
@@ -243,24 +237,24 @@
                 ></span>
               </a>
               <figcaption>
-                <span class="shot-index">01</span>나의 연습과 우리 밴드
+                <span class="shot-index">01</span><span class="shot-caption">My practice and our band</span>
               </figcaption>
             </figure>
             <figure class="gallery-shot">
               <a
                 class="shot-link"
-                href="assets/bandlog/iphone-02-song-bundle-880.webp?v=20261012-r2"
-                aria-label="함께 고르는 합주곡 화면 확대"
-                data-caption="함께 고르는 합주곡"
+                href="assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1"
+                aria-label="Songs we pick together · Enlarge screen"
+                data-caption="Songs we pick together"
               >
                 <img
-                  src="assets/bandlog/iphone-02-song-bundle-880.webp?v=20261012-r2"
+                  src="assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1"
                   srcset="
-                    assets/bandlog/iphone-02-song-bundle-440.webp?v=20261012-r2 440w,
-                    assets/bandlog/iphone-02-song-bundle-880.webp?v=20261012-r2 880w
+                    assets/bandlog/en-US/iphone-02-song-bundle-440.webp?v=20261012-localized-r1 440w,
+                    assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1 880w
                   "
                   sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="합주곡을 묶고 멤버들과 의견을 나누는 화면"
+                  alt="Screen for collecting songs and sharing ideas with bandmates"
                   width="1320"
                   height="2868"
                   loading="lazy"
@@ -277,24 +271,24 @@
                 ></span>
               </a>
               <figcaption>
-                <span class="shot-index">02</span>함께 고르는 합주곡
+                <span class="shot-index">02</span><span class="shot-caption">Songs we pick together</span>
               </figcaption>
             </figure>
             <figure class="gallery-shot">
               <a
                 class="shot-link"
-                href="assets/bandlog/iphone-03-encouragement-880.webp?v=20261012-r2"
-                aria-label="서로에게 보내는 응원 화면 확대"
-                data-caption="서로에게 보내는 응원"
+                href="assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1"
+                aria-label="Encouragement for each other · Enlarge screen"
+                data-caption="Encouragement for each other"
               >
                 <img
-                  src="assets/bandlog/iphone-03-encouragement-880.webp?v=20261012-r2"
+                  src="assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1"
                   srcset="
-                    assets/bandlog/iphone-03-encouragement-440.webp?v=20261012-r2 440w,
-                    assets/bandlog/iphone-03-encouragement-880.webp?v=20261012-r2 880w
+                    assets/bandlog/en-US/iphone-03-encouragement-440.webp?v=20261012-localized-r1 440w,
+                    assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1 880w
                   "
                   sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="밴드 멤버에게 이모지로 가볍게 반응을 보내는 화면"
+                  alt="Screen for sending lighthearted emoji reactions to bandmates"
                   width="1320"
                   height="2868"
                   loading="lazy"
@@ -311,24 +305,24 @@
                 ></span>
               </a>
               <figcaption>
-                <span class="shot-index">03</span>서로에게 보내는 응원
+                <span class="shot-index">03</span><span class="shot-caption">Encouragement for each other</span>
               </figcaption>
             </figure>
             <figure class="gallery-shot">
               <a
                 class="shot-link"
-                href="assets/bandlog/iphone-04-hapju-880.webp?v=20261012-r2"
-                aria-label="한곳에 모인 합주 준비 화면 확대"
-                data-caption="한곳에 모인 합주 준비"
+                href="assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1"
+                aria-label="Rehearsal prep in one place · Enlarge screen"
+                data-caption="Rehearsal prep in one place"
               >
                 <img
-                  src="assets/bandlog/iphone-04-hapju-880.webp?v=20261012-r2"
+                  src="assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1"
                   srcset="
-                    assets/bandlog/iphone-04-hapju-440.webp?v=20261012-r2 440w,
-                    assets/bandlog/iphone-04-hapju-880.webp?v=20261012-r2 880w
+                    assets/bandlog/en-US/iphone-04-hapju-440.webp?v=20261012-localized-r1 440w,
+                    assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1 880w
                   "
                   sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="다음 합주의 일정과 장소, 준비 정보를 확인하는 화면"
+                  alt="Screen showing the next rehearsal’s schedule, location, and preparation"
                   width="1320"
                   height="2868"
                   loading="lazy"
@@ -345,24 +339,24 @@
                 ></span>
               </a>
               <figcaption>
-                <span class="shot-index">04</span>한곳에 모인 합주 준비
+                <span class="shot-index">04</span><span class="shot-caption">Rehearsal prep in one place</span>
               </figcaption>
             </figure>
             <figure class="gallery-shot">
               <a
                 class="shot-link"
-                href="assets/bandlog/iphone-05-practice-reactions-880.webp?v=20261012-r2"
-                aria-label="기록으로 이어지는 연습 화면 확대"
-                data-caption="기록으로 이어지는 연습"
+                href="assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1"
+                aria-label="Practice connected through records · Enlarge screen"
+                data-caption="Practice connected through records"
               >
                 <img
-                  src="assets/bandlog/iphone-05-practice-reactions-880.webp?v=20261012-r2"
+                  src="assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1"
                   srcset="
-                    assets/bandlog/iphone-05-practice-reactions-440.webp?v=20261012-r2 440w,
-                    assets/bandlog/iphone-05-practice-reactions-880.webp?v=20261012-r2 880w
+                    assets/bandlog/en-US/iphone-05-practice-reactions-440.webp?v=20261012-localized-r1 440w,
+                    assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1 880w
                   "
                   sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="연습 비하인드를 사진과 영상으로 보고 리액션을 보내는 화면"
+                  alt="Screen for viewing practice photos and videos and sending reactions"
                   width="1320"
                   height="2868"
                   loading="lazy"
@@ -379,16 +373,16 @@
                 ></span>
               </a>
               <figcaption>
-                <span class="shot-index">05</span>기록으로 이어지는 연습
+                <span class="shot-index">05</span><span class="shot-caption">Practice connected through records</span>
               </figcaption>
             </figure>
           </div>
           <div class="gallery-navigation" hidden>
-            <p>옆으로 넘겨 둘러보세요</p>
+            <p data-i18n="gallery.scroll">Swipe to explore</p>
             <div>
               <button
                 class="icon-button gallery-prev"
-                aria-label="이전 화면으로 스크롤"
+                aria-label="Scroll to the previous screen" data-i18n-aria="gallery.previous"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -403,7 +397,7 @@
                 </svg></button
               ><button
                 class="icon-button gallery-next"
-                aria-label="다음 화면으로 스크롤"
+                aria-label="Scroll to the next screen" data-i18n-aria="gallery.next"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -421,20 +415,16 @@
           </div>
           <div class="product-features">
             <div>
-              <h3>나의 연습을 차곡차곡</h3>
-              <p>
-                밴드에 가입하지 않아도<br />사진과 영상으로 연습을 남깁니다.
-              </p>
+              <h3 data-i18n="feature.1.title">Build your practice log</h3>
+              <p data-i18n="feature.1.body">Save practice with photos and videos,<br />even before you join a band.</p>
             </div>
             <div>
-              <h3>우리 밴드의 준비를 한곳에</h3>
-              <p>
-                합주할 곡과 의견, 일정과 장소를<br />멤버들과 함께 확인합니다.
-              </p>
+              <h3 data-i18n="feature.2.title">Keep band prep in one place</h3>
+              <p data-i18n="feature.2.body">Check songs, ideas, schedules, and locations<br />together with your bandmates.</p>
             </div>
             <div>
-              <h3>말 대신 가벼운 리액션</h3>
-              <p>멤버의 연습에 반응을 보내고<br />함께할 마음을 이어갑니다.</p>
+              <h3 data-i18n="feature.3.title">A reaction instead of words</h3>
+              <p data-i18n="feature.3.body">React to your bandmates’ practice<br />and keep the feeling of playing together alive.</p>
             </div>
           </div>
         </div>
@@ -442,45 +432,40 @@
       <section class="about" id="about" aria-labelledby="about-title">
         <div class="container about-layout">
           <div class="about-intro">
-            <p class="section-label">나로웍스가 일하는 방식</p>
-            <h2 id="about-title">가까운 곳에서<br />시작합니다.</h2>
-            <p>좋아하는 일을 하며 마주친 불편,<br />더 잘 누리고 싶은 일상.</p>
-            <p>
-              우리는 가까운 필요를 작지만 완결된 서비스로 풀고, 비슷한 마음을
-              가진 사람들이 함께 쓸 수 있도록 키웁니다.
-            </p>
+            <p class="section-label" data-i18n="about.label">How NaroWorks works</p>
+            <h2 id="about-title" data-i18n="about.title">We start<br />close to home.</h2>
+            <p data-i18n="about.lead">The friction we meet doing what we love.<br />The everyday moments we want to enjoy more.</p>
+            <p data-i18n="about.description">We turn needs close to us into small, complete services, then help them grow so others who feel the same way can use them too.</p>
           </div>
           <div class="principles">
             <article class="principle">
               <div class="principle-symbol symbol-start" aria-hidden="true">
                 <i></i><i></i>
               </div>
-              <h3>가까이서 시작합니다</h3>
-              <p>우리가 직접 겪거나 충분히 이해한<br />문제를 다룹니다.</p>
+              <h3 data-i18n="principle.1.title">Start close to home</h3>
+              <p data-i18n="principle.1.body">Work on problems we have experienced<br />or understand well.</p>
             </article>
             <article class="principle">
               <div class="principle-symbol symbol-focus" aria-hidden="true">
                 <i></i><i></i><i></i>
               </div>
-              <h3>작게 완성합니다</h3>
-              <p>많은 기능보다 하나의 중요한 경험을<br />제대로 만듭니다.</p>
+              <h3 data-i18n="principle.2.title">Make something small and complete</h3>
+              <p data-i18n="principle.2.body">Build one important experience well<br />before adding more features.</p>
             </article>
             <article class="principle">
               <div class="principle-symbol symbol-continue" aria-hidden="true">
                 <i></i><i></i>
               </div>
-              <h3>계속할 수 있게 합니다</h3>
-              <p>
-                화면에 머문 시간보다 좋아하는 일을<br />이어가는 변화를 봅니다.
-              </p>
+              <h3 data-i18n="principle.3.title">Help people keep going</h3>
+              <p data-i18n="principle.3.body">Look for changes that help people keep doing<br />what they love, beyond time spent on a screen.</p>
             </article>
           </div>
         </div>
       </section>
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <p class="section-label">함께 이야기해요</p>
-          <h2 id="contact-title">좋아하는 일을<br />이어가는 방법.</h2>
+          <p class="section-label" data-i18n="contact.label">Let’s talk</p>
+          <h2 id="contact-title" data-i18n="contact.title">Ways to keep doing<br />what you love.</h2>
           <a class="contact-link" href="mailto:contact@naroworks.com"
             ><span>contact@naroworks.com</span
             ><svg
@@ -500,31 +485,26 @@
     <footer>
       <div class="container footer-inner">
         <div class="footer-top">
-          <p class="company-name">
-            주식회사 나로웍스 <span>Naroworks Inc.</span>
-          </p>
-          <div class="footer-links" aria-label="회사 정책 및 공고">
+          <p class="company-name"><span class="company-primary" data-i18n="company.name">Naroworks Inc.</span><span data-i18n="company.otherName">주식회사 NaroWorks</span></p>
+          <div class="footer-links" aria-label="Company policies and notices" data-i18n-aria="company.links">
             <a
               href="https://naroworks.notion.site/3ded36b356c081e18e78e59c614eac50"
               target="_blank"
               rel="noopener noreferrer"
-              ><strong>개인정보 처리방침</strong></a
+              ><strong data-i18n="company.privacy">Privacy policy</strong></a
             >
             <a
               href="https://naroworks.notion.site/3ded36b356c0813f96fdfa2e56a66511"
               target="_blank"
               rel="noopener noreferrer"
-              >전자공고</a
-            >
+               data-i18n="company.notices">Public notices</a>
           </div>
         </div>
         <div class="company-details">
           <p>
-            <span>대표자 박형기</span><span>사업자등록번호 482-88-03565</span>
+            <span data-i18n="company.representative">Representative: Hyeonggi Park</span><span data-i18n="company.registration">Korean business registration number: 482-88-03565</span>
           </p>
-          <address>
-            경기도 고양시 덕양구 으뜸로 130, 1131호(덕은동, 위프라임트윈타워)
-          </address>
+          <address data-i18n="company.address">Suite 1131, 130 Eutteum-ro, Deogyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea</address>
           <p>
             <a href="mailto:contact@naroworks.com">contact@naroworks.com</a>
           </p>
@@ -532,8 +512,8 @@
         <p class="copyright">© <span id="year">2026</span> Naroworks Inc.</p>
       </div>
     </footer>
-    <dialog class="image-viewer" aria-label="밴드로그 화면 확대">
-      <button class="icon-button viewer-close" aria-label="확대 화면 닫기">
+    <dialog class="image-viewer" aria-label="Enlarged Bandlog screen" data-i18n-aria="viewer.label">
+      <button class="icon-button viewer-close" aria-label="Close enlarged screen" data-i18n-aria="viewer.close">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -547,7 +527,7 @@
       <div class="viewer-content">
         <img class="viewer-image" alt="" />
         <div class="viewer-controls">
-          <button class="icon-button viewer-prev" aria-label="이전 화면">
+          <button class="icon-button viewer-prev" aria-label="Previous screen" data-i18n-aria="viewer.previous">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -561,7 +541,7 @@
             </svg>
           </button>
           <p class="viewer-caption" aria-live="polite"></p>
-          <button class="icon-button viewer-next" aria-label="다음 화면">
+          <button class="icon-button viewer-next" aria-label="Next screen" data-i18n-aria="viewer.next">
             <svg
               viewBox="0 0 24 24"
               fill="none"

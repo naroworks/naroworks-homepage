@@ -80,3 +80,30 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 이전 `hero-background.jpg`는 기존 홈페이지 이력을 위한 자산으로 남겨 두며 개편 화면에서는 사용하지 않는다.
 
 2026-10-12 후속 최신화: 카드 B2/3%·홈 이모지 A·상시 선택 패널과 묶음 사진 clipping 보정본을 동일한 WebP 파생 규격으로 교체했다. 기존 카피·순서·홈페이지 layout을 유지했다. 이미지 URL의 `v=20261012-r2`는 교체된 자산을 브라우저 캐시와 구분한다.
+
+
+## 2026-10-12 언어별 Bandlog 화면
+
+- 원본 저장소: [Bandlog PR #1075](https://github.com/naroworks/bandlog/pull/1075), merge SHA `b0c1de49a7be645ef77347decbd2e72820254bdd`.
+- 확정본: [Figma 99 Ready localized-r1](https://www.figma.com/design/hkc0GBpkjsdaYOqaZyxbBb?node-id=2129-751), 사용자 보관·스토어 저장·홈페이지 언어 대응 요청으로 승인.
+- 일본어 `ja-JP`, 대만 번체 `zh-Hant-TW`, 영어 `en-US`마다 iPhone 5장. 이미지 안 인물·밴드·합주실·카피와 실제 앱 리소스 문구는 같은 Figma 확정본에 포함되어 있다.
+- 원본 `docs/delivery/store-assets/localized/<locale>/app-store/iphone/`의 PNG 1320×2868에서 440px·880px WebP를 파생했다. Pillow LANCZOS, quality 88, method 6. 이미지의 문구·구성·순서·종횡비를 보존한다. 원본 SHA-256은 Bandlog manifest와 확인했다.
+- 사진은 사용자 제공 사진의 모자이크 파생본이다. 출처는 Bandlog `apps/api/src/scenarios/assets/README.md`를 따른다. UI 구성은 Figma export이며 새 사진 생성이나 AI 편집을 수행하지 않았다.
+
+| 언어 | 원본 파일 | Ready node | 원본 SHA-256 |
+| --- | --- | --- | --- |
+| ja-JP | iphone-01-home.png | 2130:751 | 43a8102ec06d9e75e70b0649a30ade48b93808865905e5affb7afafe6562b85e |
+| ja-JP | iphone-02-song-bundle.png | 2130:1234 | dc221b8a959b45248105b1107a8d85a93552c67c0e4dc2eecbca4d24a1e3eb1b |
+| ja-JP | iphone-03-encouragement.png | 2130:1470 | ab4280a42311776ba9d1ddbefc219017fa230eb4cda9f8f0671456c2a981bd62 |
+| ja-JP | iphone-04-hapju.png | 2130:1671 | 87972e8104859f4a06dad2c34fcdc59cc787d947ce421ad5635a0a1fe41bcaae |
+| ja-JP | iphone-05-practice-reactions.png | 2130:2013 | 1067ae204412bd904d46e086758f791051470c0761271c1459641ba9e0fc9014 |
+| zh-Hant-TW | iphone-01-home.png | 2131:2030 | 19e3cc5b62593ce1a67c5d63ede4c2dbd96fd17cd39e1ddd5790f54cb116d69a |
+| zh-Hant-TW | iphone-02-song-bundle.png | 2131:2513 | 545b15b828bd1df282ec521762af9bc8ff55ef6e1c61c262f8c3486452f58be3 |
+| zh-Hant-TW | iphone-03-encouragement.png | 2131:2749 | da41a42c50dd76fe4f6d5f4834dee45c2043c8be5f1122ab2fd884ab7c9195fb |
+| zh-Hant-TW | iphone-04-hapju.png | 2131:2950 | a3ce503c7bdba42c4e639dd8e64bc1d9f8f5a62adc4f21771b466dfeb22e0d39 |
+| zh-Hant-TW | iphone-05-practice-reactions.png | 2131:3292 | 9cfd5cb598f03495eecd79637791ff5388560d38ec7a3763fa1c60ee358c37b0 |
+| en-US | iphone-01-home.png | 2131:4759 | e9db9f0899e787093986a212b6df61b1257e921b1dfd8c6ffd5b84accf627d22 |
+| en-US | iphone-02-song-bundle.png | 2131:5242 | 6b6718bffea57f921d7b7c7aec3ae78643ab086887a115d550762c0692e36855 |
+| en-US | iphone-03-encouragement.png | 2131:5478 | c9a5e43e7cd3e19bc7cd58e7fd849e5ea032ee6f89426988b02f55e641e2b331 |
+| en-US | iphone-04-hapju.png | 2131:5679 | 03e5097ac2300efc7ebcc651863748a8ed0c953ba8b00725169de48fe17c3828 |
+| en-US | iphone-05-practice-reactions.png | 2131:6021 | f36601c7d91409d42d3ea63bdfd2940e8a66f6697be11af926dd5236a19d1336 |

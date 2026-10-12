@@ -21,11 +21,24 @@ python3 -m http.server 4173 --bind 127.0.0.1
 - `index.html`: 회사 소개, 밴드로그의 승인된 iPhone 화면 5장, 공시·연락처.
 - `styles.css`: 반응형 레이아웃과 타이포그래피. 기존 Pretendard·LINE Seed KR 웹폰트를 자체 제공.
 - `site.js`: 첫 화면 등장, 갤러리 탐색과 확대. 외부 라이브러리·추적 도구 없음.
+- `localization.mjs`: 한국어·일본어·대만 번체·영어 본문과 접근성 문구, 언어 감지, 갤러리 이미지 전환.
 - `assets/bandlog/`: 승인된 스토어 화면의 비율을 보존한 WebP 파생본. 원본·체크섬은 [자산 출처](ASSET_PROVENANCE.md)를 따름.
 - `assets/icons/`: Apple·Google Play SVG. 두 스토어 표시는 출시 준비 상태이며 링크와 클릭 동작이 없음.
 - [개편 방향과 검증 조건](docs/homepage-redesign.md)
 
 JavaScript 없이도 본문·이미지·연락처를 이용할 수 있습니다. 동작 줄이기 설정에서는 등장 애니메이션과 부드러운 스크롤을 끕니다. 확대 화면은 Escape와 좌우 방향키를 지원합니다.
+
+## 언어
+
+상단 dropdown에서 한국어·日本語·繁體中文（台灣）·English를 선택합니다. 수동 선택은 `localStorage`의 `naroworks.locale`에 저장하며 이후 방문에도 우선합니다. 저장된 선택이 없으면 `navigator.languages`의 선호 순서에서 지원하는 언어를 선택하고, 일치하는 언어가 없으면 영어를 표시합니다. 번체 중국어는 `zh-Hant` 또는 TW·HK·MO 지역을 인식하며 간체 중국어는 지원하지 않습니다.
+
+언어를 바꾸면 본문·문서 제목·접근성 문구·갤러리 캡션과 iPhone 이미지 5장이 함께 바뀝니다. 외국어 썸네일은 Bandlog Figma 99의 같은 Ready r1 원본에서 만들었습니다. JavaScript가 꺼진 경우 영어 본문과 영어 이미지를 제공합니다. 브라우저 저장이 차단돼도 현재 방문의 선택은 동작합니다. 회사의 법정 명칭·등록번호와 기존 공개 정책 링크는 보존합니다.
+
+언어 감지·선택 우선순위·번역 누락 검증:
+
+```sh
+node --test test/localization.test.mjs
+```
 
 ## Deployment
 
