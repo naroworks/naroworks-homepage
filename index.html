@@ -4,115 +4,578 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>나로웍스 — 나로 시작해 좋아하는 일이 계속되도록</title>
-    <meta name="description" content="나로웍스는 직접 겪는 불편에서 출발해, 좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다." />
-    <meta name="theme-color" content="#f7f8f6" />
+    <meta
+      name="description"
+      content="나로웍스는 직접 겪는 불편에서 출발해, 좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다."
+    />
+    <meta name="theme-color" content="#f2f5f7" />
     <link rel="canonical" href="https://www.naroworks.com/" />
-    <link rel="icon" href="favicon-naro-32.png?v=3" type="image/png" sizes="32x32" />
-    <link rel="icon" href="favicon-naro-16.png?v=3" type="image/png" sizes="16x16" />
-    <link rel="icon" href="favicon-naro.png?v=3" type="image/png" sizes="512x512" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" sizes="180x180" />
-    <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/LINESeedKR-Bd.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="icon"
+      href="favicon-naro-32.png?v=3"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="favicon-naro-16.png?v=3"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="favicon-naro.png?v=3"
+      type="image/png"
+      sizes="512x512"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="apple-touch-icon.png?v=3"
+      sizes="180x180"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/PretendardVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/LINESeedKR-Bd.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="about.css" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content="나로웍스" />
-    <meta property="og:title" content="나로웍스 — 나로 시작해 좋아하는 일이 계속되도록" />
-    <meta property="og:description" content="좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다." />
+    <meta
+      property="og:title"
+      content="나로웍스 — 나로 시작해 좋아하는 일이 계속되도록"
+    />
+    <meta
+      property="og:description"
+      content="좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다."
+    />
     <meta property="og:url" content="https://www.naroworks.com/" />
-    <meta property="og:image" content="https://www.naroworks.com/assets/og.png" />
+    <meta
+      property="og:image"
+      content="https://www.naroworks.com/assets/og.png"
+    />
     <meta property="og:image:width" content="1684" />
     <meta property="og:image:height" content="934" />
     <meta property="og:image:alt" content="나로웍스 CI" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="나로웍스 — 나로 시작해 좋아하는 일이 계속되도록" />
-    <meta name="twitter:description" content="좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다." />
-    <meta name="twitter:image" content="https://www.naroworks.com/assets/og.png" />
+    <meta
+      name="twitter:title"
+      content="나로웍스 — 나로 시작해 좋아하는 일이 계속되도록"
+    />
+    <meta
+      name="twitter:description"
+      content="좋아하는 일을 더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.naroworks.com/assets/og.png"
+    />
+    <script src="site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 바로가기</a>
-    <header class="site-header">
+    <header class="site-header" id="top">
       <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="나로웍스 홈">
-          <img src="assets/naroworks-english-wordmark.png" alt="NaroWorks" width="1806" height="312" />
-        </a>
+        <a class="brand" href="#top" aria-label="나로웍스 홈"
+          ><img
+            src="assets/naroworks-english-wordmark.png"
+            alt="NaroWorks"
+            width="1806"
+            height="312"
+        /></a>
         <nav aria-label="주요 메뉴">
-          <a href="#about">회사</a>
-          <a href="mailto:contact@naroworks.com">Contact</a>
+          <a href="#products">제품</a><a href="#about">회사</a
+          ><a href="#contact">문의</a>
         </nav>
       </div>
     </header>
     <main id="main">
-      <section class="hero" id="top">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <h1><span>나</span>로 시작해<br /><span>좋아하는 일</span>이<br />계속되도록</h1>
-            <p class="hero-description">
-              나로웍스는 우리가 직접 겪는 불편에서 출발해, 좋아하는 일을
-              더 쉽게 시작하고 오래 이어갈 수 있는 서비스를 만듭니다.
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-orbit" aria-hidden="true">
+            <svg viewBox="0 0 440 440" fill="none">
+              <ellipse
+                cx="220"
+                cy="220"
+                rx="188"
+                ry="83"
+                transform="rotate(-38 220 220)"
+              />
+              <ellipse
+                cx="220"
+                cy="220"
+                rx="188"
+                ry="83"
+                transform="rotate(38 220 220)"
+              /></svg
+            ><span></span>
+          </div>
+          <h1 id="hero-title">
+            <span class="hero-line">나로 시작해</span
+            ><span class="hero-line">좋아하는 일이</span
+            ><span class="hero-line hero-line-outline">계속되도록</span>
+          </h1>
+          <div class="hero-bottom">
+            <p>
+              나로웍스는 우리가 직접 겪는 불편에서 출발해,<br
+                class="desktop-break"
+              />
+              좋아하는 일을 더 쉽게 시작하고<br class="desktop-break" />
+              오래 이어갈 수 있는 서비스를 만듭니다.
             </p>
+            <a class="explore-link" href="#products"
+              ><span>우리가 만드는 서비스</span
+              ><span class="circle-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="products" id="products" aria-labelledby="bandlog-title">
+        <div class="container">
+          <div class="product-topline">
+            <p>우리가 만드는 서비스</p>
+            <span>Bandlog</span>
+          </div>
+          <div class="product-intro">
+            <div>
+              <div class="product-brand">
+                <img
+                  class="product-symbol"
+                  src="assets/bandlog/symbol.webp"
+                  alt=""
+                  width="512"
+                  height="512"
+                  loading="lazy"
+                /><span>밴드로그</span>
+              </div>
+              <h2 id="bandlog-title">내 연습부터,<br />우리 밴드까지.</h2>
+            </div>
+            <div class="product-description">
+              <p>
+                혼자 남긴 연습이 모이고,<br />함께할 다음 합주로 이어지도록.
+              </p>
+              <p>
+                밴드로그는 개인 연습 기록과 밴드 활동을 한곳에 모으는 앱입니다.
+                연습의 순간을 남기고, 합주곡과 일정을 준비하고, 서로에게 가벼운
+                리액션을 보내세요.
+              </p>
+              <div class="store-badges" aria-label="스토어 출시 준비 중">
+                <div class="store-badge">
+                  <img
+                    src="assets/icons/apple.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  /><span
+                    ><strong>App Store</strong><small>준비 중</small></span
+                  >
+                </div>
+                <div class="store-badge">
+                  <img
+                    src="assets/icons/google-play.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                  /><span
+                    ><strong>Google Play</strong><small>준비 중</small></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-heading">
+            <span>화면을 눌러 자세히 보기</span>
+          </div>
+          <div
+            class="product-gallery"
+            tabindex="0"
+            role="region"
+            aria-label="밴드로그 iPhone 화면 5장"
+          >
+            <figure class="gallery-shot">
+              <a
+                class="shot-link"
+                href="assets/bandlog/iphone-01-home-880.webp"
+                aria-label="나의 연습과 우리 밴드 화면 확대"
+                data-caption="나의 연습과 우리 밴드"
+              >
+                <img
+                  src="assets/bandlog/iphone-01-home-880.webp"
+                  srcset="
+                    assets/bandlog/iphone-01-home-440.webp 440w,
+                    assets/bandlog/iphone-01-home-880.webp 880w
+                  "
+                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
+                  alt="개인 연습 기록과 참여 중인 밴드를 함께 보는 홈 화면"
+                  width="1320"
+                  height="2868"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="shot-expand" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+                ></span>
+              </a>
+              <figcaption>
+                <span class="shot-index">01</span>나의 연습과 우리 밴드
+              </figcaption>
+            </figure>
+            <figure class="gallery-shot">
+              <a
+                class="shot-link"
+                href="assets/bandlog/iphone-02-song-bundle-880.webp"
+                aria-label="함께 고르는 합주곡 화면 확대"
+                data-caption="함께 고르는 합주곡"
+              >
+                <img
+                  src="assets/bandlog/iphone-02-song-bundle-880.webp"
+                  srcset="
+                    assets/bandlog/iphone-02-song-bundle-440.webp 440w,
+                    assets/bandlog/iphone-02-song-bundle-880.webp 880w
+                  "
+                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
+                  alt="합주곡을 묶고 멤버들과 의견을 나누는 화면"
+                  width="1320"
+                  height="2868"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="shot-expand" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+                ></span>
+              </a>
+              <figcaption>
+                <span class="shot-index">02</span>함께 고르는 합주곡
+              </figcaption>
+            </figure>
+            <figure class="gallery-shot">
+              <a
+                class="shot-link"
+                href="assets/bandlog/iphone-03-encouragement-880.webp"
+                aria-label="서로에게 보내는 응원 화면 확대"
+                data-caption="서로에게 보내는 응원"
+              >
+                <img
+                  src="assets/bandlog/iphone-03-encouragement-880.webp"
+                  srcset="
+                    assets/bandlog/iphone-03-encouragement-440.webp 440w,
+                    assets/bandlog/iphone-03-encouragement-880.webp 880w
+                  "
+                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
+                  alt="밴드 멤버에게 이모지로 가볍게 반응을 보내는 화면"
+                  width="1320"
+                  height="2868"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="shot-expand" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+                ></span>
+              </a>
+              <figcaption>
+                <span class="shot-index">03</span>서로에게 보내는 응원
+              </figcaption>
+            </figure>
+            <figure class="gallery-shot">
+              <a
+                class="shot-link"
+                href="assets/bandlog/iphone-04-hapju-880.webp"
+                aria-label="한곳에 모인 합주 준비 화면 확대"
+                data-caption="한곳에 모인 합주 준비"
+              >
+                <img
+                  src="assets/bandlog/iphone-04-hapju-880.webp"
+                  srcset="
+                    assets/bandlog/iphone-04-hapju-440.webp 440w,
+                    assets/bandlog/iphone-04-hapju-880.webp 880w
+                  "
+                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
+                  alt="다음 합주의 일정과 장소, 준비 정보를 확인하는 화면"
+                  width="1320"
+                  height="2868"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="shot-expand" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+                ></span>
+              </a>
+              <figcaption>
+                <span class="shot-index">04</span>한곳에 모인 합주 준비
+              </figcaption>
+            </figure>
+            <figure class="gallery-shot">
+              <a
+                class="shot-link"
+                href="assets/bandlog/iphone-05-practice-reactions-880.webp"
+                aria-label="기록으로 이어지는 연습 화면 확대"
+                data-caption="기록으로 이어지는 연습"
+              >
+                <img
+                  src="assets/bandlog/iphone-05-practice-reactions-880.webp"
+                  srcset="
+                    assets/bandlog/iphone-05-practice-reactions-440.webp 440w,
+                    assets/bandlog/iphone-05-practice-reactions-880.webp 880w
+                  "
+                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
+                  alt="연습 비하인드를 사진과 영상으로 보고 리액션을 보내는 화면"
+                  width="1320"
+                  height="2868"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="shot-expand" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+                ></span>
+              </a>
+              <figcaption>
+                <span class="shot-index">05</span>기록으로 이어지는 연습
+              </figcaption>
+            </figure>
+          </div>
+          <div class="gallery-navigation" hidden>
+            <p>옆으로 넘겨 둘러보세요</p>
+            <div>
+              <button
+                class="icon-button gallery-prev"
+                aria-label="이전 화면으로 스크롤"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" />
+                </svg></button
+              ><button
+                class="icon-button gallery-next"
+                aria-label="다음 화면으로 스크롤"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-features">
+            <div>
+              <h3>나의 연습을 차곡차곡</h3>
+              <p>
+                밴드에 가입하지 않아도<br />사진과 영상으로 연습을 남깁니다.
+              </p>
+            </div>
+            <div>
+              <h3>우리 밴드의 준비를 한곳에</h3>
+              <p>
+                합주할 곡과 의견, 일정과 장소를<br />멤버들과 함께 확인합니다.
+              </p>
+            </div>
+            <div>
+              <h3>말 대신 가벼운 리액션</h3>
+              <p>멤버의 연습에 반응을 보내고<br />함께할 마음을 이어갑니다.</p>
+            </div>
           </div>
         </div>
       </section>
       <section class="about" id="about" aria-labelledby="about-title">
-        <div class="container">
-          <div class="section-meta"><p class="eyebrow">OUR APPROACH</p><span>가까운 필요에서, 오래 쓰이는 서비스로</span></div>
+        <div class="container about-layout">
           <div class="about-intro">
-            <h2 id="about-title">가까운 곳에서<br />시작합니다<span class="accent-dot">.</span></h2>
-            <p>좋아하는 일을 하며 마주친 불편,<br />더 잘 누리고 싶은 일상.<br /><br />우리는 가까운 필요를 작지만 완결된 서비스로 풀고,<br class="desktop-break" /> 비슷한 마음을 가진 사람들이 함께 쓸 수 있도록 키웁니다.</p>
+            <p class="section-label">나로웍스가 일하는 방식</p>
+            <h2 id="about-title">가까운 곳에서<br />시작합니다.</h2>
+            <p>좋아하는 일을 하며 마주친 불편,<br />더 잘 누리고 싶은 일상.</p>
+            <p>
+              우리는 가까운 필요를 작지만 완결된 서비스로 풀고, 비슷한 마음을
+              가진 사람들이 함께 쓸 수 있도록 키웁니다.
+            </p>
           </div>
-          <div class="principles" aria-label="나로웍스의 제품 원칙">
+          <div class="principles">
             <article class="principle">
-              <span class="principle-number">01</span>
-              <div class="principle-symbol symbol-start" aria-hidden="true"><i></i><i></i></div>
+              <div class="principle-symbol symbol-start" aria-hidden="true">
+                <i></i><i></i>
+              </div>
               <h3>가까이서 시작합니다</h3>
-              <p>우리가 직접 겪거나 충분히 이해한<br class="desktop-break" /> 문제를 다룹니다.</p>
+              <p>우리가 직접 겪거나 충분히 이해한<br />문제를 다룹니다.</p>
             </article>
             <article class="principle">
-              <span class="principle-number">02</span>
-              <div class="principle-symbol symbol-focus" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="principle-symbol symbol-focus" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
               <h3>작게 완성합니다</h3>
-              <p>많은 기능보다 하나의 중요한 경험을<br class="desktop-break" /> 제대로 만듭니다.</p>
+              <p>많은 기능보다 하나의 중요한 경험을<br />제대로 만듭니다.</p>
             </article>
             <article class="principle">
-              <span class="principle-number">03</span>
-              <div class="principle-symbol symbol-continue" aria-hidden="true"><i></i><i></i></div>
+              <div class="principle-symbol symbol-continue" aria-hidden="true">
+                <i></i><i></i>
+              </div>
               <h3>계속할 수 있게 합니다</h3>
-              <p>화면에 머문 시간보다 좋아하는 일을<br class="desktop-break" /> 이어가는 변화를 봅니다.</p>
+              <p>
+                화면에 머문 시간보다 좋아하는 일을<br />이어가는 변화를 봅니다.
+              </p>
             </article>
           </div>
         </div>
       </section>
-      <section class="contact" id="contact">
-        <div class="container contact-inner">
-          <p class="section-label">Contact</p>
-          <div>
-            <h2>좋아하는 일을 이어가는 방법을<br />함께 이야기합니다.</h2>
-            <a href="mailto:contact@naroworks.com">contact@naroworks.com</a>
-          </div>
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <p class="section-label">함께 이야기해요</p>
+          <h2 id="contact-title">좋아하는 일을<br />이어가는 방법.</h2>
+          <a class="contact-link" href="mailto:contact@naroworks.com"
+            ><span>contact@naroworks.com</span
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
         </div>
       </section>
     </main>
     <footer>
       <div class="container footer-inner">
         <div class="footer-top">
-          <p class="company-name">주식회사 나로웍스 <span>Naroworks Inc.</span></p>
+          <p class="company-name">
+            주식회사 나로웍스 <span>Naroworks Inc.</span>
+          </p>
           <div class="footer-links" aria-label="회사 정책 및 공고">
-            <a href="https://naroworks.notion.site/3ded36b356c081e18e78e59c614eac50" target="_blank" rel="noopener noreferrer"><strong>개인정보 처리방침</strong></a>
-            <a href="https://naroworks.notion.site/3ded36b356c0813f96fdfa2e56a66511" target="_blank" rel="noopener noreferrer">전자공고</a>
+            <a
+              href="https://naroworks.notion.site/3ded36b356c081e18e78e59c614eac50"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>개인정보 처리방침</strong></a
+            >
+            <a
+              href="https://naroworks.notion.site/3ded36b356c0813f96fdfa2e56a66511"
+              target="_blank"
+              rel="noopener noreferrer"
+              >전자공고</a
+            >
           </div>
         </div>
         <div class="company-details">
-          <p><span>대표자 박형기</span><span>사업자등록번호 482-88-03565</span></p>
-          <address>경기도 고양시 덕양구 으뜸로 130, 1131호(덕은동, 위프라임트윈타워)</address>
-          <p><a href="mailto:contact@naroworks.com">contact@naroworks.com</a></p>
+          <p>
+            <span>대표자 박형기</span><span>사업자등록번호 482-88-03565</span>
+          </p>
+          <address>
+            경기도 고양시 덕양구 으뜸로 130, 1131호(덕은동, 위프라임트윈타워)
+          </address>
+          <p>
+            <a href="mailto:contact@naroworks.com">contact@naroworks.com</a>
+          </p>
         </div>
         <p class="copyright">© <span id="year">2026</span> Naroworks Inc.</p>
       </div>
     </footer>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <dialog class="image-viewer" aria-label="밴드로그 화면 확대">
+      <button class="icon-button viewer-close" aria-label="확대 화면 닫기">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+      <div class="viewer-content">
+        <img class="viewer-image" alt="" />
+        <div class="viewer-controls">
+          <button class="icon-button viewer-prev" aria-label="이전 화면">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" />
+            </svg>
+          </button>
+          <p class="viewer-caption" aria-live="polite"></p>
+          <button class="icon-button viewer-next" aria-label="다음 화면">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
