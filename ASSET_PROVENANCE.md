@@ -107,3 +107,7 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 | en-US | iphone-03-encouragement.png | 2131:5478 | c9a5e43e7cd3e19bc7cd58e7fd849e5ea032ee6f89426988b02f55e641e2b331 |
 | en-US | iphone-04-hapju.png | 2131:5679 | 03e5097ac2300efc7ebcc651863748a8ed0c953ba8b00725169de48fe17c3828 |
 | en-US | iphone-05-practice-reactions.png | 2131:6021 | f36601c7d91409d42d3ea63bdfd2940e8a66f6697be11af926dd5236a19d1336 |
+
+## 2026-10-12 일본어 バンドネコ 브랜드
+
+일본어에서만 バンドネコ 명칭·승인 고양이 심볼·흰색 Thin 워드마크를 표시한다. Figma 브랜드 Ready 2182:69, 일본어 스토어 Ready 2189:751에서 승인했다. 스토어 PNG 1320×2868를 기존 440/880px WebP 규격(Pillow LANCZOS, quality88, method6)으로 파생했다. 고양이 RGBA는 156×156 lossless WebP, 흰색 워드마크는 500×127 lossless WebP다. 다른 언어의 자산·본문은 기존 그대로이며 언어 복귀 시 기존 심볼을 사용한다.

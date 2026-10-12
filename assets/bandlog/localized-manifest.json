@@ -55,53 +55,53 @@
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-01-home-440.webp",
-      "bytes": 38826,
-      "sha256": "f4c1025ac014e566013cd271f449bcd2e82b39fb21c8b172217467903c09b6d4"
+      "bytes": 38698,
+      "sha256": "08568edd6f189f534e1416f880c0ff1182343ebf22c87e9e02f6e114b3e267f9"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-01-home-880.webp",
-      "bytes": 96290,
-      "sha256": "40fc0f007de7b7b800c9d09fd46dc0b89b04ed44cd4bcdf811fd376ed52e7afe"
+      "bytes": 96242,
+      "sha256": "5f57611a36b226b64b15a410c5a0bd11f59667b97698fec12a8b56627dc3e6ed"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-02-song-bundle-440.webp",
-      "bytes": 32456,
-      "sha256": "88e036de59bfdaf57955d2c803c8770cb2e6a13507f3270edb3621e7d33897e1"
+      "bytes": 32450,
+      "sha256": "cd266df523e60a19701de77b4fa8770acc813683d8d437afc9c4f60d849b3126"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-02-song-bundle-880.webp",
-      "bytes": 79784,
-      "sha256": "34247d34b266239efa7cea5804b945ab9854dabcc3728930f21294efb8950e19"
+      "bytes": 79790,
+      "sha256": "732a92e5dfdf7ede66871d15c2fd470b47f7a8bea0f09354b7de31d3760f4575"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-03-encouragement-440.webp",
-      "bytes": 32718,
-      "sha256": "6344a77885034f8663ecaa43aa92aef8ec73199b2c4b645371a7298937274f77"
+      "bytes": 32886,
+      "sha256": "6d54bd3bbcf7122ae46990d84f68f7e6cc16ff5011e54bc263075f984d576f04"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-03-encouragement-880.webp",
-      "bytes": 76110,
-      "sha256": "32d187eefee853acb112fbed96d66cc65c5b20ca170b28a9294f779f94ac4d6c"
+      "bytes": 76240,
+      "sha256": "15f6342e2312f997b0423a368f93542bdeb1c4e59d13a2428c2826308b486a91"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-04-hapju-440.webp",
-      "bytes": 27706,
-      "sha256": "489e151d56db62571927114ec5f8413516da072e4320f4bf6b6d3ede0c602e1d"
+      "bytes": 27690,
+      "sha256": "d5321e28ae293ecd5c9b60ef2693a9bce33e4fd83d8eddd25d29046214a7c5a6"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-04-hapju-880.webp",
-      "bytes": 66900,
-      "sha256": "323d408336fff32873fcd742abd5230c59504d4f915c2851ce8e6b19d7a3c5d7"
+      "bytes": 66874,
+      "sha256": "d2beb5ca7c0fd4d838307ac1ce85c31268f82d312d3802e13b61bc45f158f5c0"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-05-practice-reactions-440.webp",
-      "bytes": 40798,
-      "sha256": "78c0a088cdc7d2050d4a777ea94d3b1664604b900924aeeb65c1819ebf79fa2b"
+      "bytes": 40738,
+      "sha256": "32ecf9116dd1400d9e9b64a4788983ec5bc2a6995984899c2e4cbda86537e9fd"
     },
     {
       "path": "assets/bandlog/ja-JP/iphone-05-practice-reactions-880.webp",
-      "bytes": 96038,
-      "sha256": "e48fbd2660d5fef99bc0bc9023539b017dc2ec2005ab6db442c70a7bd9924824"
+      "bytes": 95936,
+      "sha256": "ae9364cb518c7696074f057d1a334a56d1950a755ab0811961a1d27f000127f9"
     },
     {
       "path": "assets/bandlog/zh-Hant-TW/iphone-01-home-440.webp",
@@ -152,6 +152,18 @@
       "path": "assets/bandlog/zh-Hant-TW/iphone-05-practice-reactions-880.webp",
       "bytes": 92672,
       "sha256": "3ac626af87c91ad278b6f626c4aed95c9a30c3d67de63efffa7cd37fca48c556"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/symbol.webp",
+      "bytes": 11814,
+      "sha256": "d75b89e8b09aae9baab17b771c9ece41f5d84ff5868e710871e1d1e1e9f6dc31"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/wordmark.webp",
+      "bytes": 5060,
+      "sha256": "5860e04467420e39a40a8c55e98bad66f50af9396f22e56c7dfbb537f73130fd"
     }
-  ]
+  ],
+  "japaneseReadySectionId": "2189:751",
+  "japaneseBrand": "バンドネコ"
 }
