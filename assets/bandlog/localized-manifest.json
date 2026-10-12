@@ -165,5 +165,7 @@
     }
   ],
   "japaneseReadySectionId": "2189:751",
-  "japaneseBrand": "バンドネコ"
+  "japaneseBrand": "バンドネコ",
+  "japaneseSourcePR": "https://github.com/naroworks/bandlog/pull/1093",
+  "japaneseSourceCommit": "2e36dc3c"
 }

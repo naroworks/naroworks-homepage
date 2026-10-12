@@ -111,3 +111,5 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 ## 2026-10-12 일본어 バンドネコ 브랜드
 
 일본어에서만 バンドネコ 명칭·승인 고양이 심볼·흰색 Thin 워드마크를 표시한다. Figma 브랜드 Ready 2182:69, 일본어 스토어 Ready 2189:751에서 승인했다. 스토어 PNG 1320×2868를 기존 440/880px WebP 규격(Pillow LANCZOS, quality88, method6)으로 파생했다. 고양이 RGBA는 156×156 lossless WebP, 흰색 워드마크는 500×127 lossless WebP다. 다른 언어의 자산·본문은 기존 그대로이며 언어 복귀 시 기존 심볼을 사용한다.
+
+일본어 자산의 저장소 전달 근거: [Bandlog PR #1093](https://github.com/naroworks/bandlog/pull/1093), source head `2e36dc3c`. 이 SHA에서 저장한 일본어 PNG와 같은 파일을 사용했다.
