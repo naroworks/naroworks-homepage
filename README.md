@@ -31,8 +31,6 @@ JavaScript 없이도 본문·이미지·연락처를 이용할 수 있습니다.
 
 `main` branch의 repository root가 GitHub Pages source입니다. `CNAME`은 `www.naroworks.com`으로 고정합니다. PR branch의 작업을 공개하려면 별도 검토 후 main 반영이 필요합니다.
 
-2026-10-12 개편 작업은 사용자 요청에 따라 **로컬 미리보기와 PR까지만** 진행합니다.
-
 ## Brand assets
 
 정규 Naroworks CI와 기존 회사 핵심 문구를 재사용합니다. 폰트·이미지·스토어 아이콘의 출처와 처리 방법은 [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md)에 기록합니다. CI 형태나 색상을 변경할 때는 회사 workspace의 브랜드 기준을 먼저 갱신합니다.

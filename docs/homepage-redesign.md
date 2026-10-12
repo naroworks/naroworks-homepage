@@ -1,6 +1,6 @@
 # 홈페이지 개편과 밴드로그 소개
 
-2026-10-12 사용자 요청. 범위는 로컬 미리보기와 PR이며 배포하지 않는다.
+2026-10-12 사용자 요청. 로컬 미리보기와 PR 검토 후, 사용자가 현재 화면의 PR 머지와 공개 배포를 승인했다.
 
 ## 디자인 방향
 
@@ -43,7 +43,7 @@
 - JavaScript가 없어도 본문과 스토어 이미지, 회사 공시와 연락처를 볼 수 있다.
 - reduced motion에서는 등장 애니메이션과 부드러운 스크롤을 중지한다.
 - Apple·Google Play 표시에는 `href`, click handler, 다운로드 문구를 넣지 않는다.
-- 로컬 화면을 확인하고 PR만 생성한다. `main` 갱신, Pages 배포, Store 배포는 수행하지 않는다.
+- 검토한 화면의 PR을 `main`에 머지하고 GitHub Pages 배포 성공 및 공개 파일 일치를 확인한다.
 
 ## 검증 결과
 
@@ -61,6 +61,6 @@
 
 [데스크톱 첫 화면](previews/desktop-hero.png) · [모바일 첫 화면](previews/mobile-hero.png) · [브라우저 검사 결과](previews/verification.json)
 
-GitHub Pages source는 `main`의 `/`임을 읽기로 확인했다. branch와 PR만 생성하고 배포하지 않는다.
+GitHub Pages source는 `main`의 `/`임을 읽기로 확인했다. 사용자가 PR #8의 현재 화면을 검토하고 머지·배포를 요청했다. 실제 배포 결과는 PR #8과 서비스 운영 일감에 연결한다.
 
 2026-10-12 후속 검토: `밴드로그의 다섯 장면` 문구와 카드의 기울기·높낮이·스크롤 펼침을 제거했다. 724px와 1800px 미리보기에서 다섯 카드의 top이 같고 transform이 모두 `none`이며 페이지 가로 넘침이 없음을 확인했다.
