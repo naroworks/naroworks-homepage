@@ -1,0 +1,157 @@
+{
+  "sourcePR": "https://github.com/naroworks/bandlog/pull/1075",
+  "sourceMergeSHA": "b0c1de49a7be645ef77347decbd2e72820254bdd",
+  "readySectionId": "2129:751",
+  "files": [
+    {
+      "path": "assets/bandlog/en-US/iphone-01-home-440.webp",
+      "bytes": 38594,
+      "sha256": "b9abef2cb5815ad3444b8127d4c27484fff7b7b203881fccad1ff2c0b55964b4"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-01-home-880.webp",
+      "bytes": 94278,
+      "sha256": "39d1037a3bbeb36e6ece9aff41f3e532808632e695e4e859c170dd288a7a6ec6"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-02-song-bundle-440.webp",
+      "bytes": 32528,
+      "sha256": "51ab799b40737fd5e22a49d68151b3d497f7871081d9d91f46eaff8b80ea0950"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-02-song-bundle-880.webp",
+      "bytes": 78812,
+      "sha256": "7cec90c8ea382be02a67620041f237caa4407aa85a696448309067483c7a70dc"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-03-encouragement-440.webp",
+      "bytes": 33578,
+      "sha256": "eaa9ae65d65341e66e909d49a8d904c2b5a4900da45709b70be4f918b92e5d8d"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-03-encouragement-880.webp",
+      "bytes": 76308,
+      "sha256": "1df2502f166503bd5a12aeb61139a5b056c1c1b2a612985a99dc4c7655be0ea8"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-04-hapju-440.webp",
+      "bytes": 29138,
+      "sha256": "eb0dbe86ca292227dd5493dd51af4ede4079da30a7fa80c14f15b9fe63156ada"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-04-hapju-880.webp",
+      "bytes": 69364,
+      "sha256": "83d16bec1f8d163a9ebd9e7e29568bfb70b225dbd47e71d1410d6963aea93215"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-05-practice-reactions-440.webp",
+      "bytes": 42002,
+      "sha256": "59cfa11114b0c10f60d1d48862adf0e99aca220a936c80f08419e5741e19a355"
+    },
+    {
+      "path": "assets/bandlog/en-US/iphone-05-practice-reactions-880.webp",
+      "bytes": 96790,
+      "sha256": "65ce6b32092fd5acdc59caea892cd3837fa096f758b8331b35374829d19fa198"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-01-home-440.webp",
+      "bytes": 38826,
+      "sha256": "f4c1025ac014e566013cd271f449bcd2e82b39fb21c8b172217467903c09b6d4"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-01-home-880.webp",
+      "bytes": 96290,
+      "sha256": "40fc0f007de7b7b800c9d09fd46dc0b89b04ed44cd4bcdf811fd376ed52e7afe"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-02-song-bundle-440.webp",
+      "bytes": 32456,
+      "sha256": "88e036de59bfdaf57955d2c803c8770cb2e6a13507f3270edb3621e7d33897e1"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-02-song-bundle-880.webp",
+      "bytes": 79784,
+      "sha256": "34247d34b266239efa7cea5804b945ab9854dabcc3728930f21294efb8950e19"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-03-encouragement-440.webp",
+      "bytes": 32718,
+      "sha256": "6344a77885034f8663ecaa43aa92aef8ec73199b2c4b645371a7298937274f77"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-03-encouragement-880.webp",
+      "bytes": 76110,
+      "sha256": "32d187eefee853acb112fbed96d66cc65c5b20ca170b28a9294f779f94ac4d6c"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-04-hapju-440.webp",
+      "bytes": 27706,
+      "sha256": "489e151d56db62571927114ec5f8413516da072e4320f4bf6b6d3ede0c602e1d"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-04-hapju-880.webp",
+      "bytes": 66900,
+      "sha256": "323d408336fff32873fcd742abd5230c59504d4f915c2851ce8e6b19d7a3c5d7"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-05-practice-reactions-440.webp",
+      "bytes": 40798,
+      "sha256": "78c0a088cdc7d2050d4a777ea94d3b1664604b900924aeeb65c1819ebf79fa2b"
+    },
+    {
+      "path": "assets/bandlog/ja-JP/iphone-05-practice-reactions-880.webp",
+      "bytes": 96038,
+      "sha256": "e48fbd2660d5fef99bc0bc9023539b017dc2ec2005ab6db442c70a7bd9924824"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-01-home-440.webp",
+      "bytes": 38518,
+      "sha256": "c3c81825447889ba62a7ff4b9d4cffbbdef94e84096719488a7e9b7d6351931f"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-01-home-880.webp",
+      "bytes": 98076,
+      "sha256": "4e6672743e0d3f72c1cd531c606dc73da24a61feb90103d3d8616dd6ba0cb6c5"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-02-song-bundle-440.webp",
+      "bytes": 30906,
+      "sha256": "9c9a41ebb00ab3dafd98c624d2ddf8b857926526550633f8b99443f0a5fa31d9"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-02-song-bundle-880.webp",
+      "bytes": 79752,
+      "sha256": "b82679703a1db443cd9236945bb23e49bfc62ca0611680704e6c0d08d21e1836"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-03-encouragement-440.webp",
+      "bytes": 31960,
+      "sha256": "7ba85687c409842701efad987f598df5922aa89c742bcabb8aba2d390886a1a8"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-03-encouragement-880.webp",
+      "bytes": 76040,
+      "sha256": "b723c4de682dd450e3f3472e5e4a1f7e0bd7d58af907aece8afd62c14078164d"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-04-hapju-440.webp",
+      "bytes": 29378,
+      "sha256": "9e8bb963632d8607eb5e077e25682977ca9799ea66a73d557dd307858d6b26b0"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-04-hapju-880.webp",
+      "bytes": 72838,
+      "sha256": "c720f5b94b93b7ac85c248e5f04991bc102f4d79bc64719fd97b9a1b326b4cbf"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-05-practice-reactions-440.webp",
+      "bytes": 39034,
+      "sha256": "5234f25fb041e846a0bea2dec5ba43120b82feeeb4a4d00d41988efe2bf55c40"
+    },
+    {
+      "path": "assets/bandlog/zh-Hant-TW/iphone-05-practice-reactions-880.webp",
+      "bytes": 92672,
+      "sha256": "3ac626af87c91ad278b6f626c4aed95c9a30c3d67de63efffa7cd37fca48c556"
+    }
+  ]
+}
