@@ -1118,3 +1118,7 @@ footer {
     transition: none !important;
   }
 }
+
+/* 일본어는 승인된 기하학 워드마크 원본을 사용한다. */
+.product-wordmark { width: clamp(180px, 20vw, 250px); height: auto; }
+.product-brand [hidden] { display: none; }

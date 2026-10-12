@@ -68,12 +68,12 @@ export const copy = {
     'nav.products': 'サービス', 'nav.about': '会社について', 'nav.contact': 'お問い合わせ', language: '言語',
     'hero.1': '自分から始めて', 'hero.2': '好きなことが', 'hero.3': '続くように',
     'hero.description': ['自分たちが感じる日々の不便から出発し、', '好きなことを始めやすく、', '続けやすくするサービスをつくります。'],
-    services: '私たちのサービス', bandlog: 'Bandlog',
+    services: '私たちのサービス', bandlog: 'バンドネコ',
     'product.title': ['自分の練習から、', 'バンドの毎日まで。'],
     'product.lead': ['一人で残した練習が集まり、', '次のリハーサルへつながるように。'],
-    'product.description': 'Bandlogは、自分の練習記録とバンドの活動を一か所にまとめるアプリです。練習の瞬間を残し、曲や予定を準備して、気軽なリアクションを送り合いましょう。',
+    'product.description': 'バンドネコは、自分の練習記録とバンドの活動を一か所にまとめるアプリです。練習の瞬間を残し、曲や予定を準備して、気軽なリアクションを送り合いましょう。',
     'store.label': 'ストア公開に向けて準備中', 'store.status': '準備中',
-    'gallery.hint': '画面を押して詳しく見る', 'gallery.label': 'BandlogのiPhone画面5枚',
+    'gallery.hint': '画面を押して詳しく見る', 'gallery.label': 'バンドネコのiPhone画面5枚',
     'gallery.scroll': '横にスワイプしてご覧ください', 'gallery.previous': '前の画面へスクロール', 'gallery.next': '次の画面へスクロール',
     'feature.1.title': '自分の練習を少しずつ', 'feature.1.body': ['バンドに入っていなくても、', '写真や動画で練習を残せます。'],
     'feature.2.title': 'バンドの準備を一か所に', 'feature.2.body': ['曲、意見、予定、場所を、', 'メンバーと一緒に確認できます。'],
@@ -89,7 +89,7 @@ export const copy = {
     'company.links': '会社の方針と公告', 'company.privacy': 'プライバシーポリシー', 'company.notices': '電子公告',
     'company.representative': '代表者：パク・ヒョンギ', 'company.registration': '韓国事業者登録番号：482-88-03565',
     'company.address': '韓国 京畿道 高陽市 徳陽区 Eutteum-ro 130、1131号（Deogeun-dong）',
-    'viewer.label': 'Bandlogの画面を拡大', 'viewer.close': '拡大画面を閉じる', 'viewer.previous': '前の画面', 'viewer.next': '次の画面',
+    'viewer.label': 'バンドネコの画面を拡大', 'viewer.close': '拡大画面を閉じる', 'viewer.previous': '前の画面', 'viewer.next': '次の画面',
     captions: ['自分の練習とバンド', 'みんなで選ぶ曲', 'メンバーへの応援', '一か所にまとまるリハーサル準備', '記録でつながる練習'],
     imageAlts: ['自分の練習記録と参加しているバンドを一緒に見られるホーム画面', '曲をコレクションにまとめてメンバーと意見を交換する画面', 'バンドメンバーに絵文字で気軽に反応を送る画面', '次のリハーサルの予定、場所、準備を確認する画面', '練習の写真や動画を見てリアクションを送る画面'],
     expand: '画面を拡大',
@@ -196,7 +196,11 @@ export function applyLocale(locale) {
     {ko: 'ko_KR', 'ja-JP': 'ja_JP', 'zh-Hant-TW': 'zh_TW', 'en-US': 'en_US'}[locale];
   const scenes = ['01-home', '02-song-bundle', '03-encouragement', '04-hapju', '05-practice-reactions'];
   const directory = locale === 'ko' ? 'assets/bandlog' : `assets/bandlog/${locale}`;
-  const version = locale === 'ko' ? '20261012-r2' : '20261012-localized-r1';
+  const version = locale === 'ko' ? '20261012-r2' : locale === 'ja-JP' ? '20261012-bandneko-r2' : '20261012-localized-r1';
+  const japanese = locale === 'ja-JP';
+  document.querySelector('.product-symbol').src = japanese ? 'assets/bandlog/ja-JP/symbol.webp?v=20261012-bandneko-r2' : 'assets/bandlog/symbol.webp';
+  document.querySelector('.product-name').hidden = japanese;
+  document.querySelector('.product-wordmark').hidden = !japanese;
   document.querySelectorAll('.gallery-shot').forEach((shot, index) => {
     const link = shot.querySelector('.shot-link');
     const image = link.querySelector('img');
