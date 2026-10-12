@@ -1,5 +1,4 @@
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
-const wideLayout = window.matchMedia("(min-width: 1101px)");
 const gallery = document.querySelector(".product-gallery");
 const galleryPrevious = document.querySelector(".gallery-prev");
 const galleryNext = document.querySelector(".gallery-next");
@@ -45,19 +44,6 @@ function updateGallery() {
   const maximumScroll = gallery.scrollWidth - gallery.clientWidth;
   galleryPrevious.disabled = gallery.scrollLeft < 2;
   galleryNext.disabled = gallery.scrollLeft >= maximumScroll - 2;
-  if (motionPreference.matches || !wideLayout.matches) {
-    gallery.style.removeProperty("--spread");
-    return;
-  }
-  const rect = gallery.getBoundingClientRect();
-  const spread = Math.max(
-    0,
-    Math.min(
-      1,
-      (rect.top - window.innerHeight * 0.2) / (window.innerHeight * 0.7),
-    ),
-  );
-  gallery.style.setProperty("--spread", spread.toFixed(3));
 }
 function queueGalleryUpdate() {
   if (!scrollFrame) scrollFrame = requestAnimationFrame(updateGallery);
@@ -75,7 +61,6 @@ document.querySelector(".gallery-navigation").hidden = false;
 galleryPrevious.addEventListener("click", () => scrollGallery(-1));
 galleryNext.addEventListener("click", () => scrollGallery(1));
 gallery.addEventListener("scroll", queueGalleryUpdate, { passive: true });
-window.addEventListener("scroll", queueGalleryUpdate, { passive: true });
 window.addEventListener("resize", queueGalleryUpdate, { passive: true });
 motionPreference.addEventListener("change", () => {
   if (motionPreference.matches)

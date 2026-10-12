@@ -321,21 +321,16 @@ nav a:hover {
 .gallery-heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 20px;
   color: #a6bacb;
   font-size: 12px;
-}
-.gallery-heading > p {
-  color: var(--white);
-  font-size: 14px;
 }
 .product-gallery {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
-  padding: 42px 40px 48px;
-  margin-inline: -40px;
+  padding: 18px 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -345,9 +340,6 @@ nav a:hover {
 }
 .gallery-shot {
   min-width: 0;
-  transform: translateY(calc(var(--lift) * var(--spread, 0)))
-    rotate(calc(var(--angle) * var(--spread, 0)));
-  transform-origin: center bottom;
   scroll-snap-align: start;
 }
 .shot-link {
@@ -762,9 +754,6 @@ footer {
     margin-inline: 0;
     gap: 20px;
   }
-  .gallery-shot {
-    transform: none;
-  }
   .gallery-navigation:not([hidden]) {
     display: flex;
   }
@@ -906,9 +895,6 @@ footer {
   }
   .gallery-heading {
     margin-bottom: 6px;
-  }
-  .gallery-heading > p {
-    font-size: 12px;
   }
   .gallery-heading > span {
     font-size: 10px;
@@ -1070,8 +1056,5 @@ footer {
   *::after {
     animation: none !important;
     transition: none !important;
-  }
-  .gallery-shot {
-    transform: none !important;
   }
 }

@@ -20,12 +20,12 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 - `index.html`: 회사 소개, 밴드로그의 승인된 iPhone 화면 5장, 공시·연락처.
 - `styles.css`: 반응형 레이아웃과 타이포그래피. 기존 Pretendard·LINE Seed KR 웹폰트를 자체 제공.
-- `site.js`: 첫 화면 등장, 스크롤에 따른 화면 펼침, 갤러리 탐색과 확대. 외부 라이브러리·추적 도구 없음.
+- `site.js`: 첫 화면 등장, 갤러리 탐색과 확대. 외부 라이브러리·추적 도구 없음.
 - `assets/bandlog/`: 승인된 스토어 화면의 비율을 보존한 WebP 파생본. 원본·체크섬은 [자산 출처](ASSET_PROVENANCE.md)를 따름.
 - `assets/icons/`: Apple·Google Play SVG. 두 스토어 표시는 출시 준비 상태이며 링크와 클릭 동작이 없음.
 - [개편 방향과 검증 조건](docs/homepage-redesign.md)
 
-JavaScript 없이도 본문·이미지·연락처를 이용할 수 있습니다. 동작 줄이기 설정에서는 등장과 스크롤 애니메이션을 끕니다. 확대 화면은 Escape와 좌우 방향키를 지원합니다.
+JavaScript 없이도 본문·이미지·연락처를 이용할 수 있습니다. 동작 줄이기 설정에서는 등장 애니메이션과 부드러운 스크롤을 끕니다. 확대 화면은 Escape와 좌우 방향키를 지원합니다.
 
 ## Deployment
 
