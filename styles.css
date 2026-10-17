@@ -1107,6 +1107,204 @@ footer {
     font-size: 38px;
   }
 }
+/* 밴드로그 소개 사이트 연결 */
+.product-site {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 28px;
+  padding: 12px 18px 12px 12px;
+  border-radius: 14px;
+  color: var(--navy);
+  background: var(--white);
+  text-decoration: none;
+  transition:
+    transform 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+.product-site img {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+.product-site span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+}
+.product-site strong {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.product-site small {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.product-site svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+  transition: transform 0.3s var(--ease);
+}
+.product-site:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 24%);
+}
+.product-site:hover svg {
+  transform: translate(3px, -3px);
+}
+.product-site:focus-visible {
+  outline: 3px solid #5d9ed4;
+  outline-offset: 3px;
+}
+.product-site + .store-badges {
+  margin-top: 14px;
+}
+
+/* 스크롤 등장: JavaScript가 동작을 허용한 경우에만 숨겼다가 보여 줍니다. */
+.motion-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.9s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion-ready [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+.motion-ready .gallery-shot[data-reveal] {
+  transform: translateY(56px) scale(0.96);
+}
+.motion-ready .gallery-shot[data-reveal].is-in {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 첫 화면 고리: 두 궤도가 천천히 엇갈려 돌고 점이 숨 쉬듯 퍼집니다. */
+  .hero-orbit ellipse {
+    transform-box: view-box;
+    transform-origin: 220px 220px;
+  }
+  .hero-orbit ellipse:first-child {
+    animation: orbit-a 48s linear infinite;
+  }
+  .hero-orbit ellipse:last-child {
+    animation: orbit-b 64s linear infinite;
+  }
+  .hero-orbit span {
+    animation: orbit-dot 22s linear infinite;
+  }
+  .hero-orbit span::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--blue);
+    animation: orbit-pulse 2.8s var(--ease) infinite;
+  }
+  .hero-bottom {
+    animation: rise-in 0.9s var(--ease) 0.5s backwards;
+  }
+  .circle-arrow {
+    animation: arrow-bob 2.6s ease-in-out 1.6s infinite;
+  }
+  .explore-link:hover .circle-arrow {
+    animation: none;
+  }
+  .product-symbol {
+    animation: symbol-float 4.2s ease-in-out infinite;
+  }
+  .product-site svg {
+    animation: link-nudge 3s ease-in-out 1s infinite;
+  }
+  .product-site:hover svg {
+    animation: none;
+  }
+  .principle.is-in .symbol-start i:last-child {
+    animation: symbol-breathe 3.2s ease-in-out 0.8s infinite;
+  }
+  .principle.is-in .symbol-focus i:nth-child(2) {
+    animation: symbol-turn 9s var(--ease) 0.8s infinite;
+  }
+  .principle.is-in .symbol-continue i:first-child {
+    animation: symbol-sway-a 4.8s ease-in-out 0.8s infinite;
+  }
+  .principle.is-in .symbol-continue i:last-child {
+    animation: symbol-sway-b 4.8s ease-in-out 0.8s infinite;
+  }
+  .principle:hover .principle-symbol i {
+    animation: none;
+  }
+  .contact-link svg {
+    animation: contact-nudge 2.8s ease-in-out 1s infinite;
+  }
+  .contact-link:hover svg {
+    animation: none;
+  }
+}
+@keyframes orbit-a {
+  from { transform: rotate(-38deg); }
+  to { transform: rotate(322deg); }
+}
+@keyframes orbit-b {
+  from { transform: rotate(38deg); }
+  to { transform: rotate(-322deg); }
+}
+@keyframes orbit-dot {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(18px, -26px); }
+  50% { transform: translate(44px, -8px); }
+  75% { transform: translate(20px, 16px); }
+}
+@keyframes orbit-pulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 0; transform: scale(3.2); }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(24px); }
+}
+@keyframes arrow-bob {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(6px); }
+}
+@keyframes symbol-float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-5px) rotate(-4deg); }
+}
+@keyframes link-nudge {
+  0%, 70%, 100% { transform: translate(0, 0); }
+  80% { transform: translate(3px, -3px); }
+}
+@keyframes symbol-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.45); }
+}
+@keyframes symbol-turn {
+  0%, 30% { transform: rotate(0); }
+  50%, 80% { transform: rotate(90deg); }
+  100% { transform: rotate(180deg); }
+}
+@keyframes symbol-sway-a {
+  0%, 100% { transform: rotate(30deg); }
+  50% { transform: rotate(52deg) translateX(3px); }
+}
+@keyframes symbol-sway-b {
+  0%, 100% { transform: rotate(30deg); }
+  50% { transform: rotate(8deg) translateX(-3px); }
+}
+@keyframes contact-nudge {
+  0%, 70%, 100% { transform: rotate(-35deg); }
+  82% { transform: translate(5px, -5px) rotate(-35deg); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

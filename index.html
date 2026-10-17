@@ -47,7 +47,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=20261012-bandneko-r2" />
+    <link rel="stylesheet" href="styles.css?v=20261017-motion" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="NaroWorks" />
@@ -80,8 +80,8 @@
       name="twitter:image"
       content="https://www.naroworks.com/assets/og.png"
     />
-    <script src="site.js" defer></script>
-    <script type="module" src="localization.mjs?v=20261012-bandneko-r2"></script>
+    <script src="site.js?v=20261017-motion" defer></script>
+    <script type="module" src="localization.mjs?v=20261017-motion"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
@@ -152,12 +152,12 @@
       </section>
       <section class="products" id="products" aria-labelledby="bandlog-title">
         <div class="container">
-          <div class="product-topline">
+          <div class="product-topline" data-reveal>
             <p data-i18n="services">The services we make</p>
             <span data-i18n="bandlog">Bandlog</span>
           </div>
           <div class="product-intro">
-            <div>
+            <div data-reveal>
               <div class="product-brand">
                 <img
                   class="product-symbol"
@@ -171,9 +171,23 @@
               </div>
               <h2 id="bandlog-title" data-i18n="product.title">From your practice<br />to your band.</h2>
             </div>
-            <div class="product-description">
+            <div class="product-description" data-reveal style="--reveal-delay: 120ms">
               <p data-i18n="product.lead">Solo practice adds up,<br />and leads into your next rehearsal together.</p>
               <p data-i18n="product.description">Bandlog brings your practice log and your band’s activities together. Capture moments of practice, prepare songs and schedules, and send each other a quick reaction.</p>
+              <a class="product-site" href="https://bandlog.kr/" target="_blank" rel="noopener"
+                ><img src="assets/bandlog/symbol.webp" alt="" width="512" height="512" loading="lazy" /><span
+                  ><strong data-i18n="product.site">Visit the Bandlog site (Korean)</strong><small>bandlog.kr</small></span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M9 7h8v8" /></svg
+              ></a>
               <div class="store-badges" aria-label="Preparing for release on app stores" data-i18n-aria="store.label">
                 <div class="store-badge">
                   <img
@@ -207,7 +221,7 @@
             role="region"
             aria-label="Five Bandlog iPhone screens" data-i18n-aria="gallery.label"
           >
-            <figure class="gallery-shot">
+            <figure class="gallery-shot" data-reveal style="--reveal-delay: 0ms">
               <a
                 class="shot-link"
                 href="assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1"
@@ -241,7 +255,7 @@
                 <span class="shot-index">01</span><span class="shot-caption">My practice and our band</span>
               </figcaption>
             </figure>
-            <figure class="gallery-shot">
+            <figure class="gallery-shot" data-reveal style="--reveal-delay: 90ms">
               <a
                 class="shot-link"
                 href="assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1"
@@ -275,7 +289,7 @@
                 <span class="shot-index">02</span><span class="shot-caption">Songs we pick together</span>
               </figcaption>
             </figure>
-            <figure class="gallery-shot">
+            <figure class="gallery-shot" data-reveal style="--reveal-delay: 180ms">
               <a
                 class="shot-link"
                 href="assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1"
@@ -309,7 +323,7 @@
                 <span class="shot-index">03</span><span class="shot-caption">Encouragement for each other</span>
               </figcaption>
             </figure>
-            <figure class="gallery-shot">
+            <figure class="gallery-shot" data-reveal style="--reveal-delay: 270ms">
               <a
                 class="shot-link"
                 href="assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1"
@@ -343,7 +357,7 @@
                 <span class="shot-index">04</span><span class="shot-caption">Rehearsal prep in one place</span>
               </figcaption>
             </figure>
-            <figure class="gallery-shot">
+            <figure class="gallery-shot" data-reveal style="--reveal-delay: 360ms">
               <a
                 class="shot-link"
                 href="assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1"
@@ -414,7 +428,7 @@
               </button>
             </div>
           </div>
-          <div class="product-features">
+          <div class="product-features" data-reveal>
             <div>
               <h3 data-i18n="feature.1.title">Build your practice log</h3>
               <p data-i18n="feature.1.body">Save practice with photos and videos,<br />even before you join a band.</p>
@@ -432,28 +446,28 @@
       </section>
       <section class="about" id="about" aria-labelledby="about-title">
         <div class="container about-layout">
-          <div class="about-intro">
+          <div class="about-intro" data-reveal>
             <p class="section-label" data-i18n="about.label">How NaroWorks works</p>
             <h2 id="about-title" data-i18n="about.title">We start<br />close to home.</h2>
             <p data-i18n="about.lead">The friction we meet doing what we love.<br />The everyday moments we want to enjoy more.</p>
             <p data-i18n="about.description">We turn needs close to us into small, complete services, then help them grow so others who feel the same way can use them too.</p>
           </div>
           <div class="principles">
-            <article class="principle">
+            <article class="principle" data-reveal>
               <div class="principle-symbol symbol-start" aria-hidden="true">
                 <i></i><i></i>
               </div>
               <h3 data-i18n="principle.1.title">Start close to home</h3>
               <p data-i18n="principle.1.body">Work on problems we have experienced<br />or understand well.</p>
             </article>
-            <article class="principle">
+            <article class="principle" data-reveal>
               <div class="principle-symbol symbol-focus" aria-hidden="true">
                 <i></i><i></i><i></i>
               </div>
               <h3 data-i18n="principle.2.title">Make something small and complete</h3>
               <p data-i18n="principle.2.body">Build one important experience well<br />before adding more features.</p>
             </article>
-            <article class="principle">
+            <article class="principle" data-reveal>
               <div class="principle-symbol symbol-continue" aria-hidden="true">
                 <i></i><i></i>
               </div>
@@ -466,8 +480,8 @@
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="container">
           <p class="section-label" data-i18n="contact.label">Let’s talk</p>
-          <h2 id="contact-title" data-i18n="contact.title">Ways to keep doing<br />what you love.</h2>
-          <a class="contact-link" href="mailto:contact@naroworks.com"
+          <h2 id="contact-title" data-reveal data-i18n="contact.title">Ways to keep doing<br />what you love.</h2>
+          <a class="contact-link" data-reveal style="--reveal-delay: 120ms" href="mailto:contact@naroworks.com"
             ><span>contact@naroworks.com</span
             ><svg
               viewBox="0 0 24 24"
