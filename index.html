@@ -47,7 +47,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=20261017-motion" />
+    <link rel="stylesheet" href="styles.css?v=20261017-align" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="NaroWorks" />
@@ -80,8 +80,8 @@
       name="twitter:image"
       content="https://www.naroworks.com/assets/og.png"
     />
-    <script src="site.js?v=20261017-motion" defer></script>
-    <script type="module" src="localization.mjs?v=20261017-motion"></script>
+    <script src="site.js?v=20261017-align" defer></script>
+    <script type="module" src="localization.mjs?v=20261017-align"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
@@ -174,40 +174,42 @@
             <div class="product-description" data-reveal style="--reveal-delay: 120ms">
               <p data-i18n="product.lead">Solo practice adds up,<br />and leads into your next rehearsal together.</p>
               <p data-i18n="product.description">Bandlog brings your practice log and your band’s activities together. Capture moments of practice, prepare songs and schedules, and send each other a quick reaction.</p>
-              <a class="product-site" href="https://bandlog.kr/" target="_blank" rel="noopener"
-                ><img src="assets/bandlog/symbol.webp" alt="" width="512" height="512" loading="lazy" /><span
-                  ><strong data-i18n="product.site">Visit the Bandlog site (Korean)</strong><small>bandlog.kr</small></span
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M7 17 17 7M9 7h8v8" /></svg
-              ></a>
-              <div class="store-badges" aria-label="Preparing for release on app stores" data-i18n-aria="store.label">
-                <div class="store-badge">
-                  <img
-                    src="assets/icons/apple.svg"
-                    alt=""
-                    width="26"
-                    height="26"
-                  /><span
-                    ><strong>App Store</strong><small data-i18n="store.status">Coming soon</small></span
+              <div class="product-actions">
+                <a class="product-site" href="https://bandlog.kr/" target="_blank" rel="noopener"
+                  ><img src="assets/bandlog/symbol.webp" alt="" width="512" height="512" loading="lazy" /><span
+                    ><strong data-i18n="product.site">Visit the Bandlog site (Korean)</strong><small>bandlog.kr</small></span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
                   >
-                </div>
-                <div class="store-badge">
-                  <img
-                    src="assets/icons/google-play.svg"
-                    alt=""
-                    width="25"
-                    height="25"
-                  /><span
-                    ><strong>Google Play</strong><small data-i18n="store.status">Coming soon</small></span
-                  >
+                    <path d="M7 17 17 7M9 7h8v8" /></svg
+                ></a>
+                <div class="store-badges" aria-label="Preparing for release on app stores" data-i18n-aria="store.label">
+                  <a class="store-badge" href="https://apps.apple.com/app/id6815118964" target="_blank" rel="noopener">
+                    <img
+                      src="assets/icons/apple.svg"
+                      alt=""
+                      width="26"
+                      height="26"
+                    /><span
+                      ><strong>App Store</strong><small data-i18n="store.status">Coming soon</small></span
+                    >
+                  </a>
+                  <a class="store-badge" href="https://play.google.com/store/apps/details?id=kr.bandlog.app" target="_blank" rel="noopener">
+                    <img
+                      src="assets/icons/google-play.svg"
+                      alt=""
+                      width="25"
+                      height="25"
+                    /><span
+                      ><strong>Google Play</strong><small data-i18n="store.status">Coming soon</small></span
+                    >
+                  </a>
                 </div>
               </div>
             </div>
