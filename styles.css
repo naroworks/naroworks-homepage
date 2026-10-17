@@ -38,6 +38,10 @@ body {
   word-break: keep-all;
   -webkit-font-smoothing: antialiased;
 }
+/* 일본어는 띄어쓰기가 없어 keep-all이면 한 줄이 통째로 넘칩니다. 폭이 모자랄 때만 줄을 나눕니다. */
+html[lang="ja-JP"] body {
+  overflow-wrap: anywhere;
+}
 body:has(.image-viewer[open]) {
   overflow: hidden;
 }
@@ -1107,14 +1111,52 @@ footer {
     font-size: 38px;
   }
 }
-/* 밴드로그 소개 사이트 연결 */
+/* 밴드로그 소개 사이트 연결: 링크와 스토어 배지 두 개가 같은 좌우 끝을 공유합니다. */
+.product-actions {
+  display: grid;
+  gap: 12px;
+  width: fit-content;
+  min-width: min(100%, 322px);
+  max-width: 100%;
+  margin-top: 28px;
+}
+.product-actions .store-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+.product-actions .store-badge {
+  min-width: 0;
+  max-width: none;
+}
+.product-actions .store-badge span {
+  white-space: nowrap;
+}
+a.store-badge {
+  text-decoration: none;
+  transition:
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
+}
+a.store-badge:hover {
+  border-color: #7d93a8;
+  background-color: rgb(255 255 255 / 6%);
+}
+a.store-badge:focus-visible {
+  outline-offset: 3px;
+}
+@media (max-width: 680px) {
+  .product-actions {
+    gap: 10px;
+    width: 100%;
+    max-width: 354px;
+    margin-top: 24px;
+  }
+}
 .product-site {
   display: flex;
   align-items: center;
   gap: 14px;
-  width: fit-content;
-  max-width: 100%;
-  margin-top: 28px;
   padding: 12px 18px 12px 12px;
   border-radius: 14px;
   color: var(--navy);
@@ -1131,6 +1173,7 @@ footer {
 }
 .product-site span {
   display: flex;
+  flex: 1;
   flex-direction: column;
   min-width: 0;
   line-height: 1.35;
@@ -1149,7 +1192,6 @@ footer {
   flex-shrink: 0;
   width: 22px;
   height: 22px;
-  margin-left: 6px;
   transition: transform 0.3s var(--ease);
 }
 .product-site:hover {
@@ -1162,9 +1204,6 @@ footer {
 .product-site:focus-visible {
   outline: 3px solid #5d9ed4;
   outline-offset: 3px;
-}
-.product-site + .store-badges {
-  margin-top: 14px;
 }
 
 /* 스크롤 등장: JavaScript가 동작을 허용한 경우에만 숨겼다가 보여 줍니다. */
