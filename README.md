@@ -23,7 +23,7 @@ python3 -m http.server 4173 --bind 127.0.0.1
 - `site.js`: 첫 화면 등장, 스크롤 등장, 갤러리 탐색과 확대. 외부 라이브러리·추적 도구 없음.
 - `localization.mjs`: 한국어·일본어·대만 번체·영어 본문과 접근성 문구, 언어 감지, 갤러리 이미지 전환.
 - `assets/bandlog/`: 승인된 스토어 화면의 비율을 보존한 WebP 파생본. 원본·체크섬은 [자산 출처](ASSET_PROVENANCE.md)를 따름.
-- `assets/icons/`: Apple·Google Play SVG. 두 스토어 배지는 각 스토어 주소로 미리 연결되며, 공개 전까지 `준비 중` 문구를 유지함.
+- `assets/icons/`: Apple·Google Play SVG. 두 스토어 배지는 각 스토어 주소로 연결되며 언어별 다운로드 문구를 표시함.
 - [개편 방향과 검증 조건](docs/homepage-redesign.md)
 
 JavaScript 없이도 본문·이미지·연락처를 이용할 수 있습니다. 동작 줄이기 설정에서는 등장·반복 애니메이션과 부드러운 스크롤을 끕니다. 확대 화면은 Escape와 좌우 방향키를 지원합니다.
