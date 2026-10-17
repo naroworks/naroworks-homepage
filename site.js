@@ -39,6 +39,37 @@ if (!motionPreference.matches && Element.prototype.animate) {
   );
 }
 
+// 스크롤 등장: 동작을 허용한 브라우저에서만 숨김 class를 붙이고, 화면에 들어오면 한 번 보여 줍니다.
+const revealTargets = [...document.querySelectorAll("[data-reveal]")];
+let revealObserver;
+function revealAll() {
+  revealTargets.forEach((target) => target.classList.add("is-in"));
+}
+if (!motionPreference.matches && "IntersectionObserver" in window) {
+  document.documentElement.classList.add("motion-ready");
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        // 갤러리는 가로로 넘겨야 보이는 화면까지 한 번에 순서대로 등장시킵니다.
+        const group =
+          entry.target === gallery
+            ? entry.target.querySelectorAll("[data-reveal]")
+            : [entry.target];
+        group.forEach((target) => target.classList.add("is-in"));
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+  );
+  revealTargets
+    .filter((target) => !gallery.contains(target))
+    .forEach((target) => revealObserver.observe(target));
+  revealObserver.observe(gallery);
+} else {
+  revealAll();
+}
+
 function updateGallery() {
   scrollFrame = 0;
   const maximumScroll = gallery.scrollWidth - gallery.clientWidth;
@@ -63,8 +94,12 @@ galleryNext.addEventListener("click", () => scrollGallery(1));
 gallery.addEventListener("scroll", queueGalleryUpdate, { passive: true });
 window.addEventListener("resize", queueGalleryUpdate, { passive: true });
 motionPreference.addEventListener("change", () => {
-  if (motionPreference.matches)
+  if (motionPreference.matches) {
     entranceAnimations.forEach((animation) => animation.cancel());
+    revealObserver?.disconnect();
+    revealAll();
+    document.documentElement.classList.remove("motion-ready");
+  }
   queueGalleryUpdate();
 });
 updateGallery();
