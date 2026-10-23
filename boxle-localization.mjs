@@ -45,7 +45,7 @@ export const boxleCopy = {
     'boxle.name': '복슬', 'boxle.title': ['Today’s weather,', 'fortunes and wishes.'],
     'boxle.lead': ['Get a feel for your day,', 'and add a little luck to the one you’re waiting for.'],
     'boxle.description': '복슬 brings weather, fortunes and wishes into one daily experience. Give a wish a date, collect luck through small rituals, explore fortune readings from four AI perspectives, and revisit your daily records.',
-    'boxle.site': '복슬 사이트에서 자세히 보기', 'boxle.store': 'Download 복슬', 'boxle.release': 'Preparing for store release · App available in Korean, Japanese and Traditional Chinese', 'boxle.gallery': 'Five 복슬 iPhone screens in Korean',
+    'boxle.site': '복슬 사이트에서 자세히 보기', 'boxle.store': 'Download 복슬', 'boxle.release': 'Preparing for store release · App languages: Korean, Japanese and Traditional Chinese', 'boxle.gallery': 'Five 복슬 iPhone screens in Korean',
     'boxle.feature.1.title': 'Your day at a glance', 'boxle.feature.1.body': ['See the weather, your daily fortune', 'and the wishes you’re keeping in one place.'],
     'boxle.feature.2.title': 'A little luck for your wishes', 'boxle.feature.2.body': ['Toss a coin or connect a star:', 'small rituals for a day that matters.'],
     'boxle.feature.3.title': 'Find your own rhythm', 'boxle.feature.3.body': ['Revisit AI fortune interpretations', 'and your daily records by date.'],
