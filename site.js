@@ -1,12 +1,11 @@
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
-const gallery = document.querySelector(".product-gallery");
-const galleryPrevious = document.querySelector(".gallery-prev");
-const galleryNext = document.querySelector(".gallery-next");
+const galleries = [...document.querySelectorAll(".product-gallery")];
 const shots = [...document.querySelectorAll(".shot-link")];
 const viewer = document.querySelector(".image-viewer");
 let currentShot = 0;
 let lastTrigger;
-let scrollFrame = 0;
+let activeShots = shots;
+const galleryUpdates = [];
 const entranceAnimations = [];
 
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -53,7 +52,7 @@ if (!motionPreference.matches && "IntersectionObserver" in window) {
         if (!entry.isIntersecting) return;
         // 갤러리는 가로로 넘겨야 보이는 화면까지 한 번에 순서대로 등장시킵니다.
         const group =
-          entry.target === gallery
+          entry.target.matches(".product-gallery")
             ? entry.target.querySelectorAll("[data-reveal]")
             : [entry.target];
         group.forEach((target) => target.classList.add("is-in"));
@@ -63,36 +62,38 @@ if (!motionPreference.matches && "IntersectionObserver" in window) {
     { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
   );
   revealTargets
-    .filter((target) => !gallery.contains(target))
+    .filter((target) => !galleries.some(gallery => gallery.contains(target)))
     .forEach((target) => revealObserver.observe(target));
-  revealObserver.observe(gallery);
+  galleries.forEach(gallery => revealObserver.observe(gallery));
 } else {
   revealAll();
 }
 
-function updateGallery() {
-  scrollFrame = 0;
-  const maximumScroll = gallery.scrollWidth - gallery.clientWidth;
-  galleryPrevious.disabled = gallery.scrollLeft < 2;
-  galleryNext.disabled = gallery.scrollLeft >= maximumScroll - 2;
-}
-function queueGalleryUpdate() {
-  if (!scrollFrame) scrollFrame = requestAnimationFrame(updateGallery);
-}
-function scrollGallery(direction) {
-  const distance =
-    gallery.querySelector("figure").getBoundingClientRect().width +
-    parseFloat(getComputedStyle(gallery).columnGap);
-  gallery.scrollBy({
-    left: direction * distance,
-    behavior: motionPreference.matches ? "instant" : "smooth",
-  });
-}
-document.querySelector(".gallery-navigation").hidden = false;
-galleryPrevious.addEventListener("click", () => scrollGallery(-1));
-galleryNext.addEventListener("click", () => scrollGallery(1));
-gallery.addEventListener("scroll", queueGalleryUpdate, { passive: true });
-window.addEventListener("resize", queueGalleryUpdate, { passive: true });
+galleries.forEach(gallery => {
+  const section = gallery.closest('.products');
+  const previous = section.querySelector('.gallery-prev');
+  const next = section.querySelector('.gallery-next');
+  let scrollFrame = 0;
+  function update() {
+    scrollFrame = 0;
+    previous.disabled = gallery.scrollLeft < 2;
+    next.disabled = gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 2;
+  }
+  function queueUpdate() {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(update);
+  }
+  function scroll(direction) {
+    const distance = gallery.querySelector('figure').getBoundingClientRect().width + parseFloat(getComputedStyle(gallery).columnGap);
+    gallery.scrollBy({left: direction * distance, behavior: motionPreference.matches ? 'instant' : 'smooth'});
+  }
+  section.querySelector('.gallery-navigation').hidden = false;
+  previous.addEventListener('click', () => scroll(-1));
+  next.addEventListener('click', () => scroll(1));
+  gallery.addEventListener('scroll', queueUpdate, {passive: true});
+  window.addEventListener('resize', queueUpdate, {passive: true});
+  galleryUpdates.push(queueUpdate);
+  update();
+});
 motionPreference.addEventListener("change", () => {
   if (motionPreference.matches) {
     entranceAnimations.forEach((animation) => animation.cancel());
@@ -100,28 +101,28 @@ motionPreference.addEventListener("change", () => {
     revealAll();
     document.documentElement.classList.remove("motion-ready");
   }
-  queueGalleryUpdate();
+  galleryUpdates.forEach(update => update());
 });
-updateGallery();
 
 function showShot(index) {
-  currentShot = (index + shots.length) % shots.length;
-  const shot = shots[currentShot];
+  currentShot = (index + activeShots.length) % activeShots.length;
+  const shot = activeShots[currentShot];
   const image = document.querySelector(".viewer-image");
   image.src = shot.href;
   image.alt = shot.querySelector("img").alt;
   document.querySelector(".viewer-caption").textContent =
-    `${currentShot + 1} / ${shots.length} · ${shot.dataset.caption}`;
+    `${currentShot + 1} / ${activeShots.length} · ${shot.dataset.caption}`;
 }
 if (typeof viewer.showModal === "function") {
-  shots.forEach((shot, index) =>
+  shots.forEach(shot =>
     shot.addEventListener("click", (event) => {
       // 수정 키를 이용한 새 탭 열기는 브라우저 기본 동작을 유지합니다.
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
         return;
       event.preventDefault();
       lastTrigger = shot;
-      showShot(index);
+      activeShots = [...shot.closest(".product-gallery").querySelectorAll(".shot-link")];
+      showShot(activeShots.indexOf(shot));
       viewer.showModal();
     }),
   );

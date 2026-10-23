@@ -49,3 +49,7 @@ node --test test/localization.test.mjs
 정규 Naroworks CI와 기존 회사 핵심 문구를 재사용합니다. 폰트·이미지·스토어 아이콘의 출처와 처리 방법은 [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md)에 기록합니다. CI 형태나 색상을 변경할 때는 회사 workspace의 브랜드 기준을 먼저 갱신합니다.
 
 LINE Seed KR은 [LINE 공식 배포본](https://seed.line.me/index_kr.html)의 웹폰트이며, 저작권은 LY Corporation에 있습니다. SIL Open Font License 1.1은 [LINESeed-OFL.txt](assets/fonts/LINESeed-OFL.txt)에 포함되어 있습니다.
+
+## 복슬 제품 소개
+
+밴드로그 다음에 `#boxle` 섹션을 둡니다. `boxle-localization.mjs`가 회사 홈페이지 네 언어의 설명과 복슬이 지원하는 세 언어의 제품 자산을 연결합니다. 영어에서는 한국어 이름·사이트 링크·스크린샷으로 fallback합니다. 각 제품의 가로 갤러리와 5장 확대 보기는 독립적으로 동작합니다. `node --test test/*.test.mjs`로 언어와 자산 매핑을 확인합니다.
