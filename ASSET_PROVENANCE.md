@@ -113,3 +113,9 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 일본어에서만 バンドネコ 명칭·승인 고양이 심볼·흰색 Thin 워드마크를 표시한다. Figma 브랜드 Ready 2182:69, 일본어 스토어 Ready 2189:751에서 승인했다. 스토어 PNG 1320×2868를 기존 440/880px WebP 규격(Pillow LANCZOS, quality88, method6)으로 파생했다. 고양이 RGBA는 156×156 lossless WebP, 흰색 워드마크는 500×127 lossless WebP다. 다른 언어의 자산·본문은 기존 그대로이며 언어 복귀 시 기존 심볼을 사용한다.
 
 일본어 자산의 저장소 전달 근거: [Bandlog PR #1093](https://github.com/naroworks/bandlog/pull/1093), source head `2e36dc3c`. 이 SHA에서 저장한 일본어 PNG와 같은 파일을 사용했다.
+
+## 복슬 · 2026-10-23
+
+`assets/boxle/{ko,ja-JP,zh-Hant-TW}/01..05-{440,880}.webp`는 naroworks/boxle PR #285로 확정된 `design/store/2026-10-23/ios/` 원본 PNG의 비율을 유지한 WebP 파생본입니다(quality 88). 원본 Figma 파일 `XlhpeQaQR9WmMbg9OJtbVH`, 정본 페이지 `1246:11351`. 금색 별이 있는 `symbol.webp`는 같은 저장소의 정규 `design/brand/logo.png`에서 192px로 변환했습니다.
+
+제품 이름은 한국어 복슬, 일본어 ふくもふ, 대만 번체 福絨입니다. 회사 홈페이지의 영어 설명에서는 사용자 결정에 따라 한국어 이름·링크 문구·화면을 씁니다. 일본어·번체는 해당 화면과 `boxle.kr/ja/`, `boxle.kr/zh-Hant/`로 연결합니다. 기존 밴드로그 자산은 변경하지 않았습니다.

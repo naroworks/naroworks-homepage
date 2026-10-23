@@ -1359,3 +1359,12 @@ a.store-badge:focus-visible {
 /* 일본어는 승인된 기하학 워드마크 원본을 사용한다. */
 .product-wordmark { width: clamp(180px, 20vw, 250px); height: auto; }
 .product-brand [hidden] { display: none; }
+
+/* 복슬도 같은 제품 갤러리·확대 보기 패턴을 사용합니다. */
+.product-boxle { background: #1a1e3a; padding-top: 60px; }
+.product-boxle .product-topline { border-color: #ffffff22; color: #ebce87; }
+.product-boxle .product-description > p:nth-child(2), .product-boxle .product-features p { color: #b7bdd4; }
+.product-boxle .product-site { background: #fefceb; }
+.product-boxle .product-site img { border-radius: 50%; }
+.product-boxle .release-note { font-size: 12px; color: #b7bdd4; line-height: 1.7; margin: -30px 0 30px; }
+@media(max-width:680px) { .product-boxle .release-note { margin-top: -24px; } }

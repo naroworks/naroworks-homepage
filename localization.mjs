@@ -1,3 +1,5 @@
+import { boxleCopy, boxleLocales } from './boxle-localization.mjs';
+
 export const supportedLocales = ['ko', 'ja-JP', 'zh-Hant-TW', 'en-US'];
 const storageKey = 'naroworks.locale';
 
@@ -54,7 +56,7 @@ export const copy = {
     'company.links': '회사 정책 및 공고', 'company.privacy': '개인정보 처리방침', 'company.notices': '전자공고',
     'company.representative': '대표자 박형기', 'company.registration': '사업자등록번호 482-88-03565',
     'company.address': '경기도 고양시 덕양구 으뜸로 130, 1131호(덕은동, 위프라임트윈타워)',
-    'viewer.label': '밴드로그 화면 확대', 'viewer.close': '확대 화면 닫기', 'viewer.previous': '이전 화면', 'viewer.next': '다음 화면',
+    'viewer.label': '앱 화면 확대', 'viewer.close': '확대 화면 닫기', 'viewer.previous': '이전 화면', 'viewer.next': '다음 화면',
     captions: ['나의 연습과 우리 밴드', '함께 고르는 합주곡', '서로에게 보내는 응원', '한곳에 모인 합주 준비', '기록으로 이어지는 연습'],
     imageAlts: ['개인 연습 기록과 참여 중인 밴드를 함께 보는 홈 화면', '합주곡을 묶고 멤버들과 의견을 나누는 화면', '밴드 멤버에게 이모지로 가볍게 반응을 보내는 화면', '다음 합주의 일정과 장소, 준비 정보를 확인하는 화면', '연습 비하인드를 사진과 영상으로 보고 리액션을 보내는 화면'],
     expand: '화면 확대',
@@ -89,7 +91,7 @@ export const copy = {
     'company.links': '会社の方針と公告', 'company.privacy': 'プライバシーポリシー', 'company.notices': '電子公告',
     'company.representative': '代表者：パク・ヒョンギ', 'company.registration': '韓国事業者登録番号：482-88-03565',
     'company.address': '韓国 京畿道 高陽市 徳陽区 Eutteum-ro 130、1131号（Deogeun-dong）',
-    'viewer.label': 'バンドネコの画面を拡大', 'viewer.close': '拡大画面を閉じる', 'viewer.previous': '前の画面', 'viewer.next': '次の画面',
+    'viewer.label': 'アプリ画面を拡大', 'viewer.close': '拡大画面を閉じる', 'viewer.previous': '前の画面', 'viewer.next': '次の画面',
     captions: ['自分の練習とバンド', 'みんなで選ぶ曲', 'メンバーへの応援', '一か所にまとまるリハーサル準備', '記録でつながる練習'],
     imageAlts: ['自分の練習記録と参加しているバンドを一緒に見られるホーム画面', '曲をコレクションにまとめてメンバーと意見を交換する画面', 'バンドメンバーに絵文字で気軽に反応を送る画面', '次のリハーサルの予定、場所、準備を確認する画面', '練習の写真や動画を見てリアクションを送る画面'],
     expand: '画面を拡大',
@@ -124,7 +126,7 @@ export const copy = {
     'company.links': '公司政策與公告', 'company.privacy': '隱私權政策', 'company.notices': '電子公告',
     'company.representative': '代表人：Hyeonggi Park', 'company.registration': '韓國營業登記號碼：482-88-03565',
     'company.address': '韓國京畿道高陽市德陽區 Eutteum-ro 130 號，1131 室（Deogeun-dong）',
-    'viewer.label': '放大 Bandlog 畫面', 'viewer.close': '關閉放大畫面', 'viewer.previous': '上一張畫面', 'viewer.next': '下一張畫面',
+    'viewer.label': '放大應用程式畫面', 'viewer.close': '關閉放大畫面', 'viewer.previous': '上一張畫面', 'viewer.next': '下一張畫面',
     captions: ['我的練習與我們的樂團', '一起挑選的團練曲', '送給彼此的加油', '放在一起的團練準備', '用紀錄串起練習'],
     imageAlts: ['同時查看個人練習紀錄與已加入樂團的首頁', '把曲目整理成合集並和團員討論的畫面', '用表情符號輕鬆回應團員的畫面', '查看下次團練行程、地點與準備資訊的畫面', '查看練習照片與影片並傳送回應的畫面'],
     expand: '放大畫面',
@@ -159,7 +161,7 @@ export const copy = {
     'company.links': 'Company policies and notices', 'company.privacy': 'Privacy policy', 'company.notices': 'Public notices',
     'company.representative': 'Representative: Hyeonggi Park', 'company.registration': 'Korean business registration number: 482-88-03565',
     'company.address': 'Suite 1131, 130 Eutteum-ro, Deogyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea',
-    'viewer.label': 'Enlarged Bandlog screen', 'viewer.close': 'Close enlarged screen', 'viewer.previous': 'Previous screen', 'viewer.next': 'Next screen',
+    'viewer.label': 'Enlarged app screen', 'viewer.close': 'Close enlarged screen', 'viewer.previous': 'Previous screen', 'viewer.next': 'Next screen',
     captions: ['My practice and our band', 'Songs we pick together', 'Encouragement for each other', 'Rehearsal prep in one place', 'Practice connected through records'],
     imageAlts: ['Home screen showing personal practice records and joined bands', 'Screen for collecting songs and sharing ideas with bandmates', 'Screen for sending lighthearted emoji reactions to bandmates', 'Screen showing the next rehearsal’s schedule, location, and preparation', 'Screen for viewing practice photos and videos and sending reactions'],
     expand: 'Enlarge screen',
@@ -167,7 +169,7 @@ export const copy = {
 };
 
 export function applyLocale(locale) {
-  const text = copy[locale];
+  const text = { ...copy[locale], ...Object.fromEntries(Object.entries(boxleCopy[locale]).filter(([key]) => key.startsWith('boxle.'))) };
   document.documentElement.lang = locale;
   document.title = text['meta.title'];
   document.querySelectorAll('[data-i18n]').forEach(node => {
@@ -201,7 +203,7 @@ export function applyLocale(locale) {
   document.querySelector('.product-symbol').src = japanese ? 'assets/bandlog/ja-JP/symbol.webp?v=20261012-bandneko-r2' : 'assets/bandlog/symbol.webp';
   document.querySelector('.product-name').hidden = japanese;
   document.querySelector('.product-wordmark').hidden = !japanese;
-  document.querySelectorAll('.gallery-shot').forEach((shot, index) => {
+  document.querySelectorAll('#products .gallery-shot').forEach((shot, index) => {
     const link = shot.querySelector('.shot-link');
     const image = link.querySelector('img');
     const path = `${directory}/iphone-${scenes[index]}`;
@@ -212,6 +214,25 @@ export function applyLocale(locale) {
     image.srcset = `${path}-440.webp?v=${version} 440w, ${path}-880.webp?v=${version} 880w`;
     image.alt = text.imageAlts[index];
     shot.querySelector('.shot-caption').textContent = text.captions[index];
+  });
+  const boxle = boxleCopy[locale];
+  const assets = boxleLocales[locale];
+  const product = document.querySelector('#boxle');
+  const siteLink = product.querySelector('.product-site');
+  siteLink.href = assets.url;
+  siteLink.lang = assets.language;
+  product.querySelectorAll('[data-i18n="boxle.name"]').forEach(node => { node.lang = assets.language; });
+  product.querySelectorAll('.gallery-shot').forEach((shot, index) => {
+    const link = shot.querySelector('.shot-link');
+    const image = link.querySelector('img');
+    const path = 'assets/boxle/' + assets.asset + '/' + String(index + 1).padStart(2, '0');
+    link.href = path + '-880.webp';
+    link.dataset.caption = boxle.captions[index];
+    link.setAttribute('aria-label', boxle.captions[index] + ' · ' + text.expand);
+    image.src = link.href;
+    image.srcset = path + '-440.webp 440w, ' + path + '-880.webp 880w';
+    image.alt = boxle.imageAlts[index];
+    shot.querySelector('.shot-caption').textContent = boxle.captions[index];
   });
   document.querySelector('#language-select').value = locale;
   document.querySelector('.language-picker').hidden = false;
