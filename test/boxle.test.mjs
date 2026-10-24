@@ -4,11 +4,11 @@ import { readFile, access } from 'node:fs/promises';
 import { boxleCopy, boxleLocales } from '../boxle-localization.mjs';
 import { supportedLocales } from '../localization.mjs';
 
-test('복슬 미지원 언어는 설명만 번역하고 한국어 이름·링크·화면으로 연결한다', () => {
+test('각 언어는 복슬의 그 언어 이름·링크·화면으로 연결한다(영어는 2026-10-24부터 boxle)', () => {
   assert.deepEqual(Object.keys(boxleCopy), supportedLocales);
-  assert.equal(boxleCopy['en-US']['boxle.name'], '복슬');
-  assert.equal(boxleCopy['en-US']['boxle.site'], boxleCopy.ko['boxle.site']);
-  assert.deepEqual(boxleLocales['en-US'], boxleLocales.ko);
+  assert.equal(boxleCopy['en-US']['boxle.name'], 'boxle');
+  assert.equal(boxleLocales['en-US'].url, 'https://boxle.kr/en/');
+  assert.equal(boxleLocales['en-US'].asset, 'en-US');
   assert.equal(boxleLocales['ja-JP'].url, 'https://boxle.kr/ja/');
   assert.equal(boxleLocales['zh-Hant-TW'].url, 'https://boxle.kr/zh-Hant/');
 });
@@ -33,6 +33,7 @@ test('복슬은 밴드로그 바로 다음에 있고 두 갤러리는 독립적�
   const product = html.slice(html.indexOf('id="boxle"'), html.indexOf('id="about"'));
   assert.ok(product.includes('https://apps.apple.com/app/id6823910868'));
   assert.ok(product.includes('https://play.google.com/store/apps/details?id=kr.boxle.app'));
-  assert.ok(product.includes('복슬 사이트에서 자세히 보기'));
+  assert.ok(product.includes('See more on the boxle site'));
+  assert.ok(product.includes('https://boxle.kr/en/'));
   assert.doesNotMatch(product, /assets\/bandlog\//);
 });

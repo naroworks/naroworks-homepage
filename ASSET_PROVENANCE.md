@@ -116,6 +116,6 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 
 ## 복슬 · 2026-10-23
 
-`assets/boxle/{ko,ja-JP,zh-Hant-TW}/01..05-{440,880}.webp`는 naroworks/boxle PR #285로 확정된 `design/store/2026-10-23/ios/` 원본 PNG의 비율을 유지한 WebP 파생본입니다(quality 88). 원본 Figma 파일 `XlhpeQaQR9WmMbg9OJtbVH`, 정본 페이지 `1246:11351`. 금색 별이 있는 `symbol.webp`는 같은 저장소의 정규 `design/brand/logo.png`에서 192px로 변환했습니다.
+`assets/boxle/{ko,ja-JP,zh-Hant-TW,en-US}/01..05-{440,880}.webp`는 naroworks/boxle PR #285로 확정된 `design/store/2026-10-23/ios/` 원본 PNG의 비율을 유지한 WebP 파생본입니다(quality 88). 원본 Figma 파일 `XlhpeQaQR9WmMbg9OJtbVH`, 정본 페이지 `1246:11351`. 금색 별이 있는 `symbol.webp`는 같은 저장소의 정규 `design/brand/logo.png`에서 192px로 변환했습니다.
 
-제품 이름은 한국어 복슬, 일본어 ふくもふ, 대만 번체 福絨입니다. 회사 홈페이지의 영어 설명에서는 사용자 결정에 따라 한국어 이름·링크 문구·화면을 씁니다. 일본어·번체는 해당 화면과 `boxle.kr/ja/`, `boxle.kr/zh-Hant/`로 연결합니다. 기존 밴드로그 자산은 변경하지 않았습니다.
+제품 이름은 한국어 복슬, 일본어 ふくもふ, 대만 번체 福絨입니다. 영어는 2026-10-24 앱 영어 지원(형기 님 결정, 국가 확장은 아님)에 따라 영어 이름 boxle, Figma 정본의 영어(en-US) 화면(`design/store/2026-10-23/ios/en-US/`)과 `boxle.kr/en/`을 씁니다. 일본어·번체는 해당 화면과 `boxle.kr/ja/`, `boxle.kr/zh-Hant/`로 연결합니다. 기존 밴드로그 자산은 변경하지 않았습니다.

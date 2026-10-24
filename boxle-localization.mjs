@@ -1,10 +1,10 @@
 // 설명은 회사 사이트 언어로, 제품 이름·링크·화면은 복슬의 지원 언어로 맞춥니다.
-// 영어는 앱이 지원하지 않으므로 한국어 제품 에셋과 한국어 링크를 사용합니다.
+// 영어는 2026-10-24부터 앱이 지원하므로(형기 님 결정, 국가 확장은 아님) 영어 이름 boxle, 영어 화면과 boxle.kr/en/을 씁니다.
 export const boxleLocales = {
   ko: { asset: 'ko', url: 'https://boxle.kr/', language: 'ko' },
   'ja-JP': { asset: 'ja-JP', url: 'https://boxle.kr/ja/', language: 'ja' },
   'zh-Hant-TW': { asset: 'zh-Hant-TW', url: 'https://boxle.kr/zh-Hant/', language: 'zh-Hant' },
-  'en-US': { asset: 'ko', url: 'https://boxle.kr/', language: 'ko' },
+  'en-US': { asset: 'en-US', url: 'https://boxle.kr/en/', language: 'en' },
 };
 
 export const boxleCopy = {
@@ -42,14 +42,14 @@ export const boxleCopy = {
     imageAlts: ['顯示台北天氣、今日運勢與心願的畫面', '心願詳情與多種累積幸運選項', '四位AI具體解讀運勢的對話', '每天連結星星完成的星座', '月曆與所選日期的心願、運勢、諮詢紀錄'],
   },
   'en-US': {
-    'boxle.name': '복슬', 'boxle.title': ['Today’s weather,', 'fortunes and wishes.'],
+    'boxle.name': 'boxle', 'boxle.title': ['Today’s weather,', 'fortunes and wishes.'],
     'boxle.lead': ['Get a feel for your day,', 'and add a little luck to the one you’re waiting for.'],
-    'boxle.description': '복슬 brings weather, fortunes and wishes into one daily experience. Give a wish a date, collect luck through small rituals, explore fortune readings from four AI perspectives, and revisit your daily records.',
-    'boxle.site': '복슬 사이트에서 자세히 보기', 'boxle.store': 'Download 복슬', 'boxle.release': 'Preparing for store release · App languages: Korean, Japanese and Traditional Chinese', 'boxle.gallery': 'Five 복슬 iPhone screens in Korean',
+    'boxle.description': 'boxle brings weather, fortunes and wishes into one daily experience. Give a wish a date, collect luck through small rituals, explore fortune readings from four AI perspectives, and revisit your daily records.',
+    'boxle.site': 'See more on the boxle site', 'boxle.store': 'Download boxle', 'boxle.release': 'Preparing for store release · App languages: Korean, Japanese, Traditional Chinese and English', 'boxle.gallery': 'Five boxle iPhone screens',
     'boxle.feature.1.title': 'Your day at a glance', 'boxle.feature.1.body': ['See the weather, your daily fortune', 'and the wishes you’re keeping in one place.'],
     'boxle.feature.2.title': 'A little luck for your wishes', 'boxle.feature.2.body': ['Toss a coin or connect a star:', 'small rituals for a day that matters.'],
     'boxle.feature.3.title': 'Find your own rhythm', 'boxle.feature.3.body': ['Revisit AI fortune interpretations', 'and your daily records by date.'],
     captions: ['Your day at a glance', 'Collect luck for a wish', 'Four AI fortune interpretations', 'A small ritual, one star at a time', 'Your days, collected in a calendar'],
-    imageAlts: ['Korean screen showing Seoul weather, today’s fortune and wishes', 'Korean wish detail with a selection of luck-building rituals', 'Korean conversation with four AI fortune interpreters', 'Korean screen for connecting daily stars into a constellation', 'Korean calendar with wishes, fortunes and consultation records for a selected day'],
+    imageAlts: ['Screen showing Seoul weather, today’s fortune and wishes', 'Wish detail with a selection of luck-building rituals', 'Conversation with four AI fortune readers', 'Screen for connecting daily stars into a constellation', 'Calendar with wishes, fortunes and AI chat records for a selected day'],
   },
 };
