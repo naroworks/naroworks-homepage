@@ -75,7 +75,7 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 - [Simple Icons Google Play](https://github.com/simple-icons/simple-icons/blob/develop/icons/googleplay.svg)
 - CC0-1.0: [Simple Icons license](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md)
 - SVG 원본 경로를 유지하고 홈페이지에서는 단색으로 표시한다. 각 상표는 해당 소유자의 자산이다.
-- 실제 다운로드 badge로 표시하지 않고 스토어 이름과 `준비 중`을 함께 표시한다. 공개 링크는 이번 PR에 추가하지 않는다.
+- (2026-10-27 바뀜) Google Play는 공개됐고 App Store도 곧 공개되므로, 페이지에는 두 스토어 모두 공개된 것으로 보고 `준비 중` 문구를 내렸다. 배지는 각 스토어 주소로 연결한다.
 
 이전 `hero-background.jpg`는 기존 홈페이지 이력을 위한 자산으로 남겨 두며 개편 화면에서는 사용하지 않는다.
 
