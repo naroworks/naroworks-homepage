@@ -1,10 +1,10 @@
 // 설명은 회사 사이트 언어로, 제품 이름·링크·화면은 복슬의 지원 언어로 맞춥니다.
 // 영어는 2026-10-24부터 앱이 지원하므로(형기 님 결정, 국가 확장은 아님) 영어 이름 boxle, 영어 화면과 boxle.kr/en/을 씁니다.
 export const boxleLocales = {
-  ko: { asset: 'ko', url: 'https://boxle.kr/', language: 'ko' },
-  'ja-JP': { asset: 'ja-JP', url: 'https://boxle.kr/ja/', language: 'ja' },
-  'zh-Hant-TW': { asset: 'zh-Hant-TW', url: 'https://boxle.kr/zh-Hant/', language: 'zh-Hant' },
-  'en-US': { asset: 'en-US', url: 'https://boxle.kr/en/', language: 'en' },
+  ko: { asset: 'ko', url: 'https://boxle.kr/', language: 'ko', appStore: 'https://apps.apple.com/kr/app/id6823910868' },
+  'ja-JP': { asset: 'ja-JP', url: 'https://boxle.kr/ja/', language: 'ja', appStore: 'https://apps.apple.com/jp/app/id6823910868' },
+  'zh-Hant-TW': { asset: 'zh-Hant-TW', url: 'https://boxle.kr/zh-Hant/', language: 'zh-Hant', appStore: 'https://apps.apple.com/tw/app/id6823910868' },
+  'en-US': { asset: 'en-US', url: 'https://boxle.kr/en/', language: 'en', appStore: 'https://apps.apple.com/sg/app/id6823910868' },
 };
 
 export const boxleCopy = {

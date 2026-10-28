@@ -168,6 +168,15 @@ export const copy = {
   },
 };
 
+// App Store 웹 주소는 나라 칸(/kr/ 등)이 있어야 컴퓨터 브라우저에서도 앱 페이지가 열립니다(2026-10-28 형기 님 확인).
+// 언어마다 출시 나라 상점으로 잇습니다. 밴드로그는 한국·일본·대만 출시라 영어는 한국 상점을 영어 표시로 엽니다.
+export const bandlogAppStores = {
+  ko: 'https://apps.apple.com/kr/app/id6815118964',
+  'ja-JP': 'https://apps.apple.com/jp/app/id6815118964',
+  'zh-Hant-TW': 'https://apps.apple.com/tw/app/id6815118964',
+  'en-US': 'https://apps.apple.com/kr/app/id6815118964?l=en',
+};
+
 export function applyLocale(locale) {
   const text = { ...copy[locale], ...Object.fromEntries(Object.entries(boxleCopy[locale]).filter(([key]) => key.startsWith('boxle.'))) };
   document.documentElement.lang = locale;
@@ -215,9 +224,11 @@ export function applyLocale(locale) {
     image.alt = text.imageAlts[index];
     shot.querySelector('.shot-caption').textContent = text.captions[index];
   });
+  document.querySelector('#products .store-badge[href^="https://apps.apple.com/"]').href = bandlogAppStores[locale];
   const boxle = boxleCopy[locale];
   const assets = boxleLocales[locale];
   const product = document.querySelector('#boxle');
+  product.querySelector('.store-badge[href^="https://apps.apple.com/"]').href = assets.appStore;
   const siteLink = product.querySelector('.product-site');
   siteLink.href = assets.url;
   siteLink.lang = assets.language;
