@@ -1,4 +1,4 @@
-import { boxleCopy, boxleLocales } from './boxle-localization.mjs';
+import { boxleCopy, boxleLocales, syncBoxleAppStore } from './boxle-localization.mjs';
 
 export const supportedLocales = ['ko', 'ja-JP', 'zh-Hant-TW', 'en-US'];
 const storageKey = 'naroworks.locale';
@@ -181,6 +181,7 @@ export function applyLocale(locale) {
   const text = { ...copy[locale], ...Object.fromEntries(Object.entries(boxleCopy[locale]).filter(([key]) => key.startsWith('boxle.'))) };
   document.documentElement.lang = locale;
   document.title = text['meta.title'];
+  syncBoxleAppStore(document.querySelector('#boxle'), boxleLocales[locale].appStore);
   document.querySelectorAll('[data-i18n]').forEach(node => {
     const value = text[node.dataset.i18n];
     if (Array.isArray(value)) {
@@ -228,7 +229,6 @@ export function applyLocale(locale) {
   const boxle = boxleCopy[locale];
   const assets = boxleLocales[locale];
   const product = document.querySelector('#boxle');
-  product.querySelector('.store-badge[href^="https://apps.apple.com/"]').href = assets.appStore;
   const siteLink = product.querySelector('.product-site');
   siteLink.href = assets.url;
   siteLink.lang = assets.language;
