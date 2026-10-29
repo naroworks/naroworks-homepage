@@ -1145,6 +1145,22 @@ a.store-badge:hover {
 a.store-badge:focus-visible {
   outline-offset: 3px;
 }
+/* App Store 심사 중(boxle-localization.mjs boxleAppStorePaused): 같은 자리, 흐리게, 누를 수 없음 */
+.store-badge.is-paused {
+  cursor: default;
+  border-style: dashed;
+}
+.store-badge.is-paused img,
+.store-badge.is-paused strong {
+  opacity: 0.5;
+}
+.store-badge.is-paused small {
+  color: #ffd266;
+}
+a.store-badge.is-paused:hover {
+  border-color: #425467;
+  background-color: transparent;
+}
 @media (max-width: 680px) {
   .product-actions {
     gap: 10px;

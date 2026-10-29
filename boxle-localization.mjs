@@ -7,12 +7,35 @@ export const boxleLocales = {
   'en-US': { asset: 'en-US', url: 'https://boxle.kr/en/', language: 'en', appStore: 'https://apps.apple.com/sg/app/id6823910868' },
 };
 
+// App Store 잠시 멈춤(2026-10-29 형기 님): iOS 앱이 심사 중이라 복슬의 App Store 배지는 모양을 둔 채 '심사 중'으로 막아 둔다.
+// 출시되면 false 한 줄로 되돌린다. 그러면 스크립트가 배지에 그 언어의 상점 주소와 다운로드 문구를, 아래 안내에 원래 문구를 다시 넣는다
+// (index.html의 스크립트 없는 영어 기본값도 함께 되돌리면 좋다: href, store.appStore, boxle.release).
+export const boxleAppStorePaused = true;
+
+// 언어를 적용하기 전에 App Store 배지와 출시 안내가 어떤 문구 키를 쓸지 정한다.
+export function syncBoxleAppStore(product, appStoreUrl) {
+  const badge = product.querySelector('.store-badge[data-store="ios"]');
+  const note = product.closest('section')?.querySelector('.release-note') ?? product.querySelector('.release-note');
+  badge.classList.toggle('is-paused', boxleAppStorePaused);
+  badge.querySelector('small').dataset.i18n = boxleAppStorePaused ? 'boxle.storePaused' : 'store.appStore';
+  if (note) note.dataset.i18n = boxleAppStorePaused ? 'boxle.releasePaused' : 'boxle.release';
+  if (boxleAppStorePaused) {
+    for (const name of ['href', 'target', 'rel']) badge.removeAttribute(name);
+    badge.setAttribute('aria-disabled', 'true');
+  } else {
+    badge.href = appStoreUrl;
+    badge.target = '_blank';
+    badge.rel = 'noopener';
+    badge.removeAttribute('aria-disabled');
+  }
+}
+
 export const boxleCopy = {
   ko: {
     'boxle.name': '복슬', 'boxle.title': ['오늘의 날씨부터,', '운세와 소원까지.'],
     'boxle.lead': ['나의 오늘을 살피고,', '바라는 그날에 행운을 더하도록.'],
     'boxle.description': '복슬은 날씨와 운세, 소원을 하나의 하루로 연결하는 앱입니다. 소원에 날짜를 담고 작은 의식으로 행운을 쌓으며, 네 AI 상담사의 운세 해설과 지난 기록을 함께 살펴보세요.',
-    'boxle.site': '복슬 사이트에서 자세히 보기', 'boxle.store': '복슬 앱 다운로드', 'boxle.release': 'App Store와 Google Play에서 내려받을 수 있습니다', 'boxle.gallery': '복슬 iPhone 화면 5장',
+    'boxle.site': '복슬 사이트에서 자세히 보기', 'boxle.store': '복슬 앱 다운로드', 'boxle.release': 'App Store와 Google Play에서 내려받을 수 있습니다', 'boxle.storePaused': '심사 중', 'boxle.releasePaused': 'Google Play에서 내려받을 수 있습니다. App Store는 심사 중입니다', 'boxle.gallery': '복슬 iPhone 화면 5장',
     'boxle.feature.1.title': '오늘을 한눈에', 'boxle.feature.1.body': ['날씨와 오늘의 운세,', '간직한 소원을 한곳에서 봅니다.'],
     'boxle.feature.2.title': '소원에 쌓는 행운', 'boxle.feature.2.body': ['동전 던지기와 별 잇기 같은', '작은 의식으로 그날을 기다립니다.'],
     'boxle.feature.3.title': '나의 흐름을 읽는 기록', 'boxle.feature.3.body': ['AI의 운세 해설과 하루의 기록을', '날짜별로 다시 펼쳐 봅니다.'],
@@ -23,7 +46,7 @@ export const boxleCopy = {
     'boxle.name': 'ふくもふ', 'boxle.title': ['今日の天気から、', '運勢と願いごとまで。'],
     'boxle.lead': ['自分の今日を知り、', '願うその日に幸運を重ねる。'],
     'boxle.description': 'ふくもふは、天気・運勢・願いごとをひとつの毎日につなぐアプリです。願いに日付を添え、小さな習慣で幸運を重ねながら、4人のAIによる運勢の解説や過去の記録を振り返れます。',
-    'boxle.site': 'ふくもふのサイトで詳しく見る', 'boxle.store': 'ふくもふをダウンロード', 'boxle.release': 'App StoreとGoogle Playで配信中', 'boxle.gallery': 'ふくもふのiPhone画面5枚',
+    'boxle.site': 'ふくもふのサイトで詳しく見る', 'boxle.store': 'ふくもふをダウンロード', 'boxle.release': 'App StoreとGoogle Playで配信中', 'boxle.storePaused': '審査中', 'boxle.releasePaused': 'Google Playで配信中。App Storeは審査中です', 'boxle.gallery': 'ふくもふのiPhone画面5枚',
     'boxle.feature.1.title': '今日を、ひと目で', 'boxle.feature.1.body': ['天気、今日の運勢、大切な願いを', 'ひとつの画面で見られます。'],
     'boxle.feature.2.title': '願いに重ねる幸運', 'boxle.feature.2.body': ['コイン投げや星つなぎなど、', '小さな習慣でその日を待ちます。'],
     'boxle.feature.3.title': '自分の流れを知る記録', 'boxle.feature.3.body': ['AIによる運勢の解説と日々の記録を', '日付ごとに振り返れます。'],
@@ -34,7 +57,7 @@ export const boxleCopy = {
     'boxle.name': '福絨', 'boxle.title': ['從今天的天氣，', '到運勢與心願。'],
     'boxle.lead': ['認識自己的今天，', '為期待的那天累積幸運。'],
     'boxle.description': '福絨將天氣、運勢與心願，串成屬於自己的每一天。為心願選個日期，透過小儀式累積幸運，也能閱讀四位AI的運勢解讀，回顧過去的紀錄。',
-    'boxle.site': '前往福絨網站了解更多', 'boxle.store': '下載福絨', 'boxle.release': '已在 App Store 與 Google Play 上架', 'boxle.gallery': '福絨的五張iPhone畫面',
+    'boxle.site': '前往福絨網站了解更多', 'boxle.store': '下載福絨', 'boxle.release': '已在 App Store 與 Google Play 上架', 'boxle.storePaused': '審核中', 'boxle.releasePaused': '已在 Google Play 上架，App Store 版本審核中', 'boxle.gallery': '福絨的五張iPhone畫面',
     'boxle.feature.1.title': '今天，一目了然', 'boxle.feature.1.body': ['天氣、今日運勢與收藏的心願，', '都在同一個地方。'],
     'boxle.feature.2.title': '為心願累積幸運', 'boxle.feature.2.body': ['投硬幣、連星星，', '用小儀式等待重要的那天。'],
     'boxle.feature.3.title': '讀懂自己的生活節奏', 'boxle.feature.3.body': ['按日期重新翻閱AI運勢解讀，', '以及每天留下的紀錄。'],
@@ -45,7 +68,7 @@ export const boxleCopy = {
     'boxle.name': 'boxle', 'boxle.title': ['Today’s weather,', 'fortunes and wishes.'],
     'boxle.lead': ['Get a feel for your day,', 'and add a little luck to the one you’re waiting for.'],
     'boxle.description': 'boxle brings weather, fortunes and wishes into one daily experience. Give a wish a date, collect luck through small rituals, explore fortune readings from four AI perspectives, and revisit your daily records.',
-    'boxle.site': 'See more on the boxle site', 'boxle.store': 'Download boxle', 'boxle.release': 'Available on the App Store and Google Play · App languages: Korean, Japanese, Traditional Chinese and English', 'boxle.gallery': 'Five boxle iPhone screens',
+    'boxle.site': 'See more on the boxle site', 'boxle.store': 'Download boxle', 'boxle.release': 'Available on the App Store and Google Play · App languages: Korean, Japanese, Traditional Chinese and English', 'boxle.storePaused': 'In review', 'boxle.releasePaused': 'Available on Google Play, App Store version in review · App languages: Korean, Japanese, Traditional Chinese and English', 'boxle.gallery': 'Five boxle iPhone screens',
     'boxle.feature.1.title': 'Your day at a glance', 'boxle.feature.1.body': ['See the weather, your daily fortune', 'and the wishes you’re keeping in one place.'],
     'boxle.feature.2.title': 'A little luck for your wishes', 'boxle.feature.2.body': ['Toss a coin or connect a star:', 'small rituals for a day that matters.'],
     'boxle.feature.3.title': 'Find your own rhythm', 'boxle.feature.3.body': ['Revisit AI fortune interpretations', 'and your daily records by date.'],
