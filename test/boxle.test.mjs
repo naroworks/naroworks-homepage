@@ -37,12 +37,10 @@ test('복슬은 밴드로그 바로 다음에 있고 두 갤러리는 독립적�
   assert.equal((html.match(/class="gallery-shot"/g) ?? []).length, 10);
   const product = html.slice(html.indexOf('id="boxle"'), html.indexOf('id="about"'));
   // 스크립트가 꺼지면 영어 본문이므로 App Store도 영어(싱가포르 상점)로 둔다.
-  // 심사 중(2026-10-29)에는 App Store 배지를 주소 없는 '심사 중' 칸으로 둔다.
-  if (boxleAppStorePaused) {
-    assert.doesNotMatch(product, /apps\.apple\.com/);
-    assert.match(product, /class="store-badge is-paused" data-store="ios" aria-disabled="true"/);
-    assert.ok(product.includes('>In review<'));
-  } else assert.ok(product.includes('https://apps.apple.com/sg/app/id6823910868'));
+  assert.equal(boxleAppStorePaused, false);
+  assert.ok(product.includes('https://apps.apple.com/sg/app/id6823910868'));
+  assert.doesNotMatch(product, /is-paused|aria-disabled|In review|releasePaused|storePaused/);
+  assert.ok(product.includes('data-i18n="boxle.release"'));
   assert.doesNotMatch(html, /apps\.apple\.com\/app\//);
   assert.ok(product.includes('https://play.google.com/store/apps/details?id=kr.boxle.app'));
   assert.ok(product.includes('See more on the boxle site'));
