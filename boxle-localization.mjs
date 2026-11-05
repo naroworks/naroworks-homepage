@@ -7,10 +7,8 @@ export const boxleLocales = {
   'en-US': { asset: 'en-US', url: 'https://boxle.kr/en/', language: 'en', appStore: 'https://apps.apple.com/sg/app/id6823910868' },
 };
 
-// App Store 잠시 멈춤(2026-10-29 형기 님): iOS 앱이 심사 중이라 복슬의 App Store 배지는 모양을 둔 채 '심사 중'으로 막아 둔다.
-// 출시되면 false 한 줄로 되돌린다. 그러면 스크립트가 배지에 그 언어의 상점 주소와 다운로드 문구를, 아래 안내에 원래 문구를 다시 넣는다
-// (index.html의 스크립트 없는 영어 기본값도 함께 되돌리면 좋다: href, store.appStore, boxle.release).
-export const boxleAppStorePaused = true;
+// 2026-11-05 복슬 iOS 1.0.7 출시: 네 언어 배지와 스크립트 없는 영어 기본값 모두 App Store로 연결한다.
+export const boxleAppStorePaused = false;
 
 // 언어를 적용하기 전에 App Store 배지와 출시 안내가 어떤 문구 키를 쓸지 정한다.
 export function syncBoxleAppStore(product, appStoreUrl) {
