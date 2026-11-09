@@ -119,3 +119,9 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 `assets/boxle/{ko,ja-JP,zh-Hant-TW,en-US}/01..05-{440,880}.webp`는 naroworks/boxle PR #285로 확정된 `design/store/2026-10-23/ios/` 원본 PNG의 비율을 유지한 WebP 파생본입니다(quality 88). 원본 Figma 파일 `XlhpeQaQR9WmMbg9OJtbVH`, 정본 페이지 `1246:11351`. 금색 별이 있는 `symbol.webp`는 같은 저장소의 정규 `design/brand/logo.png`에서 192px로 변환했습니다.
 
 제품 이름은 한국어 복슬, 일본어 ふくもふ, 대만 번체 福絨입니다. 영어는 2026-10-24 앱 영어 지원(형기 님 결정, 국가 확장은 아님)에 따라 영어 이름 boxle, Figma 정본의 영어(en-US) 화면(`design/store/2026-10-23/ios/en-US/`)과 `boxle.kr/en/`을 씁니다. 일본어·번체는 해당 화면과 `boxle.kr/ja/`, `boxle.kr/zh-Hant/`로 연결합니다. 기존 밴드로그 자산은 변경하지 않았습니다.
+
+## Minou
+
+- `assets/minou/symbol.webp`: 미누 공식 앱 아이콘(털모자와 목도리 D안, minou 저장소 `apps/app/assets/icon.png`)의 512px 파생본.
+- `assets/minou/idle.webp`: 승인한 미누 원화 idle 시트(minou 저장소 `apps/app/assets/minou/idle.webp`)를 칸 384px로 줄인 것. 다시 칠하지 않았습니다.
+- `assets/minou/ko/01~05-{440,880}.webp`: 실제 앱 화면 캡처(미누 Figma 정규 파일 'DRAFT / store-screenshots-ko'의 '00 자산 · 앱 화면 캡처', 1320×2868)를 줄인 WebP. 홈, 꾸러미, 3D 구경, 입혀 보기, 자랑 카드 순서입니다. 생성 이미지는 쓰지 않았습니다.

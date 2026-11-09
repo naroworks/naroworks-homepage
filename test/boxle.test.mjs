@@ -29,13 +29,13 @@ test('모든 언어의 설명과 화면 5장, 두 해상도의 파일이 준비�
   }
 });
 
-test('복슬은 밴드로그 바로 다음에 있고 두 갤러리는 독립적으로 접근한다', async () => {
+test('복슬은 밴드로그 바로 다음에 있고 갤러리는 제품마다 독립적으로 접근한다', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   assert.ok(html.indexOf('id="products"') < html.indexOf('id="boxle"'));
-  assert.ok(html.indexOf('id="boxle"') < html.indexOf('id="about"'));
-  assert.equal((html.match(/class="product-gallery"/g) ?? []).length, 2);
-  assert.equal((html.match(/class="gallery-shot"/g) ?? []).length, 10);
-  const product = html.slice(html.indexOf('id="boxle"'), html.indexOf('id="about"'));
+  assert.ok(html.indexOf('id="boxle"') < html.indexOf('id="minou"'));
+  assert.equal((html.match(/class="product-gallery"/g) ?? []).length, 3);
+  assert.equal((html.match(/class="gallery-shot"/g) ?? []).length, 15);
+  const product = html.slice(html.indexOf('id="boxle"'), html.indexOf('id="minou"'));
   // 스크립트가 꺼지면 영어 본문이므로 App Store도 영어(싱가포르 상점)로 둔다.
   assert.equal(boxleAppStorePaused, false);
   assert.ok(product.includes('https://apps.apple.com/sg/app/id6823910868'));

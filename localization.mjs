@@ -1,4 +1,5 @@
 import { boxleCopy, boxleLocales, syncBoxleAppStore } from './boxle-localization.mjs';
+import { minouCopy, minouLocales } from './minou-localization.mjs';
 
 export const supportedLocales = ['ko', 'ja-JP', 'zh-Hant-TW', 'en-US'];
 const storageKey = 'naroworks.locale';
@@ -178,7 +179,7 @@ export const bandlogAppStores = {
 };
 
 export function applyLocale(locale) {
-  const text = { ...copy[locale], ...Object.fromEntries(Object.entries(boxleCopy[locale]).filter(([key]) => key.startsWith('boxle.'))) };
+  const text = { ...copy[locale], ...Object.fromEntries(Object.entries(boxleCopy[locale]).filter(([key]) => key.startsWith('boxle.'))), ...Object.fromEntries(Object.entries(minouCopy[locale]).filter(([key]) => key.startsWith('minou.'))) };
   document.documentElement.lang = locale;
   document.title = text['meta.title'];
   syncBoxleAppStore(document.querySelector('#boxle'), boxleLocales[locale].appStore);
@@ -244,6 +245,26 @@ export function applyLocale(locale) {
     image.srcset = path + '-440.webp 440w, ' + path + '-880.webp 880w';
     image.alt = boxle.imageAlts[index];
     shot.querySelector('.shot-caption').textContent = boxle.captions[index];
+  });
+  const minou = minouCopy[locale];
+  const minouAssets = minouLocales[locale];
+  const minouProduct = document.querySelector('#minou');
+  const minouSite = minouProduct.querySelector('.product-site');
+  minouSite.href = minouAssets.url;
+  minouSite.lang = minouAssets.language;
+  minouProduct.querySelector('.store-badge[data-store="ios"]').href = minouAssets.appStore;
+  minouProduct.querySelectorAll('[data-i18n="minou.name"]').forEach(node => { node.lang = minouAssets.language; });
+  minouProduct.querySelectorAll('.gallery-shot').forEach((shot, index) => {
+    const link = shot.querySelector('.shot-link');
+    const image = link.querySelector('img');
+    const path = 'assets/minou/' + minouAssets.asset + '/' + String(index + 1).padStart(2, '0');
+    link.href = path + '-880.webp';
+    link.dataset.caption = minou.captions[index];
+    link.setAttribute('aria-label', minou.captions[index] + ' · ' + text.expand);
+    image.src = link.href;
+    image.srcset = path + '-440.webp 440w, ' + path + '-880.webp 880w';
+    image.alt = minou.imageAlts[index];
+    shot.querySelector('.shot-caption').textContent = minou.captions[index];
   });
   document.querySelector('#language-select').value = locale;
   document.querySelector('.language-picker').hidden = false;
