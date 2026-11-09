@@ -1384,3 +1384,15 @@ a.store-badge.is-paused:hover {
 .product-boxle .product-site img { border-radius: 50%; }
 .product-boxle .release-note { font-size: 12px; color: #b7bdd4; line-height: 1.7; margin: -30px 0 30px; }
 @media(max-width:680px) { .product-boxle .release-note { margin-top: -24px; } }
+
+/* 미누(Minou): 짙은 코코아 바탕에 털실 빨강과 크림. 앉은 미누는 승인 원화 idle 시트(3×2칸)를 칸 단위로 바꿔 눈을 깜빡인다 */
+.product-minou { background: #2b201d; padding-top: 60px; }
+.product-minou .product-topline { border-color: #ffffff22; color: #f08a75; }
+.product-minou .product-description > p:nth-child(2), .product-minou .product-features p { color: #d6c6b8; }
+.product-minou .product-site { background: #fff4ea; }
+.product-minou .product-symbol, .product-minou .product-site img { border-radius: 22%; }
+.product-minou .release-note { font-size: 12px; color: #d6c6b8; line-height: 1.7; margin: -30px 0 30px; }
+.minou-cat { display: inline-block; width: 76px; height: 76px; margin-left: 6px; vertical-align: bottom; background: url(assets/minou/idle.webp) 0 0 / 300% 200% no-repeat; animation: minou-blink 4.8s steps(1) infinite; }
+@keyframes minou-blink { 0%, 86% { background-position: 0 0; } 88% { background-position: 100% 0; } 90% { background-position: 0 100%; } 92% { background-position: 100% 0; } 94%, 100% { background-position: 0 0; } }
+@media (prefers-reduced-motion: reduce) { .minou-cat { animation: none; } }
+@media(max-width:680px) { .product-minou .release-note { margin-top: -24px; } .minou-cat { width: 60px; height: 60px; } }

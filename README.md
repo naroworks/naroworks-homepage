@@ -53,3 +53,7 @@ LINE Seed KR은 [LINE 공식 배포본](https://seed.line.me/index_kr.html)의 �
 ## 복슬 제품 소개
 
 밴드로그 다음에 `#boxle` 섹션을 둡니다. `boxle-localization.mjs`가 회사 홈페이지 네 언어의 설명과 복슬이 지원하는 세 언어의 제품 자산을 연결합니다. 영어에서는 한국어 이름·사이트 링크·스크린샷으로 fallback합니다. 각 제품의 가로 갤러리와 5장 확대 보기는 독립적으로 동작합니다. `node --test test/*.test.mjs`로 언어와 자산 매핑을 확인합니다.
+
+## 미누 제품 소개
+
+복슬 다음에 `#minou` 섹션을 둡니다(2026-11-09). `minou-localization.mjs`가 회사 홈페이지 네 언어의 설명과 미누의 언어별 이름(미누 · ミヌー · Minou), 미누 홈(minou.naroworks.com), 그 나라 App Store 주소를 연결합니다. 화면 5장은 한국어 앱 화면을 모든 언어에서 함께 쓰고, 이름 옆의 앉은 미누는 승인 원화 idle 시트로 눈을 깜빡입니다(동작 줄이기 설정에서는 멈춤). `node --test test/*.test.mjs`로 확인합니다.
