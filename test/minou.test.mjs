@@ -33,7 +33,7 @@ test('미누는 복슬 다음, 회사 소개 앞에 있고 두 스토어와 미�
   assert.ok(html.indexOf('id="boxle"') < html.indexOf('id="minou"'));
   assert.ok(html.indexOf('id="minou"') < html.indexOf('id="about"'));
   const product = html.slice(html.indexOf('id="minou"'), html.indexOf('id="about"'));
-  assert.ok(product.includes('https://apps.apple.com/us/app/id6830531773'));
+  assert.ok(product.includes('https://apps.apple.com/sg/app/id6830531773'));
   assert.ok(product.includes(minouPlay));
   assert.ok(product.includes('https://minou.naroworks.com/en/'));
   assert.doesNotMatch(product, /boxle|bandlog|is-paused|aria-disabled/);

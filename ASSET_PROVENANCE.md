@@ -125,3 +125,20 @@ Avoid: gradients, shadows, 3D, perspective depth, texture, paper grain, noise, g
 - `assets/minou/symbol.webp`: 미누 공식 앱 아이콘(털모자와 목도리 D안, minou 저장소 `apps/app/assets/icon.png`)의 512px 파생본.
 - `assets/minou/idle.webp`: 승인한 미누 원화 idle 시트(minou 저장소 `apps/app/assets/minou/idle.webp`)를 칸 384px로 줄인 것. 다시 칠하지 않았습니다.
 - `assets/minou/ko/01~05-{440,880}.webp`: 실제 앱 화면 캡처(미누 Figma 정규 파일 'DRAFT / store-screenshots-ko'의 '00 자산 · 앱 화면 캡처', 1320×2868)를 줄인 WebP. 홈, 꾸러미, 3D 구경, 입혀 보기, 자랑 카드 순서입니다. 생성 이미지는 쓰지 않았습니다.
+
+## 2026-11-11 Minou 해외 출시 화면
+
+Minou `7b08ba4e` Expo 웹 출력과 운영 콘텐츠 6판의 실제 그리기 화면을 촬영했다. 제품 코드·설치본·OTA는 수정하지 않았다. 일본어·영어 UI로 촬영하고 440/880px WebP로 비례 축소했다. 대만 번체는 현재 배포 앱의 영어 화면을 쓰며 번체 UI의 추후 제공을 안내한다. 승인 미누 원화를 재사용했고 생성 이미지는 만들지 않았다.
+
+| 언어 | 원본 | SHA-256 |
+| --- | --- | --- |
+| en | 02.png | 6fc2963600b30664a65338eda42e09f6e6bf3e621daf405ee3f6f57567e328e8 |
+| en | 03.png | 7db363cd21e738c008048e26679127dfd1d21566ce580b1cf23d518d39bcb267 |
+| en | 04.png | d79a5557a1dbc33998abb6160ec1ad70451b2bfcd1859e888009ea2fa9e3accd |
+| en | wear-ask.png | 08ac5a1da29ad5ab0c2fd4a363fed302fb20c5db8eabc077b3c50eb3bd855406 |
+| en | 09.png | 18f9464577d6f49ba9c6ad1c268ede40429a9f6fa79e804f9c2a3d26fe366fee |
+| ja | 02.png | 01b43d359c065940a2d8b342f89a774526b23e6a8c37d6a7f7dadc9bc2356880 |
+| ja | 03.png | da744fa1f27ae059485757983a6d6e742e8cf749c25b3c1cd9fce1d5359df369 |
+| ja | 04.png | 3c6bc8cdf2999832a8992d37ee521ff151562c9370b4c3584381f8da61ca9e61 |
+| ja | wear-ask.png | 8a1361b21f3405de8b6e63ba5bf2dbe5dc52ac14749473c288c93fdb6fd43bb2 |
+| ja | 09.png | d6bd9d97c7f4c2fc7d0c8f2d6f537f47e245e0a6a99b17ed1eff885f5ba19fdc |
