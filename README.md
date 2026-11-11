@@ -57,3 +57,7 @@ LINE Seed KR은 [LINE 공식 배포본](https://seed.line.me/index_kr.html)의 �
 ## 미누 제품 소개
 
 복슬 다음에 `#minou` 섹션을 둡니다(2026-11-09). `minou-localization.mjs`가 회사 홈페이지 네 언어의 설명과 미누의 언어별 이름(미누 · ミヌー · Minou), 미누 홈(minou.naroworks.com), 그 나라 App Store 주소를 연결합니다. 화면 5장은 한국어·일본어·영어 실제 앱 캡처로 제공한다. 대만 번체는 현재 배포 앱의 영어 화면을 쓰고 번체 UI의 추후 제공을 안내한다. `?lang=ko|en|ja|zh-TW`로 언어를 직접 지정할 수 있고 회사 개인정보처리방침도 네 언어로 연결한다. 이름 옆의 앉은 미누는 승인 원화 idle 시트로 눈을 깜빡입니다(동작 줄이기 설정에서는 멈춤). `node --test test/*.test.mjs`로 확인합니다.
+
+## 공개 정책의 언어 이동
+
+`privacy/ko/`, `privacy/en/`, `privacy/ja/`, `privacy/zh-TW/`는 각 언어의 공개 Notion 정책으로 이동한다. Notion이 같은 서비스의 주소를 편집 화면 주소로 바꾸는 것을 피하도록, 공개 문서의 언어 이동에는 이 홈페이지 주소를 쓴다. 자동 이동을 막는 브라우저를 위한 일반 링크도 제공한다.
