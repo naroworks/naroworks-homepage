@@ -40,9 +40,9 @@ export const minouCopy = {
     'minou.site': '前往 Minou 網站了解更多', 'minou.store': '下載 Minou', 'minou.release': '商店目前版本提供韓文、日文及英文介面。此處為英文 App 畫面；繁體中文介面將於後續版本提供。', 'minou.gallery': 'Minou 的五張 iPhone 畫面',
     'minou.feature.1.title': '像真的一樣的手編', 'minou.feature.1.body': ['用推與拉的拇指動作，', '照真正的編織順序完成。'],
     'minou.feature.2.title': 'Minou 會穿上', 'minou.feature.2.body': ['編好的圍巾和帽子，', '由黑貓 Minou 穿上。'],
-    'minou.feature.3.title': '六個溫暖的空間', 'minou.feature.3.body': ['庭院、下雨的咖啡廳、冬天的小屋…', '在套組對應的場所享受編織。'],
-    captions: ['穿上手織作品的 Minou', '用套組收集新織圖', '用 3D 轉動欣賞作品', '幫 Minou 穿穿看', '和 Minou 一起分享作品'],
-    imageAlts: ['戴著手織帽子與圍巾的 Minou 坐在庭院的首頁畫面', '多種織圖套組的畫面', '用 3D 欣賞編好的條紋圍巾', '詢問是否讓 Minou 穿上圍巾的畫面', '圍著圍巾的 Minou 分享卡片'],
+    'minou.feature.3.title': '六個溫暖的空間', 'minou.feature.3.body': ['庭院、下雨的咖啡廳、冬天的小屋…', '在主題包對應的場所享受編織。'],
+    captions: ['穿上手織作品的 Minou', '用主題包收集新織圖', '用 3D 轉動欣賞作品', '幫 Minou 穿穿看', '和 Minou 一起分享作品'],
+    imageAlts: ['戴著手織帽子與圍巾的 Minou 坐在庭院的首頁畫面', '多種織圖主題包的畫面', '用 3D 欣賞編好的條紋圍巾', '詢問是否讓 Minou 穿上圍巾的畫面', '圍著圍巾的 Minou 分享卡片'],
   },
   'en-US': {
     'minou.name': 'Minou', 'minou.title': ['Real knitting,', 'right on your phone.'],
