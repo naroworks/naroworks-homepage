@@ -182,6 +182,14 @@ export function applyLocale(locale) {
   const text = { ...copy[locale], ...Object.fromEntries(Object.entries(boxleCopy[locale]).filter(([key]) => key.startsWith('boxle.'))), ...Object.fromEntries(Object.entries(minouCopy[locale]).filter(([key]) => key.startsWith('minou.'))) };
   document.documentElement.lang = locale;
   document.title = text['meta.title'];
+  const privacyPages = {
+    ko: '3ded36b356c081e18e78e59c614eac50',
+    'en-US': '415d36b356c081df81a1d1fe3d0e8b2a',
+    'ja-JP': '415d36b356c0815aa1ebc08e5c19c43c',
+    'zh-Hant-TW': '415d36b356c081d78c81ff1b3cafef6d',
+  };
+  document.querySelector('[data-i18n="company.privacy"]').closest('a').href = 'https://naroworks.notion.site/' + privacyPages[locale];
+
   syncBoxleAppStore(document.querySelector('#boxle'), boxleLocales[locale].appStore);
   document.querySelectorAll('[data-i18n]').forEach(node => {
     const value = text[node.dataset.i18n];
@@ -253,6 +261,7 @@ export function applyLocale(locale) {
   minouSite.href = minouAssets.url;
   minouSite.lang = minouAssets.language;
   minouProduct.querySelector('.store-badge[data-store="ios"]').href = minouAssets.appStore;
+  minouProduct.querySelector('.store-badge[data-store="android"]').href = 'https://play.google.com/store/apps/details?id=com.naroworks.minou&hl=' + minouAssets.language;
   minouProduct.querySelectorAll('[data-i18n="minou.name"]').forEach(node => { node.lang = minouAssets.language; });
   minouProduct.querySelectorAll('.gallery-shot').forEach((shot, index) => {
     const link = shot.querySelector('.shot-link');
@@ -273,7 +282,8 @@ export function applyLocale(locale) {
 if (typeof document !== 'undefined') {
   let saved;
   try { saved = localStorage.getItem(storageKey); } catch { /* 저장이 막혀도 언어 선택은 동작합니다. */ }
-  applyLocale(chooseLocale(saved, navigator.languages?.length ? navigator.languages : [navigator.language]));
+  const requested = resolveLocale(new URLSearchParams(location.search).get('lang'));
+  applyLocale(requested || chooseLocale(saved, navigator.languages?.length ? navigator.languages : [navigator.language]));
   document.querySelector('#language-select').addEventListener('change', event => {
     const locale = event.target.value;
     if (!supportedLocales.includes(locale)) return;
