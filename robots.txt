@@ -6,4 +6,4 @@ Disallow: /ASSET_PROVENANCE.md
 
 Sitemap: https://www.naroworks.com/sitemap.xml
 
-#DaumWebMasterTool:9ff8d2711bbee31f96aaae623f4ff220f9d3be2a0f35a61b6e34661c0cdeb025:CNSJIIGOISrSV2aL3hPlgQ==
+#DaumWebMasterTool:d61d6e24dd306da3976e800bca364e34d93c008d1dcb7c5ce331df01813d5267:CNSJIIGOISrSV2aL3hPlgQ==
