@@ -1,63 +1,21 @@
-# Naroworks homepage
+# Naroworks 홈페이지
 
-나로웍스 공식 회사 홈페이지입니다. 회사의 제품 원칙과 밴드로그를 소개합니다.
+뜨개 앱 미누를 개발하고 운영하는 주식회사 나로웍스의 회사 소개 페이지입니다. GitHub Pages에서 저장소 루트의 정적 파일을 제공합니다.
 
-- Production URL: [www.naroworks.com](https://www.naroworks.com)
-- Hosting: GitHub Pages
-- Contact: [contact@naroworks.com](mailto:contact@naroworks.com)
-
-## Local preview
-
-별도 설치나 빌드 없이 정적 파일 서버로 실행합니다.
+## 로컬 확인
 
 ```sh
-python3 -m http.server 4173 --bind 127.0.0.1
+python3 -m http.server 4310 --bind 127.0.0.1
 ```
 
-[로컬 미리보기](http://127.0.0.1:4173/)를 엽니다.
+[로컬 홈페이지](http://127.0.0.1:4310/)에서 확인할 수 있습니다. 시험은 `node --test test/*.test.mjs`로 실행합니다.
 
-## 구성
+## 언어와 링크
 
-- `index.html`: 회사 소개, 밴드로그의 승인된 iPhone 화면 5장과 [bandlog.kr](https://bandlog.kr/) 연결, 공시·연락처.
-- `styles.css`: 반응형 레이아웃과 타이포그래피. 기존 Pretendard·LINE Seed KR 웹폰트를 자체 제공.
-- `site.js`: 첫 화면 등장, 스크롤 등장, 갤러리 탐색과 확대. 외부 라이브러리·추적 도구 없음.
-- `localization.mjs`: 한국어·일본어·대만 번체·영어 본문과 접근성 문구, 언어 감지, 갤러리 이미지 전환.
-- `assets/bandlog/`: 승인된 스토어 화면의 비율을 보존한 WebP 파생본. 원본·체크섬은 [자산 출처](ASSET_PROVENANCE.md)를 따름.
-- `assets/icons/`: Apple·Google Play SVG. 두 스토어 배지는 각 스토어 주소로 연결되며 언어별 다운로드 문구를 표시함.
-- [개편 방향과 검증 조건](docs/homepage-redesign.md)
+`index.html`에 영어 본문과 그림, 제품 링크, 회사 정보를 담았습니다. `localization.mjs`의 네 언어 문구와 영어 기본 HTML을 함께 관리합니다. URL의 `?lang=ko|ja|zh-TW|en` 지정이 우선이며, 이어서 저장된 언어와 기기 언어를 확인합니다. 일치하는 언어가 없으면 영어로 표시합니다.
 
-JavaScript 없이도 본문·이미지·연락처를 이용할 수 있습니다. 동작 줄이기 설정에서는 등장·반복 애니메이션과 부드러운 스크롤을 끕니다. 확대 화면은 Escape와 좌우 방향키를 지원합니다.
+미누의 도메인을 바꿀 때는 `index.html`에서 `id="minou-home"`인 링크의 도메인만 수정하고 영어 경로 `/en/`을 유지합니다. 이 주소가 자바스크립트의 `PRODUCT_ROOT` 원본입니다. 창업자의 LinkedIn 주소도 같은 파일의 `id="founder-profile"` 링크 한 곳에서 관리합니다.
 
-## 언어
+[자산 출처](ASSET_PROVENANCE.md)에 원본 경로와 크롭 범위를 기록했습니다.
 
-상단 dropdown에서 한국어·日本語·繁體中文（台灣）·English를 선택합니다. URL의 `?lang=` 지정이 가장 먼저 적용된다. 수동 선택은 `localStorage`의 `naroworks.locale`에 저장하며 이후 방문에도 우선합니다. 저장된 선택이 없으면 `navigator.languages`의 선호 순서에서 지원하는 언어를 선택하고, 일치하는 언어가 없으면 영어를 표시합니다. 번체 중국어는 `zh-Hant` 또는 TW·HK·MO 지역을 인식하며 간체 중국어는 지원하지 않습니다.
-
-언어를 바꾸면 본문·문서 제목·접근성 문구·갤러리 캡션과 iPhone 이미지 5장이 함께 바뀝니다. 일본어는 バンドネコ 이름·고양이 심볼·흰색 워드마크와 일본어 Ready r2의 화면 5장을 사용합니다. 다른 외국어 썸네일은 기존 Figma 99의 Ready r1 원본을 유지합니다. JavaScript가 꺼진 경우 영어 본문과 영어 이미지를 제공합니다. 브라우저 저장이 차단돼도 현재 방문의 선택은 동작합니다. 회사의 법정 명칭·등록번호와 기존 공개 정책 링크는 보존합니다.
-
-언어 감지·선택 우선순위·번역 누락 검증:
-
-```sh
-node --test test/localization.test.mjs
-```
-
-## Deployment
-
-`main` branch의 repository root가 GitHub Pages source입니다. `CNAME`은 `www.naroworks.com`으로 고정합니다. PR branch의 작업을 공개하려면 별도 검토 후 main 반영이 필요합니다.
-
-## Brand assets
-
-정규 Naroworks CI와 기존 회사 핵심 문구를 재사용합니다. 폰트·이미지·스토어 아이콘의 출처와 처리 방법은 [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md)에 기록합니다. CI 형태나 색상을 변경할 때는 회사 workspace의 브랜드 기준을 먼저 갱신합니다.
-
-LINE Seed KR은 [LINE 공식 배포본](https://seed.line.me/index_kr.html)의 웹폰트이며, 저작권은 LY Corporation에 있습니다. SIL Open Font License 1.1은 [LINESeed-OFL.txt](assets/fonts/LINESeed-OFL.txt)에 포함되어 있습니다.
-
-## 복슬 제품 소개
-
-밴드로그 다음에 `#boxle` 섹션을 둡니다. `boxle-localization.mjs`가 회사 홈페이지 네 언어의 설명과 복슬이 지원하는 세 언어의 제품 자산을 연결합니다. 영어에서는 한국어 이름·사이트 링크·스크린샷으로 fallback합니다. 각 제품의 가로 갤러리와 5장 확대 보기는 독립적으로 동작합니다. `node --test test/*.test.mjs`로 언어와 자산 매핑을 확인합니다.
-
-## 미누 제품 소개
-
-복슬 다음에 `#minou` 섹션을 둡니다(2026-11-09). `minou-localization.mjs`가 회사 홈페이지 네 언어의 설명과 미누의 언어별 이름(미누 · ミヌー · Minou), 미누 홈(minou.naroworks.com), 그 나라 App Store 주소를 연결합니다. 화면 5장은 한국어·일본어·영어 실제 앱 캡처로 제공한다. 대만 번체는 현재 배포 앱의 영어 화면을 쓰고 번체 UI의 추후 제공을 안내한다. `?lang=ko|en|ja|zh-TW`로 언어를 직접 지정할 수 있고 회사 개인정보처리방침도 네 언어로 연결한다. 이름 옆의 앉은 미누는 승인 원화 idle 시트로 눈을 깜빡입니다(동작 줄이기 설정에서는 멈춤). `node --test test/*.test.mjs`로 확인합니다.
-
-## 공개 정책의 언어 이동
-
-`privacy/ko/`, `privacy/en/`, `privacy/ja/`, `privacy/zh-TW/`는 각 언어의 공개 Notion 정책으로 이동한다. Notion이 같은 서비스의 주소를 편집 화면 주소로 바꾸는 것을 피하도록, 공개 문서의 언어 이동에는 이 홈페이지 주소를 쓴다. 자동 이동을 막는 브라우저를 위한 일반 링크도 제공한다.
+대표 LinkedIn 주소를 받으면 `index.html`의 `id="founder-profile"` 링크에 넣고 `hidden`을 지웁니다(지금은 숨김).
