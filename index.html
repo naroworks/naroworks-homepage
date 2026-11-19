@@ -1,841 +1,183 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NaroWorks — Start with you. Keep doing what you love.</title>
-    <meta
-      name="description"
-      content="NaroWorks starts with everyday frustrations we experience ourselves, building services that make it easier to start and keep doing what you love."
-    />
-    <meta name="theme-color" content="#f2f5f7" />
-    <meta name="naver-site-verification" content="42f74fa5d4e53dd009983a190f6ee95a3938af54" />
-    <link rel="canonical" href="https://www.naroworks.com/" />
-    <link
-      rel="icon"
-      href="favicon-naro-32.png?v=3"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      href="favicon-naro-16.png?v=3"
-      type="image/png"
-      sizes="16x16"
-    />
-    <link
-      rel="icon"
-      href="favicon-naro.png?v=3"
-      type="image/png"
-      sizes="512x512"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="apple-touch-icon.png?v=3"
-      sizes="180x180"
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/PretendardVariable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/LINESeedKR-Bd.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="styles.css?v=20261109-minou" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="NaroWorks" />
-    <meta
-      property="og:title"
-      content="NaroWorks — Start with you. Keep doing what you love."
-    />
-    <meta
-      property="og:description"
-      content="Services that make it easier to start and keep doing what you love."
-    />
-    <meta property="og:url" content="https://www.naroworks.com/" />
-    <meta
-      property="og:image"
-      content="https://www.naroworks.com/assets/og.png"
-    />
-    <meta property="og:image:width" content="1684" />
-    <meta property="og:image:height" content="934" />
-    <meta property="og:image:alt" content="NaroWorks CI" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="NaroWorks — Start with you. Keep doing what you love."
-    />
-    <meta
-      name="twitter:description"
-      content="Services that make it easier to start and keep doing what you love."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.naroworks.com/assets/og.png"
-    />
-    <script src="site.js?v=20261109-minou" defer></script>
-    <script type="module" src="localization.mjs?v=20261111-minou-locales"></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="NaroWorks home" data-i18n-aria="home"
-          ><img
-            src="assets/naroworks-english-wordmark.png"
-            alt="NaroWorks"
-            width="1806"
-            height="312"
-        /></a>
-        <nav aria-label="Main navigation" data-i18n-aria="navigation">
-          <a href="#products" data-i18n="nav.products">Products</a><a href="#about" data-i18n="nav.about">About</a><a href="#contact" data-i18n="nav.contact">Contact</a>
-        </nav>
-        <label class="language-picker" hidden>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
-          <select id="language-select" aria-label="Language" data-i18n-aria="language">
-            <option value="ko">한국어</option>
-            <option value="ja-JP">日本語</option>
-            <option value="zh-Hant-TW">繁體中文（台灣）</option>
-            <option value="en-US" selected>English</option>
-          </select>
-        </label>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naroworks | Makers of Minou, the knitting app</title>
+  <meta name="description" content="Naroworks builds and runs Minou, a knitting app powered by real-time 3D rendering and AI-driven character mapping.">
+  <meta name="theme-color" content="#f9f8f3">
+  <meta name="naver-site-verification" content="42f74fa5d4e53dd009983a190f6ee95a3938af54">
+  <link rel="canonical" href="https://www.naroworks.com/">
+  <link rel="icon" href="favicon-naro-32.png?v=3" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-naro-16.png?v=3" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-naro.png?v=3" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" sizes="180x180">
+  <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Naroworks">
+  <meta property="og:url" content="https://www.naroworks.com/">
+  <meta property="og:title" content="Naroworks | Makers of Minou, the knitting app">
+  <meta property="og:description" content="Naroworks builds and runs Minou, a knitting app powered by real-time 3D rendering and AI-driven character mapping.">
+  <meta property="og:image" content="https://www.naroworks.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Minou the black cat wearing striped socks and a scarf">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Naroworks | Makers of Minou, the knitting app">
+  <meta name="twitter:description" content="Naroworks builds and runs Minou, a knitting app powered by real-time 3D rendering and AI-driven character mapping.">
+  <meta name="twitter:image" content="https://www.naroworks.com/assets/og.png">
+  <script type="module" src="site.js"></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#top"><img src="assets/naroworks-english-wordmark.png" alt="Naroworks" width="1806" height="312"></a>
+      <nav class="mast-nav" data-label="navigation" aria-label="Main navigation">
+        <a href="#minou" data-i18n="productNav">Minou</a>
+        <a href="#technology" data-i18n="techNav">Technology</a>
+        <a href="#company" data-i18n="companyNav">Company</a>
+      </nav>
+      <label class="languages" hidden>
+        <span class="sr" data-i18n="language">Choose language</span>
+        <span aria-hidden="true" class="globe"></span>
+        <select id="language-select" dir="ltr">
+          <option value="ko" lang="ko">한국어</option>
+          <option value="ja-JP" lang="ja">日本語</option>
+          <option value="zh-Hant-TW" lang="zh-Hant-TW">繁體中文</option>
+          <option value="en-US" lang="en" selected>English</option>
+        </select>
+      </label>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span data-i18n="heroFirst">Knitting,</span> <span data-i18n="heroLast">rendered in code.</span></h1>
+        <p class="intro" data-i18n="intro">Naroworks is a software developer and operator. We build and run Minou, a knitting app powered by our real-time knitting simulation and AI-driven character mapping.</p>
+        <a class="action" href="#minou"><span data-i18n="look">See the workbench</span><span class="down" aria-hidden="true">↓</span></a>
       </div>
-    </header>
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero-inner">
-          <div class="hero-orbit" aria-hidden="true">
-            <svg viewBox="0 0 440 440" fill="none">
-              <ellipse
-                cx="220"
-                cy="220"
-                rx="188"
-                ry="83"
-                transform="rotate(-38 220 220)"
-              />
-              <ellipse
-                cx="220"
-                cy="220"
-                rx="188"
-                ry="83"
-                transform="rotate(38 220 220)"
-              /></svg
-            ><span></span>
+      <figure class="sample">
+        <div class="graph">
+          <span class="register tl" aria-hidden="true"></span><span class="register tr" aria-hidden="true"></span>
+          <span class="register bl" aria-hidden="true"></span><span class="register br" aria-hidden="true"></span>
+          <div class="sock-paper">
+            <img width="369" height="369" data-media="sock" src="assets/minou/en/sock-detail.webp" data-alt="sockAlt" alt="Detail of a red and green striped sock on the needles">
+            <span lang="en">3D</span>
           </div>
-          <h1 id="hero-title">
-            <span class="hero-line" data-i18n="hero.1">Start with you.</span><span class="hero-line" data-i18n="hero.2">Keep doing</span><span class="hero-line hero-line-outline" data-i18n="hero.3">what you love.</span>
-          </h1>
-          <div class="hero-bottom">
-            <p data-i18n="hero.description">We start with the everyday frustrations we experience,<br />and build services that make it easier to start<br />and keep doing what you love.</p>
-            <a class="explore-link" href="#products"
-              ><span data-i18n="services">The services we make</span><span class="circle-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
-            ></a>
+          <div class="thread" aria-hidden="true"></div>
+          <img class="winter-cat" src="assets/minou/pack-winter.webp" width="512" height="512" data-alt="catAlt" alt="Minou the black cat wearing striped socks and a scarf">
+          <span class="flat-tag" lang="en">2D</span>
+        </div>
+        <figcaption><span data-i18n="sample">Minou’s winter socks</span><span class="palette"><span data-i18n="yarn">Yarn colors</span><i aria-hidden="true"></i></span></figcaption>
+      </figure>
+    </section>
+
+    <section id="minou" class="workbench" aria-labelledby="bench-title">
+      <div class="wrap bench-layout">
+        <div class="bench-copy">
+          <div class="product-sign"><img src="assets/minou/symbol.webp" alt="" width="512" height="512"><span data-i18n="productNav">Minou</span></div>
+          <h2 id="bench-title" data-i18n="bench">Two thumbs, one stitch at a time</h2>
+          <p data-i18n="knitting">Minou brings the motions and sequence of real knitting to mobile. Hold the phone sideways and work the needles with your thumbs to finish scarves, hats and socks. Minou the cat wears each finished piece, and it joins your shelf.</p><p data-i18n="knittingExtra">Press and hold to undo a stitch.</p>
+          <div class="bench-links">
+            <a class="text-link" id="minou-home" data-link="product" href="https://minouknit.com/en/"><span data-i18n="seeProduct">Visit the Minou website</span><span aria-hidden="true">↗</span></a>
+            <div class="stores" lang="en"><a data-link="appStore" href="https://apps.apple.com/sg/app/id6830531773">App Store <span aria-hidden="true">↗</span></a><a data-link="googlePlay" href="https://play.google.com/store/apps/details?id=com.naroworks.minou&amp;hl=en">Google Play <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-      </section>
-      <section class="products" id="products" aria-labelledby="bandlog-title">
-        <div class="container">
-          <div class="product-topline" data-reveal>
-            <p data-i18n="services">The services we make</p>
-            <span data-i18n="bandlog">Bandlog</span>
+        <figure class="monitor">
+          <div class="screen">
+            <video id="stitch" controls playsinline muted preload="none" width="1280" height="590" poster="assets/minou/en/stitch.webp" src="assets/minou/en/stitch.mp4" data-label="clipAlt" aria-label="Screen recording of two needles working a stitch on Minou’s winter sock"></video>
           </div>
-          <div class="product-intro">
-            <div data-reveal>
-              <div class="product-brand">
-                <img
-                  class="product-symbol"
-                  src="assets/bandlog/symbol.webp"
-                  alt=""
-                  width="512"
-                  height="512"
-                  loading="lazy"
-                /><span class="product-name" data-i18n="bandlog">Bandlog</span>
-                <img class="product-wordmark" hidden src="assets/bandlog/ja-JP/wordmark.webp?v=20261012-bandneko-r2" alt="バンドネコ" width="1789" height="455" loading="lazy" />
-              </div>
-              <h2 id="bandlog-title" data-i18n="product.title">From your practice<br />to your band.</h2>
-            </div>
-            <div class="product-description" data-reveal style="--reveal-delay: 120ms">
-              <p data-i18n="product.lead">Solo practice adds up,<br />and leads into your next rehearsal together.</p>
-              <p data-i18n="product.description">Bandlog brings your practice log and your band’s activities together. Capture moments of practice, prepare songs and schedules, and send each other a quick reaction.</p>
-              <div class="product-actions">
-                <a class="product-site" href="https://bandlog.kr/" target="_blank" rel="noopener"
-                  ><img src="assets/bandlog/symbol.webp" alt="" width="512" height="512" loading="lazy" /><span
-                    ><strong data-i18n="product.site">Visit the Bandlog site (Korean)</strong><small>bandlog.kr</small></span
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 17 17 7M9 7h8v8" /></svg
-                ></a>
-                <div class="store-badges" aria-label="Download the Bandlog app" data-i18n-aria="store.label">
-                  <a class="store-badge" href="https://apps.apple.com/kr/app/id6815118964?l=en" target="_blank" rel="noopener">
-                    <img
-                      src="assets/icons/apple.svg"
-                      alt=""
-                      width="26"
-                      height="26"
-                    /><span
-                      ><small data-i18n="store.appStore">Download on the</small><strong>App Store</strong></span
-                    >
-                  </a>
-                  <a class="store-badge" href="https://play.google.com/store/apps/details?id=kr.bandlog.app" target="_blank" rel="noopener">
-                    <img
-                      src="assets/icons/google-play.svg"
-                      alt=""
-                      width="25"
-                      height="25"
-                    /><span
-                      ><small data-i18n="store.googlePlay">Get it on</small><strong>Google Play</strong></span
-                    >
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-heading">
-            <span data-i18n="gallery.hint">Tap a screen to see more</span>
-          </div>
-          <div
-            class="product-gallery"
-            tabindex="0"
-            role="region"
-            aria-label="Five Bandlog iPhone screens" data-i18n-aria="gallery.label"
-          >
-            <figure class="gallery-shot" data-reveal style="--reveal-delay: 0ms">
-              <a
-                class="shot-link"
-                href="assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1"
-                aria-label="My practice and our band · Enlarge screen"
-                data-caption="My practice and our band"
-              >
-                <img
-                  src="assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1"
-                  srcset="
-                    assets/bandlog/en-US/iphone-01-home-440.webp?v=20261012-localized-r1 440w,
-                    assets/bandlog/en-US/iphone-01-home-880.webp?v=20261012-localized-r1 880w
-                  "
-                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="Home screen showing personal practice records and joined bands"
-                  width="1320"
-                  height="2868"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="shot-expand" aria-hidden="true"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
-                ></span>
-              </a>
-              <figcaption>
-                <span class="shot-index">01</span><span class="shot-caption">My practice and our band</span>
-              </figcaption>
-            </figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay: 90ms">
-              <a
-                class="shot-link"
-                href="assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1"
-                aria-label="Songs we pick together · Enlarge screen"
-                data-caption="Songs we pick together"
-              >
-                <img
-                  src="assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1"
-                  srcset="
-                    assets/bandlog/en-US/iphone-02-song-bundle-440.webp?v=20261012-localized-r1 440w,
-                    assets/bandlog/en-US/iphone-02-song-bundle-880.webp?v=20261012-localized-r1 880w
-                  "
-                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="Screen for collecting songs and sharing ideas with bandmates"
-                  width="1320"
-                  height="2868"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="shot-expand" aria-hidden="true"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
-                ></span>
-              </a>
-              <figcaption>
-                <span class="shot-index">02</span><span class="shot-caption">Songs we pick together</span>
-              </figcaption>
-            </figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay: 180ms">
-              <a
-                class="shot-link"
-                href="assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1"
-                aria-label="Encouragement for each other · Enlarge screen"
-                data-caption="Encouragement for each other"
-              >
-                <img
-                  src="assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1"
-                  srcset="
-                    assets/bandlog/en-US/iphone-03-encouragement-440.webp?v=20261012-localized-r1 440w,
-                    assets/bandlog/en-US/iphone-03-encouragement-880.webp?v=20261012-localized-r1 880w
-                  "
-                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="Screen for sending lighthearted emoji reactions to bandmates"
-                  width="1320"
-                  height="2868"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="shot-expand" aria-hidden="true"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
-                ></span>
-              </a>
-              <figcaption>
-                <span class="shot-index">03</span><span class="shot-caption">Encouragement for each other</span>
-              </figcaption>
-            </figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay: 270ms">
-              <a
-                class="shot-link"
-                href="assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1"
-                aria-label="Rehearsal prep in one place · Enlarge screen"
-                data-caption="Rehearsal prep in one place"
-              >
-                <img
-                  src="assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1"
-                  srcset="
-                    assets/bandlog/en-US/iphone-04-hapju-440.webp?v=20261012-localized-r1 440w,
-                    assets/bandlog/en-US/iphone-04-hapju-880.webp?v=20261012-localized-r1 880w
-                  "
-                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="Screen showing the next rehearsal’s schedule, location, and preparation"
-                  width="1320"
-                  height="2868"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="shot-expand" aria-hidden="true"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
-                ></span>
-              </a>
-              <figcaption>
-                <span class="shot-index">04</span><span class="shot-caption">Rehearsal prep in one place</span>
-              </figcaption>
-            </figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay: 360ms">
-              <a
-                class="shot-link"
-                href="assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1"
-                aria-label="Practice connected through records · Enlarge screen"
-                data-caption="Practice connected through records"
-              >
-                <img
-                  src="assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1"
-                  srcset="
-                    assets/bandlog/en-US/iphone-05-practice-reactions-440.webp?v=20261012-localized-r1 440w,
-                    assets/bandlog/en-US/iphone-05-practice-reactions-880.webp?v=20261012-localized-r1 880w
-                  "
-                  sizes="(max-width: 680px) 76vw, (max-width: 1100px) 280px, 240px"
-                  alt="Screen for viewing practice photos and videos and sending reactions"
-                  width="1320"
-                  height="2868"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="shot-expand" aria-hidden="true"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
-                ></span>
-              </a>
-              <figcaption>
-                <span class="shot-index">05</span><span class="shot-caption">Practice connected through records</span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="gallery-navigation" hidden>
-            <p data-i18n="gallery.scroll">Swipe to explore</p>
-            <div>
-              <button
-                class="icon-button gallery-prev"
-                aria-label="Scroll to the previous screen" data-i18n-aria="gallery.previous"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg></button
-              ><button
-                class="icon-button gallery-next"
-                aria-label="Scroll to the next screen" data-i18n-aria="gallery.next"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="product-features" data-reveal>
-            <div>
-              <h3 data-i18n="feature.1.title">Build your practice log</h3>
-              <p data-i18n="feature.1.body">Save practice with photos and videos,<br />even before you join a band.</p>
-            </div>
-            <div>
-              <h3 data-i18n="feature.2.title">Keep band prep in one place</h3>
-              <p data-i18n="feature.2.body">Check songs, ideas, schedules, and locations<br />together with your bandmates.</p>
-            </div>
-            <div>
-              <h3 data-i18n="feature.3.title">A reaction instead of words</h3>
-              <p data-i18n="feature.3.body">React to your bandmates’ practice<br />and keep the feeling of playing together alive.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="products product-boxle" id="boxle" aria-labelledby="boxle-title">
-        <div class="container">
-          <div class="product-topline" data-reveal>
-            <p data-i18n="services">The services we make</p>
-            <span data-i18n="boxle.name">boxle</span>
-          </div>
-          <div class="product-intro">
-            <div data-reveal>
-              <div class="product-brand">
-                <img
-                  class="product-symbol"
-                  src="assets/boxle/symbol.webp"
-                  alt=""
-                  width="512"
-                  height="512"
-                  loading="lazy"
-                /><span class="product-name" lang="en" data-i18n="boxle.name">boxle</span>
-              </div>
-              <h2 id="boxle-title" data-i18n="boxle.title">Today’s weather,<br />fortunes and wishes.</h2>
-            </div>
-            <div class="product-description" data-reveal style="--reveal-delay: 120ms">
-              <p data-i18n="boxle.lead">Get a feel for your day,<br />and add a little luck to the one you’re waiting for.</p>
-              <p data-i18n="boxle.description">boxle brings weather, fortunes and wishes into one daily experience. Give a wish a date, collect luck through small rituals, explore fortune readings from four AI perspectives, and revisit your daily records.</p>
-              <div class="product-actions">
-                <a class="product-site" lang="en" href="https://boxle.kr/en/" target="_blank" rel="noopener"
-                  ><img src="assets/boxle/symbol.webp" alt="" width="512" height="512" loading="lazy" /><span
-                    ><strong data-i18n="boxle.site">See more on the boxle site</strong><small>boxle.kr</small></span
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 17 17 7M9 7h8v8" /></svg
-                ></a>
-                <div class="store-badges" aria-label="Download boxle" data-i18n-aria="boxle.store">
-                  <a class="store-badge" data-store="ios" href="https://apps.apple.com/sg/app/id6823910868" target="_blank" rel="noopener">
-                    <img
-                      src="assets/icons/apple.svg"
-                      alt=""
-                      width="26"
-                      height="26"
-                    /><span
-                      ><small data-i18n="store.appStore">Download on the</small><strong>App Store</strong></span
-                    >
-                  </a>
-                  <a class="store-badge" href="https://play.google.com/store/apps/details?id=kr.boxle.app" target="_blank" rel="noopener">
-                    <img
-                      src="assets/icons/google-play.svg"
-                      alt=""
-                      width="25"
-                      height="25"
-                    /><span
-                      ><small data-i18n="store.googlePlay">Get it on</small><strong>Google Play</strong></span
-                    >
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="release-note" data-i18n="boxle.release">Available on the App Store and Google Play · App languages: Korean, Japanese, Traditional Chinese and English</p>
-          <div class="gallery-heading">
-            <span data-i18n="gallery.hint">Tap a screen to see more</span>
-          </div>
-          <div
-            class="product-gallery"
-            tabindex="0"
-            role="region"
-            aria-label="Five boxle iPhone screens" data-i18n-aria="boxle.gallery"
-          >
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:0ms"><a class="shot-link" href="assets/boxle/en-US/01-880.webp" aria-label="Your day at a glance · Enlarge screen" data-caption="Your day at a glance"><img src="assets/boxle/en-US/01-880.webp" srcset="assets/boxle/en-US/01-440.webp 440w, assets/boxle/en-US/01-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Screen showing Seoul weather, today’s fortune and wishes" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">01</span><span class="shot-caption">Your day at a glance</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:90ms"><a class="shot-link" href="assets/boxle/en-US/02-880.webp" aria-label="Collect luck for a wish · Enlarge screen" data-caption="Collect luck for a wish"><img src="assets/boxle/en-US/02-880.webp" srcset="assets/boxle/en-US/02-440.webp 440w, assets/boxle/en-US/02-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Wish detail with a selection of luck-building rituals" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">02</span><span class="shot-caption">Collect luck for a wish</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:180ms"><a class="shot-link" href="assets/boxle/en-US/03-880.webp" aria-label="Four AI fortune interpretations · Enlarge screen" data-caption="Four AI fortune interpretations"><img src="assets/boxle/en-US/03-880.webp" srcset="assets/boxle/en-US/03-440.webp 440w, assets/boxle/en-US/03-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Conversation with four AI fortune readers" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">03</span><span class="shot-caption">Four AI fortune interpretations</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:270ms"><a class="shot-link" href="assets/boxle/en-US/04-880.webp" aria-label="A small ritual, one star at a time · Enlarge screen" data-caption="A small ritual, one star at a time"><img src="assets/boxle/en-US/04-880.webp" srcset="assets/boxle/en-US/04-440.webp 440w, assets/boxle/en-US/04-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Screen for connecting daily stars into a constellation" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">04</span><span class="shot-caption">A small ritual, one star at a time</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:360ms"><a class="shot-link" href="assets/boxle/en-US/05-880.webp" aria-label="Your days, collected in a calendar · Enlarge screen" data-caption="Your days, collected in a calendar"><img src="assets/boxle/en-US/05-880.webp" srcset="assets/boxle/en-US/05-440.webp 440w, assets/boxle/en-US/05-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Calendar with wishes, fortunes and AI chat records for a selected day" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">05</span><span class="shot-caption">Your days, collected in a calendar</span></figcaption></figure>
-          </div>
-          <div class="gallery-navigation" hidden>
-            <p data-i18n="gallery.scroll">Swipe to explore</p>
-            <div>
-              <button
-                class="icon-button gallery-prev"
-                aria-label="Scroll to the previous screen" data-i18n-aria="gallery.previous"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg></button
-              ><button
-                class="icon-button gallery-next"
-                aria-label="Scroll to the next screen" data-i18n-aria="gallery.next"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="product-features" data-reveal>
-            <div>
-              <h3 data-i18n="boxle.feature.1.title">Your day at a glance</h3>
-              <p data-i18n="boxle.feature.1.body">See the weather, your daily fortune<br />and the wishes you’re keeping in one place.</p>
-            </div>
-            <div>
-              <h3 data-i18n="boxle.feature.2.title">A little luck for your wishes</h3>
-              <p data-i18n="boxle.feature.2.body">Toss a coin or connect a star:<br />small rituals for a day that matters.</p>
-            </div>
-            <div>
-              <h3 data-i18n="boxle.feature.3.title">Find your own rhythm</h3>
-              <p data-i18n="boxle.feature.3.body">Revisit AI fortune interpretations<br />and your daily records by date.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="products product-minou" id="minou" aria-labelledby="minou-title">
-        <div class="container">
-          <div class="product-topline" data-reveal>
-            <p data-i18n="services">The services we make</p>
-            <span data-i18n="minou.name">Minou</span>
-          </div>
-          <div class="product-intro">
-            <div data-reveal>
-              <div class="product-brand">
-                <img
-                  class="product-symbol"
-                  src="assets/minou/symbol.webp"
-                  alt=""
-                  width="512"
-                  height="512"
-                  loading="lazy"
-                /><span class="product-name" lang="en" data-i18n="minou.name">Minou</span><span class="minou-cat" aria-hidden="true"></span>
-              </div>
-              <h2 id="minou-title" data-i18n="minou.title">Real knitting,<br />right on your phone.</h2>
-            </div>
-            <div class="product-description" data-reveal style="--reveal-delay: 120ms">
-              <p data-i18n="minou.lead">Knit one stitch at a time with two thumbs,<br />and Minou the black cat wears what you make.</p>
-              <p data-i18n="minou.description">Minou is an app for knitting scarves, hats and socks stitch by stitch: hold your phone sideways and move the needles with two thumbs. Hold to unravel a mistake, let it knit on its own when your hands are busy, and collect finished pieces in Minou’s wardrobe and shelf.</p>
-              <div class="product-actions">
-                <a class="product-site" lang="en" href="https://minou.naroworks.com/en/" target="_blank" rel="noopener"
-                  ><img src="assets/minou/symbol.webp" alt="" width="512" height="512" loading="lazy" /><span
-                    ><strong data-i18n="minou.site">See more on the Minou site</strong><small>minou.naroworks.com</small></span
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 17 17 7M9 7h8v8" /></svg
-                ></a>
-                <div class="store-badges" aria-label="Download Minou" data-i18n-aria="minou.store">
-                  <a class="store-badge" data-store="ios" href="https://apps.apple.com/sg/app/id6830531773" target="_blank" rel="noopener">
-                    <img
-                      src="assets/icons/apple.svg"
-                      alt=""
-                      width="26"
-                      height="26"
-                    /><span
-                      ><small data-i18n="store.appStore">Download on the</small><strong>App Store</strong></span
-                    >
-                  </a>
-                  <a class="store-badge" data-store="android" href="https://play.google.com/store/apps/details?id=com.naroworks.minou" target="_blank" rel="noopener">
-                    <img
-                      src="assets/icons/google-play.svg"
-                      alt=""
-                      width="25"
-                      height="25"
-                    /><span
-                      ><small data-i18n="store.googlePlay">Get it on</small><strong>Google Play</strong></span
-                    >
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="release-note" data-i18n="minou.release">Available on the App Store and Google Play</p>
-          <div class="gallery-heading">
-            <span data-i18n="gallery.hint">Tap a screen to see more</span>
-          </div>
-          <div
-            class="product-gallery"
-            tabindex="0"
-            role="region"
-            aria-label="Five Minou iPhone screens" data-i18n-aria="minou.gallery"
-          >
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:0ms"><a class="shot-link" href="assets/minou/en/01-880.webp" aria-label="Minou in a handmade outfit · Enlarge screen" data-caption="Minou in a handmade outfit"><img src="assets/minou/en/01-880.webp" srcset="assets/minou/en/01-440.webp 440w, assets/minou/en/01-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Home screen with Minou in a handmade hat and scarf, sitting in the garden" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">01</span><span class="shot-caption">Minou in a handmade outfit</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:90ms"><a class="shot-link" href="assets/minou/en/02-880.webp" aria-label="New patterns from each pack · Enlarge screen" data-caption="New patterns from each pack"><img src="assets/minou/en/02-880.webp" srcset="assets/minou/en/02-440.webp 440w, assets/minou/en/02-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Pattern packs screen" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">02</span><span class="shot-caption">New patterns from each pack</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:180ms"><a class="shot-link" href="assets/minou/en/03-880.webp" aria-label="Turn your piece around in 3D · Enlarge screen" data-caption="Turn your piece around in 3D"><img src="assets/minou/en/03-880.webp" srcset="assets/minou/en/03-440.webp 440w, assets/minou/en/03-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="A finished striped scarf shown in 3D" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">03</span><span class="shot-caption">Turn your piece around in 3D</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:270ms"><a class="shot-link" href="assets/minou/en/04-880.webp" aria-label="Try it on Minou · Enlarge screen" data-caption="Try it on Minou"><img src="assets/minou/en/04-880.webp" srcset="assets/minou/en/04-440.webp 440w, assets/minou/en/04-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="Asking whether to dress Minou in the finished scarf" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">04</span><span class="shot-caption">Try it on Minou</span></figcaption></figure>
-            <figure class="gallery-shot" data-reveal style="--reveal-delay:360ms"><a class="shot-link" href="assets/minou/en/05-880.webp" aria-label="Share a photo with Minou · Enlarge screen" data-caption="Share a photo with Minou"><img src="assets/minou/en/05-880.webp" srcset="assets/minou/en/05-440.webp 440w, assets/minou/en/05-880.webp 880w" sizes="(max-width:680px) 76vw, (max-width:1100px) 280px, 240px" alt="A share card of Minou in a scarf" width="1320" height="2868" loading="lazy" decoding="async"><span class="shot-expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span></a><figcaption><span class="shot-index">05</span><span class="shot-caption">Share a photo with Minou</span></figcaption></figure>
-          </div>
-          <div class="gallery-navigation" hidden>
-            <p data-i18n="gallery.scroll">Swipe to explore</p>
-            <div>
-              <button
-                class="icon-button gallery-prev"
-                aria-label="Scroll to the previous screen" data-i18n-aria="gallery.previous"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg></button
-              ><button
-                class="icon-button gallery-next"
-                aria-label="Scroll to the next screen" data-i18n-aria="gallery.next"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="product-features" data-reveal>
-            <div>
-              <h3 data-i18n="minou.feature.1.title">Hand knitting that feels real</h3>
-              <p data-i18n="minou.feature.1.body">Push and pull with your thumbs,<br />following real knitting steps.</p>
-            </div>
-            <div>
-              <h3 data-i18n="minou.feature.2.title">Minou wears it</h3>
-              <p data-i18n="minou.feature.2.body">Finished scarves and hats<br />are worn by Minou the black cat.</p>
-            </div>
-            <div>
-              <h3 data-i18n="minou.feature.3.title">Six cozy spaces</h3>
-              <p data-i18n="minou.feature.3.body">A garden, a rainy café, a winter cabin…<br />each pack has its own setting.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="about" id="about" aria-labelledby="about-title">
-        <div class="container about-layout">
-          <div class="about-intro" data-reveal>
-            <p class="section-label" data-i18n="about.label">How NaroWorks works</p>
-            <h2 id="about-title" data-i18n="about.title">We start<br />close to home.</h2>
-            <p data-i18n="about.lead">The friction we meet doing what we love.<br />The everyday moments we want to enjoy more.</p>
-            <p data-i18n="about.description">We turn needs close to us into small, complete services, then help them grow so others who feel the same way can use them too.</p>
-          </div>
-          <div class="principles">
-            <article class="principle" data-reveal>
-              <div class="principle-symbol symbol-start" aria-hidden="true">
-                <i></i><i></i>
-              </div>
-              <h3 data-i18n="principle.1.title">Start close to home</h3>
-              <p data-i18n="principle.1.body">Work on problems we have experienced<br />or understand well.</p>
-            </article>
-            <article class="principle" data-reveal>
-              <div class="principle-symbol symbol-focus" aria-hidden="true">
-                <i></i><i></i><i></i>
-              </div>
-              <h3 data-i18n="principle.2.title">Make something small and complete</h3>
-              <p data-i18n="principle.2.body">Build one important experience well<br />before adding more features.</p>
-            </article>
-            <article class="principle" data-reveal>
-              <div class="principle-symbol symbol-continue" aria-hidden="true">
-                <i></i><i></i>
-              </div>
-              <h3 data-i18n="principle.3.title">Help people keep going</h3>
-              <p data-i18n="principle.3.body">Look for changes that help people keep doing<br />what they love, beyond time spent on a screen.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="container">
-          <p class="section-label" data-i18n="contact.label">Let’s talk</p>
-          <h2 id="contact-title" data-reveal data-i18n="contact.title">Ways to keep doing<br />what you love.</h2>
-          <a class="contact-link" data-reveal style="--reveal-delay: 120ms" href="mailto:contact@naroworks.com"
-            ><span>contact@naroworks.com</span
-            ><svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
-          ></a>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container footer-inner">
-        <div class="footer-top">
-          <p class="company-name"><span class="company-primary" data-i18n="company.name">Naroworks Inc.</span><span data-i18n="company.otherName">주식회사 NaroWorks</span></p>
-          <div class="footer-links" aria-label="Company policies and notices" data-i18n-aria="company.links">
-            <a
-              href="https://naroworks.notion.site/415d36b356c081df81a1d1fe3d0e8b2a"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong data-i18n="company.privacy">Privacy policy</strong></a
-            >
-            <a
-              href="https://naroworks.notion.site/3ded36b356c0813f96fdfa2e56a66511"
-              target="_blank"
-              rel="noopener noreferrer"
-               data-i18n="company.notices">Public notices</a>
-          </div>
-        </div>
-        <div class="company-details">
-          <p>
-            <span data-i18n="company.representative">Representative: Hyeonggi Park</span><span data-i18n="company.registration">Korean business registration number: 482-88-03565</span>
-          </p>
-          <address data-i18n="company.address">Suite 1131, 130 Eutteum-ro, Deogyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea</address>
-          <p>
-            <a href="mailto:contact@naroworks.com">contact@naroworks.com</a>
-          </p>
-        </div>
-        <p class="copyright">© <span id="year">2026</span> Naroworks Inc.</p>
+          <figcaption><span data-i18n="clip">Knitting one stitch of a winter sock</span><button class="playback" type="button" aria-controls="stitch" hidden><i aria-hidden="true"></i><span>Play</span></button><a class="recording-file" href="assets/minou/en/stitch.mp4" hidden data-i18n="videoError">Open recording</a></figcaption>
+        </figure>
       </div>
-    </footer>
-    <dialog class="image-viewer" aria-label="Enlarged app screen" data-i18n-aria="viewer.label">
-      <button class="icon-button viewer-close" aria-label="Close enlarged screen" data-i18n-aria="viewer.close">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          aria-hidden="true"
-        >
-          <path d="m6 6 12 12M18 6 6 18" />
-        </svg>
-      </button>
-      <div class="viewer-content">
-        <img class="viewer-image" alt="" />
-        <div class="viewer-controls">
-          <button class="icon-button viewer-prev" aria-label="Previous screen" data-i18n-aria="viewer.previous">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14m-6-6 6 6-6 6" />
-            </svg>
-          </button>
-          <p class="viewer-caption" aria-live="polite"></p>
-          <button class="icon-button viewer-next" aria-label="Next screen" data-i18n-aria="viewer.next">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14m-6-6 6 6-6 6" />
-            </svg>
-          </button>
+    </section>
+
+    <section id="technology" class="technology wrap" aria-labelledby="tech-title">
+      <div class="section-head">
+        <h2 id="tech-title" data-i18n="techTitle">From needles to pixels</h2>
+        <p data-i18n="techIntro">Minou’s workbench runs on a knitting simulation engine we built in house and renders on the device in real time with three.js.</p>
+      </div>
+      <div class="studies">
+        <article class="study">
+          <div class="specimen"><img data-media="fabric" src="assets/minou/en/fabric.webp" data-alt="fabricAlt" alt="Close view of brown stitches on two needles at the café workbench" width="920" height="310"></div>
+          <div class="study-text"><h3 data-i18n="physicsTitle">Thumb input, 3D needle motion</h3><p data-i18n="physicsBody">We translate 2D touch input into 3D needle motions such as inserting and wrapping. The fabric is computed with a stitch-level physics model, so tension and stretch stay in the finished piece.</p></div>
+        </article>
+        <article class="study">
+          <div class="specimen poses"><img src="assets/minou/stretch-poses.webp" width="1152" height="384" data-alt="posesAlt" alt="Three pixel frames of Minou rising from a sitting position to stretch"></div>
+          <div class="study-text"><h3 data-i18n="framesTitle">A character designed frame by frame</h3><p data-i18n="framesBody">Minou is a pixel character drawn in 90 frames: 15 movements with six frames each. Every frame keeps the head, ears and paws on separate layers.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="connection" aria-labelledby="connection-title">
+      <div class="wrap connection-layout">
+        <div class="connection-copy">
+          <h2 id="connection-title" data-i18n="connectionTitle">Connecting 3D and 2D</h2>
+          <p data-i18n="connectionIntro">We convert each 3D piece rendered on the device into clothing for a 2D pixel character. Yarn colors and patterns carry over, down to the marks left by tension.</p>
+          <p data-i18n="connectionFit">An AI vision model identifies the character’s position and body structure in every frame and maps each piece to the head, neck and paws. The clothes fit whether Minou sits, walks or sleeps. The mapping now covers all 90 frames.</p>
+          <p data-i18n="connectionNext">Next is real-time tracking. We are extending the system so AI follows the character’s movement moment by moment and the clothes move with it.</p>
+        </div>
+        <div class="pattern-sheet">
+          <div class="sheet-key" aria-hidden="true"><span>3D</span><span>2D</span></div>
+          <figure class="piece">
+            <figcaption data-i18n="bobbleName">Bobble hat</figcaption>
+            <img class="piece-model" src="assets/minou/connect/bobble-3d.webp" width="640" height="640" loading="lazy" data-alt="bobbleModel" alt="3D view of a red knit hat with a cream pompom">
+            <span class="piece-arrow" aria-hidden="true"></span>
+            <div class="piece-poses">
+              <img src="assets/minou/connect/bobble-idle_0.webp" width="512" height="512" loading="lazy" data-alt="bobbleSit" alt="Minou sitting in the bobble hat">
+              <img src="assets/minou/connect/bobble-walk_2.webp" width="512" height="512" loading="lazy" data-alt="bobbleWalk" alt="Minou walking in the bobble hat">
+              <img src="assets/minou/connect/bobble-doze_3.webp" width="512" height="512" loading="lazy" data-alt="bobbleDoze" alt="Minou dozing in the bobble hat">
+            </div>
+          </figure>
+          <figure class="piece">
+            <figcaption data-i18n="scarfName">Gold cable scarf</figcaption>
+            <img class="piece-model" src="assets/minou/connect/cable-scarf-3d.webp" width="640" height="640" loading="lazy" data-alt="scarfModel" alt="3D view of the gold cable scarf draped over a stand">
+            <span class="piece-arrow" aria-hidden="true"></span>
+            <div class="piece-poses">
+              <img src="assets/minou/connect/cable-scarf-idle_0.webp" width="512" height="512" loading="lazy" data-alt="scarfSit" alt="Minou sitting in the gold scarf">
+              <img src="assets/minou/connect/cable-scarf-stretch_3.webp" width="512" height="512" loading="lazy" data-alt="scarfStretch" alt="Minou stretching in the gold scarf">
+              <img src="assets/minou/connect/cable-scarf-groom_2.webp" width="512" height="512" loading="lazy" data-alt="scarfGroom" alt="Minou wearing the gold scarf and grooming with one paw">
+            </div>
+          </figure>
+          <figure class="piece">
+            <figcaption data-i18n="socksName">Argyle socks</figcaption>
+            <img class="piece-model" src="assets/minou/connect/argyle-socks-3d.webp" width="640" height="640" loading="lazy" data-alt="socksModel" alt="3D view of a pair of brown socks with gold diamonds">
+            <span class="piece-arrow" aria-hidden="true"></span>
+            <div class="piece-poses">
+              <img src="assets/minou/connect/argyle-socks-gaze_0.webp" width="512" height="512" loading="lazy" data-alt="socksGaze" alt="Minou looking up in argyle socks">
+              <img src="assets/minou/connect/argyle-socks-cheer_2.webp" width="512" height="512" loading="lazy" data-alt="socksCheer" alt="Minou raising both front paws in argyle socks">
+              <img src="assets/minou/connect/argyle-socks-stretch_3.webp" width="512" height="512" loading="lazy" data-alt="socksStretch" alt="Minou stretching in argyle socks">
+            </div>
+          </figure>
         </div>
       </div>
-    </dialog>
-  </body>
+    </section>
+
+    <section id="company" class="company wrap" aria-labelledby="company-title">
+      <div><h2 id="company-title" data-i18n="about">About Naroworks</h2><p data-i18n="aboutBody">Founded in September 2026. We build and run our own products on real-time graphics and AI.</p></div>
+      <div class="founder"><h3 data-i18n="founder">Hyungkee Park</h3><div lang="en">CEO &amp; Founder</div><p data-i18n="founderBody">Leads product, design, engineering and operations for Minou.</p>
+        <a class="text-link" id="founder-profile" data-link="linkedin" href="https://www.linkedin.com/in/" lang="en" hidden>LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="footer-top"><img src="assets/naroworks-english-wordmark.png" alt="Naroworks" width="1806" height="312">
+        <div class="contact"><span data-i18n="contact">Contact</span><a href="mailto:contact@naroworks.com">contact@naroworks.com <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="legal"><div>
+        <strong data-i18n="company.name">Naroworks Inc.</strong>
+        <div class="legal-ids"><span data-i18n="company.representative">Representative: Hyungkee Park</span><span data-i18n="company.registration">Korean business registration number: 482-88-03565</span></div>
+        <address data-i18n="company.address">Suite 1131, 130 Eutteum-ro, Deogyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea</address>
+      </div>
+      <nav data-label="company.links" aria-label="Company policies and notices">
+        <a data-link="privacy" href="privacy/en/" data-i18n="company.privacy">Privacy policy</a>
+        <a href="https://naroworks.notion.site/3ded36b356c0813f96fdfa2e56a66511" data-i18n="company.notices">Public notices</a>
+      </nav></div>
+    </div>
+  </footer>
+</body>
 </html>

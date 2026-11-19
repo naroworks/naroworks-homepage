@@ -18,17 +18,12 @@ test('저장한 선택을 우선하고 기기 언어를 인식하지 못하면 �
   assert.equal(chooseLocale(undefined, []), 'en-US');
 });
 
-test('네 언어의 본문·접근성 문구와 갤러리 리소스가 빠짐없이 존재한다', () => {
-  const keys = Object.keys(copy.ko).sort();
+
+test('네 언어의 본문과 접근성 문구가 같은 키를 제공한다', () => {
+  const keys = Object.keys(copy['en-US']).sort();
   assert.deepEqual(Object.keys(copy), supportedLocales);
   for (const locale of supportedLocales) {
     assert.deepEqual(Object.keys(copy[locale]).sort(), keys, locale);
-    for (const value of Object.values(copy[locale])) {
-      if (Array.isArray(value)) assert.ok(value.every(item => typeof item === 'string' && item.length > 0));
-      else assert.ok(typeof value === 'string' && value.length > 0);
-    }
-    assert.equal(copy[locale].captions.length, 5);
-    assert.equal(copy[locale].imageAlts.length, 5);
-    assert.match(copy[locale]['company.registration'], /482-88-03565/);
+    for (const key of keys) assert.ok(copy[locale][key].trim(), `${locale} ${key}`);
   }
 });
