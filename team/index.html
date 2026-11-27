@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team | Naroworks</title>
+  <meta name="description" content="The team at Naroworks, makers of the knitting app Minou.">
+  <!-- 팀 페이지: 홈 꼬리에서만 잇고 검색에는 넣지 않는다(sitemap 밖, robots.txt로 막지 않음) -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f9f8f3">
+  <link rel="icon" href="../favicon-naro-32.png?v=3" type="image/png" sizes="32x32">
+  <link rel="icon" href="../favicon-naro-16.png?v=3" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=3" sizes="180x180">
+  <link rel="preload" href="../assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../team.js"></script>
+</head>
+<body id="top" class="team-page">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a class="brand" href="../"><img src="../assets/naroworks-english-wordmark.png" alt="Naroworks" width="1806" height="312"></a>
+      <nav class="mast-nav" data-label="navigation" aria-label="Main navigation">
+        <a href="../#minou" data-i18n="productNav">Minou</a>
+        <a href="../#technology" data-i18n="techNav">Technology</a>
+        <a href="../#company" data-i18n="companyNav">Company</a>
+      </nav>
+      <label class="languages" hidden>
+        <span class="sr" data-i18n="language">Choose language</span>
+        <span aria-hidden="true" class="globe"></span>
+        <select id="language-select" dir="ltr">
+          <option value="ko" lang="ko">한국어</option>
+          <option value="ja-JP" lang="ja">日本語</option>
+          <option value="zh-Hant-TW" lang="zh-Hant-TW">繁體中文</option>
+          <option value="en-US" lang="en" selected>English</option>
+        </select>
+      </label>
+    </div>
+  </header>
+  <main id="main">
+    <section class="team-intro wrap" aria-labelledby="team-title">
+      <div>
+        <p class="team-eyebrow" data-i18n="team.eyebrow">Naroworks Inc.</p>
+        <h1 id="team-title" data-i18n="team.heading">Team</h1>
+      </div>
+      <figure class="team-mark" aria-hidden="true"><img src="../assets/minou/pack-winter.webp" width="512" height="512" alt=""></figure>
+    </section>
+
+    <section class="person wrap" aria-labelledby="person-name">
+      <div class="person-who">
+        <h2 id="person-name" data-i18n="team.name">Hyungkee Park</h2>
+        <p class="person-alt" data-i18n="team.nameAlt" lang="ko">박형기</p>
+        <p class="person-role" data-i18n="team.role">Founder &amp; CEO</p>
+        <p class="person-links">
+          <a class="text-link" href="mailto:hyungkee.park@minouknit.com">hyungkee.park@minouknit.com</a>
+          <a class="text-link" id="founder-linkedin" href="https://www.linkedin.com/in/hyungkee-park-84623a12a/" rel="noopener" lang="en">LinkedIn <span aria-hidden="true">↗</span></a>
+        </p>
+      </div>
+      <div class="person-body">
+        <p data-i18n="team.bio">Leads product and technology. Designed Minou’s real-time 3D knitting engine and the process that dresses 2D characters in pieces knitted in 3D.</p>
+        <h3 data-i18n="team.careerTitle">Before Naroworks</h3>
+        <ul class="career">
+          <li><b data-i18n="team.career1Org">Rapport Labs</b><span data-i18n="team.career1Role">Co-founder and backend lead, later ML lead and CISO</span><time>2020–2024</time></li>
+          <li><b data-i18n="team.career2Org">Hyperconnect</b><span data-i18n="team.career2Role">Backend engineer, Hakuna Live</span><time>2018–2019</time></li>
+          <li><b data-i18n="team.career3Org">ESTsecurity</b><span data-i18n="team.career3Role">Backend developer</span><time>2017–2018</time></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="facts wrap" aria-labelledby="facts-title">
+      <h2 id="facts-title" data-i18n="team.companyTitle">Company details</h2>
+      <dl>
+        <div class="fact"><dt data-i18n="team.factCompany">Company</dt><dd data-i18n="company.name">Naroworks Inc.</dd></div>
+        <div class="fact"><dt data-i18n="team.factFounded">Founded</dt><dd data-i18n="team.founded">September 2026</dd></div>
+        <div class="fact"><dt data-i18n="team.factProduct">Product</dt><dd><a class="text-link" id="minou-home" data-link="product" href="https://minouknit.com/en/"><span data-i18n="team.product">Minou for iOS and Android</span> <span aria-hidden="true">↗</span></a></dd></div>
+        <div class="fact"><dt data-i18n="team.factContact">Contact</dt><dd><a class="text-link" href="mailto:contact@naroworks.com">contact@naroworks.com</a></dd></div>
+      </dl>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="footer-top"><img src="../assets/naroworks-english-wordmark.png" alt="Naroworks" width="1806" height="312">
+        <div class="contact"><span data-i18n="contact">Contact</span><a href="mailto:contact@naroworks.com">contact@naroworks.com <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="legal"><div>
+        <strong data-i18n="company.name">Naroworks Inc.</strong>
+        <div class="legal-ids"><span data-i18n="company.representative">Representative: Hyungkee Park</span><span data-i18n="company.registration">Korean business registration number: 482-88-03565</span></div>
+        <address data-i18n="company.address">Suite 1131, 130 Eutteum-ro, Deogyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea</address>
+      </div>
+      <nav data-label="company.links" aria-label="Company policies and notices">
+        <a href="./" aria-current="page" data-i18n="company.team">Team</a>
+        <a data-link="privacy" href="../privacy/en/" data-i18n="company.privacy">Privacy policy</a>
+        <a href="https://naroworks.notion.site/3ded36b356c0813f96fdfa2e56a66511" data-i18n="company.notices">Public notices</a>
+      </nav></div>
+    </div>
+  </footer>
+</body>
+</html>

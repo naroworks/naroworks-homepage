@@ -224,3 +224,37 @@ address { font-style: normal; }
 }
 html:lang(ja) { font-family: "Hiragino Sans", "Yu Gothic", Meiryo, Pretendard, sans-serif; }
 html:lang(zh) { font-family: "PingFang TC", "Microsoft JhengHei", Pretendard, sans-serif; }
+/* 팀 페이지(team/). 홈과 같은 종이 · 먹 · 가는 줄 결로, 카드 상자 없이 줄로 나눈다 */
+.team-intro { display: grid; grid-template-columns: 1fr minmax(160px, 260px); gap: 32px 8%; align-items: end; padding-block: clamp(48px, 6vw, 96px) clamp(32px, 3.5vw, 52px); border-bottom: 2px solid var(--ink); }
+.team-eyebrow { color: var(--iris); font-size: 15px; font-weight: 620; }
+.team-intro h1 { margin-top: 6px; font-size: clamp(56px, 7vw, 104px); line-height: 1; letter-spacing: -.07em; font-weight: 655; }
+.team-mark { background: var(--lavender); border: 1px solid #bcb6cc; background-image: linear-gradient(to right, #cec8df 1px, transparent 1px), linear-gradient(to bottom, #cec8df 1px, transparent 1px); background-size: 20px 20px; }
+.team-mark img { width: 100%; height: auto; image-rendering: pixelated; }
+.person { display: grid; grid-template-columns: 1fr 1.6fr; gap: 24px 8%; padding-block: clamp(36px, 4vw, 60px); border-bottom: 1px solid var(--rule); }
+.person-who h2 { font-size: clamp(30px, 2.6vw, 40px); }
+.person-alt { margin-top: 4px; font-size: 15px; }
+.person-role { margin-top: 14px; color: var(--ink); font-size: 16px; font-weight: 620; }
+.person-links { display: grid; justify-items: start; margin-top: 10px; }
+.person-links .text-link { color: var(--iris); font-size: 15px; }
+.person-body > p { max-width: 58ch; }
+.person-body h3 { margin-top: 30px; font-size: 14px; font-weight: 620; letter-spacing: 0; color: var(--body); }
+.career { margin: 8px 0 0; padding: 0; list-style: none; }
+.career li { display: grid; grid-template-columns: minmax(120px, .7fr) 2fr auto; gap: 4px 20px; padding: 13px 0; border-top: 1px solid var(--rule); font-size: 15px; line-height: 1.55; }
+.career b { font-weight: 620; }
+.career span, .career time { color: var(--body); }
+.career time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.facts { padding-block: clamp(36px, 4vw, 60px) clamp(56px, 6vw, 96px); }
+.facts h2 { font-size: 14px; font-weight: 620; letter-spacing: 0; color: var(--body); }
+.facts dl { margin: 10px 0 0; font-size: 15px; }
+.fact { display: grid; grid-template-columns: 1fr 1.6fr; column-gap: 8%; border-top: 1px solid var(--rule); }
+.facts dt, .facts dd { margin: 0; padding: 12px 0; }
+.facts dt { color: var(--body); }
+.facts dd a { min-height: 0; }
+@media (max-width: 680px) {
+  .team-intro { grid-template-columns: 1fr; }
+  .team-mark { grid-row: 1; width: 132px; }
+  .person { grid-template-columns: 1fr; }
+  .career li { grid-template-columns: 1fr auto; }
+  .career span { grid-column: 1 / -1; grid-row: 2; }
+  .fact { grid-template-columns: 110px 1fr; column-gap: 16px; }
+}
