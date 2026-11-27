@@ -19,3 +19,7 @@ python3 -m http.server 4310 --bind 127.0.0.1
 [자산 출처](ASSET_PROVENANCE.md)에 원본 경로와 크롭 범위를 기록했습니다.
 
 대표 LinkedIn 주소를 받으면 `index.html`의 `id="founder-profile"` 링크에 넣고 `hidden`을 지웁니다(지금은 숨김).
+
+## 팀 페이지
+
+`team/index.html`은 대표와 이전 경력, 회사 정보를 담은 팀 페이지입니다. 홈 꼬리의 'Team' 링크에서만 잇고, `noindex`를 달고 sitemap에서 뺐습니다(robots.txt로 막지 않음). 글은 `localization.mjs`의 `team.*`이고 언어 바꾸기는 `team.js`가 합니다. 대표 LinkedIn과 연락처(`hyungkee.park@minouknit.com`)는 이 페이지에만 있습니다.
